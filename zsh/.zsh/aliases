@@ -2,6 +2,9 @@
 
 echo "Loading $HOME/.zsh/aliases"
 
+alias gst='git status'
+alias gci='git commit'
+
 alias mv='nocorrect mv'
 alias cp='nocorrect cp'
 alias mkdir='nocorrect mkdir'

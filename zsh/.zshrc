@@ -40,7 +40,7 @@ SAVEHIST=2048
 VIMRC=$HOME/.vimrc
 
 ### key bindings
-bindkey -v
+bindkey -e
 
 # historical backward/forward search with linehead string binded to ^P/^N
 autoload history-search-end

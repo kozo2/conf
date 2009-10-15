@@ -40,7 +40,7 @@ SAVEHIST=2048
 VIMRC=$HOME/.vimrc
 
 ### key bindings
-bindkey -e
+bindkey -v
 
 # historical backward/forward search with linehead string binded to ^P/^N
 autoload history-search-end
@@ -67,5 +67,4 @@ autoload -U compinit
 compinit
 autoload predict-on
 predict-on
-
 

@@ -21,7 +21,6 @@ alias e='emacs -nw'
 alias v=vim
 alias l=less
 alias j='jobs -l'
-alias sx='screen -x'
 alias x=exit
 alias where='command -v'
 alias su='su -l'
@@ -45,6 +44,6 @@ alias -g L='|less'
 alias -g G='|grep'
 alias -g GI='|grep -i'
 
-del (){
+dl (){
   command mv $* ~/.Trash/
 }

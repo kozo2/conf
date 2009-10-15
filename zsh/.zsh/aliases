@@ -4,6 +4,9 @@ echo "Loading $HOME/.zsh/aliases"
 
 alias gst='git status'
 alias gci='git commit'
+alias gps='git push'
+alias gpl='git pull'
+alias gdf='git diff'
 
 alias mv='nocorrect mv'
 alias cp='nocorrect cp'

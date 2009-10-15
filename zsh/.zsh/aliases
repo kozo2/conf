@@ -1,0 +1,44 @@
+# http://devel.aquahill.net/zsh/aliases
+
+echo "Loading $HOME/.zsh/aliases"
+
+alias mv='nocorrect mv'
+alias cp='nocorrect cp'
+alias mkdir='nocorrect mkdir'
+alias h=history
+alias grep=egrep
+alias ll='ls -l'
+alias la='ls -a'
+
+# http://blog.bulknews.net/mt/archives/DECON.pdf
+alias e='emacs -nw'
+alias v=vim
+alias l=less
+alias j='jobs -l'
+alias sx='screen -x'
+alias x=exit
+alias where='command -v'
+alias su='su -l'
+
+alias df='df -h'
+alias du='du -ackh'
+alias diff='diff -NBaur'
+alias scp='scp -p'
+
+# show the directories or symbolic link of directories
+alias lsd='ls -ld *(-/DN)'
+
+# show the files start with "."
+alias lsa='ls -ld .*'
+
+# global alias
+# http://hatena.g.hatena.ne.jp/hatenatech/20060517/1147833430
+alias -g H='|head'
+alias -g T='|tail'
+alias -g L='|less'
+alias -g G='|grep'
+alias -g GI='|grep -i'
+
+del (){
+  command mv $* ~/.Trash/
+}

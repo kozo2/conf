@@ -2,6 +2,7 @@
 
 echo "Loading $HOME/.zsh/aliases"
 
+alias gad='git add'
 alias gst='git status'
 alias gci='git commit'
 alias gps='git push'

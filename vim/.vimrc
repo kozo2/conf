@@ -373,7 +373,11 @@ if has("cscope")
 endif
 " }}}
 
+" {{{ getscript.vim
 
+let g:GetLatestVimScripts_allowautoinstall=1
+
+" }}}
 
 " {{{ FuzzyFinder
 

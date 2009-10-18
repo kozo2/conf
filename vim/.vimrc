@@ -398,7 +398,7 @@ nnoremap <silent> <C-f>p     :FufFile<CR>
 nnoremap <silent> <C-f><C-d> :FufDirWithCurrentBufferDir<CR>
 nnoremap <silent> <C-f>d     :FufDirWithFullCwd<CR>
 nnoremap <silent> <C-f>D     :FufDir<CR>
-nnoremap <silent> <C-j>      :FufMruFile<CR>
+nnoremap <silent> <C-g>      :FufMruFile<CR>
 nnoremap <silent> <C-k>      :FufMruCmd<CR>
 nnoremap <silent> <C-b>      :FufBookmark<CR>
 nnoremap <silent> <C-f><C-t> :FufTag<CR>

@@ -68,3 +68,8 @@ compinit
 autoload predict-on
 predict-on
 
+# http://d.hatena.ne.jp/ns9tks/20091016/1255691027
+if [ $SHLVL = 1 ]; then
+  export TERM=xterm-256color
+  tmux attach-session || tmux
+fi

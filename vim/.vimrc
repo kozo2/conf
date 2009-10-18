@@ -284,6 +284,7 @@ inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 noremap! <C-b> <Left>
 noremap! <C-f> <Right>
 noremap! <C-k> <Up>

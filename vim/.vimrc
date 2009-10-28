@@ -8,7 +8,7 @@ set nocompatible
 filetype plugin indent on
 
 " Switch on syntax highlighting
-syntax on
+syntax enable
 
 " }}}
 
@@ -127,12 +127,17 @@ setlocal cursorline
 
 " {{{ set for indent
 
-" http://omake.accense.com/wiki/GoogleTwoSpaceIndent
-" Use 2 spaces for (auto)indent
+" An indentation level every eight columns
+set tabstop=8
+
+" Convert all tabs typed into spaces
+set expandtab
+
+" Indent/outdent by two columns
 set shiftwidth=2
 
-" Use 8 spaces for <Tab> and :retab
-set tabstop=8
+" Always indent/outdent to the nearest tabstop
+set shiftround
 
 " When softtabstop is zero, this feature is off
 set softtabstop=0
@@ -140,17 +145,11 @@ set softtabstop=0
 " Do smart autoindenting when starting a new line
 set smartindent
 
-" In Insert mode: Use the appropriate number of spaces to insert a <Tab>
-set expandtab
-
 " When on, a <Tab> in front of a line inserts blanks according to shiftwidth
 set smarttab
 
 " Copy indent from current line when starting a new line
 set autoindent
-
-" Round indent to multiple of 'shiftwidth' for > and < commands
-set shiftround
 
 " }}}
 

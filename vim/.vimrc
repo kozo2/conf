@@ -442,11 +442,6 @@ nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
 " }}}
 
-" {{{ smartchr.vim
-inoremap <expr> = smartchr#loop(' = ', ' == ', '=')
-
-" }}}"
-
 " {{{ NERDTree
 
 " Increase window size to 35 columns

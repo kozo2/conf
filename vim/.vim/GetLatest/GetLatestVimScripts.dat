@@ -1,14 +1,10 @@
 ScriptID SourceID Filename
 -----
 90 1 vcscommand.zip
-273 1 taglist.zip
-1697 2 surround.zip
-1879 3 autocomplpop.vim
-1984 1 :AutoInstall: fuzzyfinder.vim
-2290 1 smartchr.zip
-2386 2 endwise.vim
-1502 3 :AutoInstall: vimball.vim
-642 1 :AutoInstall: getscript.vim
-294 1 :AutoInstall: Align.vim
-1066 1 :AutoInstall: cecutil.vim
+273 1 taglist_45.zip
 1075 1 :AutoInstall: netrw.vim
+1542 1 pythoncomplete.vim
+1697 1 surround.zip
+1879 1 vim-autocomplpop.zip
+1984 1 vim-fuzzyfinder.zip
+2540 1 snipMate.zip

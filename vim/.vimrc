@@ -7,7 +7,7 @@ set nocompatible
 " Enable loading filetype and indentation plugins
 filetype plugin indent on
 
-" Turn syntax highlighting on
+" Switch on syntax highlighting
 syntax on
 
 " }}}
@@ -127,12 +127,12 @@ setlocal cursorline
 
 " {{{ set for indent
 
-" http://d.hatena.ne.jp/amachang/20081019/1224365794
-" Use 4 spaces for (auto)indent
-set shiftwidth=4
+" http://omake.accense.com/wiki/GoogleTwoSpaceIndent
+" Use 2 spaces for (auto)indent
+set shiftwidth=2
 
-" Use 4 spaces for <Tab> and :retab
-set tabstop=4
+" Use 8 spaces for <Tab> and :retab
+set tabstop=8
 
 " When softtabstop is zero, this feature is off
 set softtabstop=0
@@ -205,6 +205,14 @@ set hidden
 
 " {{{ expression-commands
 
+command! Cp932 edit ++enc=cp932
+command! Eucjp edit ++enc=euc-jp
+command! Iso2022jp edit ++enc=iso-2022-jp
+command! Utf8 edit ++enc=utf-8
+
+command! Jis Iso2022jp
+command! Sjis Cp932
+
 " netRW: Open files in a split window
 "let g:netrw_browse_split = 1
 let mapleader = ","
@@ -214,6 +222,10 @@ let mapleader = ","
 
 
 " {{{ mappings
+
+" quick vimrc reload
+nnoremap <Space>. :<C-u>edit $MYVIMRC<Enter>
+nnoremap <Space>s. :<C-u>source $MYVIMRC<Enter>
 
 " save changes
 noremap ,s :w<CR>
@@ -267,9 +279,10 @@ cnoremap <silent> <C-l> <C-c>
 noremap <C-S>		:update<CR>
 vnoremap <C-S>		<C-C>:update<CR>
 inoremap <C-S>		<C-O>:update<CR>
+
 " http://whileimautomaton.net/2008/06/diary#d01-214900
 nnoremap <C-h> :<C-u>help<Space>
-nnoremap <C-h><C-h> :<C-u>help <C-r><C-w><Return>
+nnoremap <C-h><C-h> :<C-u>help<Space><C-r><C-w><Return>
 
 " http://lab.hde.co.jp/2009/02/vimpython.html
 "noremap <F5> :!/usr/bin/python %<CR>
@@ -325,8 +338,25 @@ noremap! <C-d> <Del>
 "inoremap 9 )
 "inoremap ) 9
 
+" quick EX command for my key arrangement
 noremap - :
-"noremap : -
+noremap : -
+
+" swap lines down-upward and display lines down-upward
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
+" quick date insert
+inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
+inoremap <expr> ,dd strftime('%Y-%m-%d')
+inoremap <expr> ,dt strftime('%H:%M:%S')
+
+" select last changed text
+nnoremap gc `[v`]
+vnoremap gc :<C-u>normal gc<Enter>
+onoremap gc :<C-u>normal gc<Enter>
 
 " http://vim.g.hatena.ne.jp/ka-nacht/20090624
 noremap D d$
@@ -412,6 +442,11 @@ nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
 nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
 " }}}
+
+" {{{ smartchr.vim
+inoremap <expr> = smartchr#loop(' = ', ' == ', '=')
+
+" }}}"
 
 " {{{ NERDTree
 

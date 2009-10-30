@@ -7,8 +7,8 @@ set nocompatible
 " Enable loading filetype and indentation plugins
 filetype plugin indent on
 
-" Turn syntax highlighting on
-syntax on
+" Switch on syntax highlighting
+syntax enable
 
 " }}}
 
@@ -127,12 +127,17 @@ setlocal cursorline
 
 " {{{ set for indent
 
-" http://d.hatena.ne.jp/amachang/20081019/1224365794
-" Use 4 spaces for (auto)indent
-set shiftwidth=4
+" An indentation level every eight columns
+set tabstop=8
 
-" Use 4 spaces for <Tab> and :retab
-set tabstop=4
+" Convert all tabs typed into spaces
+set expandtab
+
+" Indent/outdent by two columns
+set shiftwidth=2
+
+" Always indent/outdent to the nearest tabstop
+set shiftround
 
 " When softtabstop is zero, this feature is off
 set softtabstop=0
@@ -140,17 +145,11 @@ set softtabstop=0
 " Do smart autoindenting when starting a new line
 set smartindent
 
-" In Insert mode: Use the appropriate number of spaces to insert a <Tab>
-set expandtab
-
 " When on, a <Tab> in front of a line inserts blanks according to shiftwidth
 set smarttab
 
 " Copy indent from current line when starting a new line
 set autoindent
-
-" Round indent to multiple of 'shiftwidth' for > and < commands
-set shiftround
 
 " }}}
 
@@ -205,6 +204,14 @@ set hidden
 
 " {{{ expression-commands
 
+command! Cp932 edit ++enc=cp932
+command! Eucjp edit ++enc=euc-jp
+command! Iso2022jp edit ++enc=iso-2022-jp
+command! Utf8 edit ++enc=utf-8
+
+command! Jis Iso2022jp
+command! Sjis Cp932
+
 " netRW: Open files in a split window
 "let g:netrw_browse_split = 1
 let mapleader = ","
@@ -214,6 +221,10 @@ let mapleader = ","
 
 
 " {{{ mappings
+
+" quick vimrc reload
+nnoremap <Space>. :<C-u>edit $MYVIMRC<Enter>
+nnoremap <Space>s. :<C-u>source $MYVIMRC<Enter>
 
 " save changes
 noremap ,s :w<CR>
@@ -267,9 +278,10 @@ cnoremap <silent> <C-l> <C-c>
 noremap <C-S>		:update<CR>
 vnoremap <C-S>		<C-C>:update<CR>
 inoremap <C-S>		<C-O>:update<CR>
+
 " http://whileimautomaton.net/2008/06/diary#d01-214900
 nnoremap <C-h> :<C-u>help<Space>
-nnoremap <C-h><C-h> :<C-u>help <C-r><C-w><Return>
+nnoremap <C-h><C-h> :<C-u>help<Space><C-r><C-w><Return>
 
 " http://lab.hde.co.jp/2009/02/vimpython.html
 "noremap <F5> :!/usr/bin/python %<CR>
@@ -325,8 +337,25 @@ noremap! <C-d> <Del>
 "inoremap 9 )
 "inoremap ) 9
 
+" quick EX command for my key arrangement
 noremap - :
-"noremap : -
+noremap : -
+
+" swap lines down-upward and display lines down-upward
+noremap j gj
+noremap k gk
+noremap gj j
+noremap gk k
+
+" quick date insert
+inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
+inoremap <expr> ,dd strftime('%Y-%m-%d')
+inoremap <expr> ,dt strftime('%H:%M:%S')
+
+" select last changed text
+nnoremap gc `[v`]
+vnoremap gc :<C-u>normal gc<Enter>
+onoremap gc :<C-u>normal gc<Enter>
 
 " http://vim.g.hatena.ne.jp/ka-nacht/20090624
 noremap D d$

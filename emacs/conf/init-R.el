@@ -9,7 +9,6 @@
              (local-set-key "(" 'electric-pair)
              (local-set-key "[" 'electric-pair)
              (local-set-key "{" 'electric-pair)
-             (local-set-key "\C-j" 'ess-smart-underscore)
              (local-set-key (kbd ",") (my-chr '(", " ",")))
              )))
 
@@ -21,7 +20,6 @@
              (local-set-key "(" 'electric-pair)
              (local-set-key "[" 'electric-pair)
              (local-set-key "{" 'electric-pair)
-             (local-set-key "\C-j" 'ess-smart-underscore)
              (local-set-key (kbd ",") (my-chr '(", " ",")))
              )))
 

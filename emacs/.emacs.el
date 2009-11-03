@@ -9,3 +9,5 @@
 
 (my-load-path "~/projects/dotfiles/emacs/conf")
 (my-load-path "~/.emacs.d/elisp")
+
+(load "init-load")

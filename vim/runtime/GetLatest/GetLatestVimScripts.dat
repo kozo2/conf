@@ -1,10 +1,16 @@
 ScriptID SourceID Filename
 -----
-90 1 vcscommand.zip
 273 1 taglist_45.zip
+294 1 Align.vba.gz
 1075 1 :AutoInstall: netrw.vim
 1542 1 pythoncomplete.vim
 1697 1 surround.zip
 1879 1 vim-autocomplpop.zip
 1984 1 vim-fuzzyfinder.zip
 2540 1 snipMate.zip
+1879 1 :AutoInstall: AutoComplPop
+294 1 :AutoInstall: Align.vim
+1066 1 :AutoInstall: cecutil.vim
+1984 1 :AutoInstall: FuzzyFinder
+642 1 :AutoInstall: getscript.vim
+1502 1 :AutoInstall: vimball.vim

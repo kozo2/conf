@@ -10,6 +10,8 @@ filetype plugin indent on
 " Switch on syntax highlighting
 syntax enable
 
+set runtimepath+=~/projects/dotfiles/vim/runtime,~/projects/dotfiles/vim/runtime/after
+
 " }}}
 
 
@@ -218,8 +220,8 @@ let mapleader = " "
 " {{{ mappings
 
 " quick vimrc reload
-nnoremap <Leader>. :<C-u>edit $MYVIMRC<Enter>
-nnoremap <Leader>s. :<C-u>source $MYVIMRC<Enter>
+nnoremap <Leader>. :<C-u>edit ~/projects/dotfiles/vim/vimrc<Enter>
+nnoremap <Leader>s. :<C-u>source ~/projects/dotfiles/vim/vimrc<Enter>
 
 " save changes
 noremap <Leader>w :w<CR>

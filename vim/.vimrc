@@ -65,8 +65,13 @@ set viminfo='20,\"50,:20,%,n~/.viminfo
 
 " {{{ set for display
 
-" Use UTF-8 as the default buffer encoding
-set enc=utf-8
+command! Cp932 edit ++enc=cp932
+command! Eucjp edit ++enc=euc-jp
+command! Iso2022jp edit ++enc=iso-2022-jp
+command! Utf8 edit ++enc=utf-8
+
+command! Jis Iso2022jp
+command! Sjis Cp932
 
 " http://omake.accense.com/wiki/vimrc
 set fileencodings=utf-8,cp932,euc-jp
@@ -204,17 +209,7 @@ set hidden
 
 " {{{ expression-commands
 
-command! Cp932 edit ++enc=cp932
-command! Eucjp edit ++enc=euc-jp
-command! Iso2022jp edit ++enc=iso-2022-jp
-command! Utf8 edit ++enc=utf-8
-
-command! Jis Iso2022jp
-command! Sjis Cp932
-
-" netRW: Open files in a split window
-"let g:netrw_browse_split = 1
-let mapleader = ","
+let mapleader = " "
 
 " }}}
 
@@ -223,17 +218,17 @@ let mapleader = ","
 " {{{ mappings
 
 " quick vimrc reload
-nnoremap <Space>. :<C-u>edit $MYVIMRC<Enter>
-nnoremap <Space>s. :<C-u>source $MYVIMRC<Enter>
+nnoremap <Leader>. :<C-u>edit $MYVIMRC<Enter>
+nnoremap <Leader>s. :<C-u>source $MYVIMRC<Enter>
 
 " save changes
-noremap ,s :w<CR>
+noremap <Leader>s :w<CR>
 
 " exit vim without saving any changes
-noremap ,q :q!<CR>
+noremap <Leader>q :q!<CR>
 
 " exit vim saving changes
-noremap ,w :x<CR>
+noremap <Leader>w :x<CR>
 
 " switch to upper/lower window quickly
 noremap <C-J> <C-W>j
@@ -263,7 +258,8 @@ vnoremap > >gv
 nnoremap K kzz
 noremap <CR> o<ESC>
 
-noremap <Leader><Leader> :e .<CR>
+" open current directory"
+noremap <Leader>d :e .<CR>
 
 " http://d.hatena.ne.jp/kozo-ni/20081028#1225205605
 nnoremap <F5> :<C-u>execute '!' &l:filetype '%'<Return>
@@ -387,20 +383,17 @@ autocmd WinEnter * match WhitespaceEOL /\s\+$/
 "highlight netrwDir cterm=none ctermfg=Cyan
 " }}}
 
+" {{{ taglist.vim
 
+let Tlist_Show_One_File = 1
+nnoremap <silent> <Leader>tl :TlistToggle<CR>
 
-" {{{ Set up cscope options
-if has("cscope")
-	set csprg=/usr/bin/cscope
-	set csto=0
-	set cst
-	set nocsverb
-	cs add cscope.out
-	set csverb
-	map <C-_> :cstag <C-R>=expand("<cword>")<CR><CR>
-	map g<C-]> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
-	map g<C-\> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
-endif
+" }}}
+
+" {{{ netrw.vim
+
+let g:netrw_browse_split = 1
+
 " }}}
 
 " {{{ getscript.vim
@@ -440,20 +433,6 @@ vnoremap <silent> <C-f><C-b> :FufAddBookmarkAsSelectedText<CR>
 nnoremap <silent> <C-f><C-e> :FufEditInfo<CR>
 nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
-" }}}
-
-" {{{ NERDTree
-
-" Increase window size to 35 columns
-let NERDTreeWinSize=35
-
-" map <F7> to toggle NERDTree window
-nmap <silent> <F7> :NERDTreeToggle<CR>
-
-" }}}
-
-" {{{ closetag
-"autocmd FileType html,xml,xsl source ~/.vim/scripts/closetag.vim
 " }}}
 
 " autocmd {{{

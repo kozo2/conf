@@ -222,13 +222,13 @@ nnoremap <Leader>. :<C-u>edit $MYVIMRC<Enter>
 nnoremap <Leader>s. :<C-u>source $MYVIMRC<Enter>
 
 " save changes
-noremap <Leader>s :w<CR>
+noremap <Leader>w :w<CR>
 
 " exit vim without saving any changes
 noremap <Leader>q :q!<CR>
 
 " exit vim saving changes
-noremap <Leader>w :x<CR>
+noremap <Leader>x :x<CR>
 
 " switch to upper/lower window quickly
 noremap <C-J> <C-W>j
@@ -467,3 +467,4 @@ ab teh the
 ab fro for
 " }}}
 
+:chdir ~

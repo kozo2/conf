@@ -1,1 +1,6 @@
 colorscheme desert
+if has('win32')
+  set guifont=Consolas:h14:cSHIFTJIS
+  gui
+  set transparency=221
+endif

@@ -1,0 +1,113 @@
+" Colors
+hi StatusLine           color: black; background: LightGray; font-weight: normal; font-size: 12pt;
+hi Normal               color: black; background: white;     font-size: 14pt;
+hi CompItem[selected]   color: black; background: Gold;
+hi CompDesc             color: black; width: 50%;
+
+
+
+" Mappings
+
+" http://subtech.g.hatena.ne.jp/secondlife/20080919/1221795410
+qmark m gmail
+qmark r google_reader
+qmark t twitter
+
+let mapleader=","
+
+noremap <Leader>a :dialog addons<CR>
+noremap <Leader>d :dialog downloads<CR>
+noremap <Leader>c :dialog console<CR>
+noremap <Leader>m :play 0<CR>
+noremap <Leader>y ;y
+
+noremap e :echo<Space>
+
+nnoremap <C-h> :help<Space>
+inoremap <C-h> <BS>
+cnoremap <C-h> <BS>
+
+noremap <C-l> <Esc>
+noremap <C-i> <Tab>
+
+cnoremap <C-n> <Down>
+cnoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
+
+cnoremap <C-m> <CR>
+inoremap <C-m> <CR>
+
+" Fuzzyfinder like buffer move
+nnoremap <C-n> :buffer<Space>
+
+cnoremap <C-f> <Right>
+cnoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-b> <Left>
+
+nnoremap j 3<C-e>
+nnoremap k 3<C-y>
+
+nnoremap h :tp<CR>
+nnoremap l :tn<CR>
+
+nnoremap <C-r> :restart<CR>
+
+nnoremap <C-j> :
+
+" for SKK
+"cnoremap <C-j> <Nop>
+
+
+
+" Options
+
+" about:config
+set! dom.disable_window_move_resize=true
+set! browser.fullscreen.autohide=false
+
+" left-hand mouse case
+set guioptions=lb
+
+set visualbell
+
+" http://unsigned.g.hatena.ne.jp/Trapezoid/20080620/1213889094
+" http://mattn.kaoriya.net/software/firefox/vimperator/20080620102116.htm
+" #135       Change your completion settings if you miss Firefox's AwesomeBar
+set wildoptions=auto
+set complete=l
+
+set activate=quickmark,paste
+
+set focuscontent=on
+
+" Disable vimperator keys on Google mail and Google reader
+autocmd LocationChange .* :js modes.passAllKeys = /mail\.google\.com|docs\.google\.com|www\.google\.com\/calendar|www\.google\.com\/reader\/view/.test(buffer.URL)
+
+
+
+" http://vimperator.org/trac/wiki/Vimperator/Tips&Tricks
+
+" #17     Show the feed-button in the statusbar
+javascript << EOF
+(function(){
+    var feedPanel = document.createElement("statusbarpanel");
+    feedPanel.setAttribute("id", "feed-panel-clone");
+    feedPanel.appendChild(document.getElementById("feed-button"));
+    feedPanel.firstChild.setAttribute("style", "padding: 0; max-height: 16px;");
+    document.getElementById("status-bar")
+            .insertBefore(feedPanel, document.getElementById("security-button"));
+})();
+EOF
+
+command google -nargs=* tabopen http://www.google.co.jp/search?q=<args>
+noremap <silent> S :exe ":google "+content.getSelection()<CR>
+
+" #224       Look up the words you selected in on-line dictionary dict.cn
+command alc -nargs=* tabopen http://eow.alc.co.jp/<args>
+noremap <silent> A :exe ":alc "+content.getSelection()<CR>
+
+echo "vimperatorrc sourced"
+
+" vim: set ft=vimperator:

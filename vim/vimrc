@@ -77,6 +77,8 @@ command! Utf8 edit ++enc=utf-8
 command! Jis Iso2022jp
 command! Sjis Cp932
 
+set background=dark
+
 " http://omake.accense.com/wiki/vimrc
 set fileencodings=utf-8,cp932,euc-jp
 set ambiwidth=double
@@ -211,15 +213,9 @@ set hidden
 
 
 
-" {{{ expression-commands
+" {{{ mappings
 
 let mapleader=" "
-
-" }}}
-
-
-
-" {{{ mappings
 
 " quick vimrc reload
 nnoremap <Leader>. :<C-u>edit ~/projects/dotfiles/vim/vimrc<Enter>
@@ -366,12 +362,6 @@ map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
 " }}}
 
 
-
-" {{{ Generic highlight changes
-
-set background=dark
-
-" }}}
 
 " {{{ taglist.vim
 

@@ -223,18 +223,17 @@ let mapleader = " "
 nnoremap <Leader>. :<C-u>edit ~/projects/dotfiles/vim/vimrc<Enter>
 nnoremap <Leader>s. :<C-u>source ~/projects/dotfiles/vim/vimrc<Enter>
 
+" edit file
+nnoremap <Leader>e :e<Space>
+
 " save changes
-noremap <Leader>w :w<CR>
+nnoremap <Leader>w :w<CR>
 
 " exit vim without saving any changes
-noremap <Leader>q :q!<CR>
+nnoremap <Leader>q :q!<CR>
 
 " exit vim saving changes
-noremap <Leader>x :x<CR>
-
-" switch to upper/lower window quickly
-noremap <C-J> <C-W>j
-noremap <C-K> <C-W>k
+nnoremap <Leader>x :x<CR>
 
 " map ,f to display all lines with keyword under cursor and ask which one to
 " jump to
@@ -375,14 +374,6 @@ highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
 autocmd WinEnter * match WhitespaceEOL /\s\+$/
 
-"highlight Comment cterm=none ctermfg=Gray
-"highlight IncSearch cterm=none ctermfg=Black ctermbg=DarkYellow
-"highlight Search cterm=none ctermfg=Black ctermbg=DarkYellow
-"highlight String cterm=none ctermfg=DarkGreen
-"highlight treeDir cterm=none ctermfg=Cyan
-"highlight treeUp cterm=none ctermfg=DarkYellow
-"highlight treeCWD cterm=none ctermfg=DarkYellow
-"highlight netrwDir cterm=none ctermfg=Cyan
 " }}}
 
 " {{{ taglist.vim
@@ -442,25 +433,39 @@ nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 " This autocommand jumps to the last known position in a file just after
 " opening it, if the '" mark is set:
 " ref. eval.txt line3756
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+""autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+""
+""" For all text files set 'textwidth' to 78 characters.
+""autocmd FileType text setlocal textwidth=78
+""
+""autocmd WinEnter * setlocal cursorline
+""autocmd WinLeave * setlocal nocursorline
+""
+""autocmd FileType netrw nnoremap q :q<CR>
+""
+""" http://paranoid.dip.jp/kaworu/2008-06-07-1.html
+""autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
-" For all text files set 'textwidth' to 78 characters.
-autocmd FileType text setlocal textwidth=78
+" }}}
 
-autocmd FileType cvs :set fileencoding=euc-jp
-autocmd FileType svn :set fileencoding=uft-8
+" other utils {{{
 
-autocmd FileType text setlocal spell spelllang=en_us
+" http://d.hatena.ne.jp/ns9tks/20091105/1257420345
+augroup VimrcNetrw
+  autocmd!
+  autocmd FileType netrw let g:bufnrLastNetrw = bufnr('%')
+augroup END
 
-autocmd BufNewFile *.{py,R,rb,php,txt,css,htm*}{,.in} set fileencoding=utf-8
+function s:openNetrw()
+  if exists('g:bufnrLastNetrw')
+    execute g:bufnrLastNetrw . 'buffer'
+  else
+    edit .
+  endif
+endfunction
 
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
+nnoremap <Space>- :call <SID>openNetrw()<CR>
 
-autocmd FileType netrw nnoremap q :q<CR>
-
-" http://paranoid.dip.jp/kaworu/2008-06-07-1.html
-autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 " }}}
 
 " abbreviations {{{
@@ -469,4 +474,4 @@ ab teh the
 ab fro for
 " }}}
 
-:chdir ~
+chdir ~

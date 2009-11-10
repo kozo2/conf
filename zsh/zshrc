@@ -1,9 +1,8 @@
 # http://devel.aquahill.net/zsh/dot.zshrc
-echo "Loading $HOME/.zshrc"
+echo "Loading zshrc"
 
 ### environment variables
 export EDITOR=vim
-export GISTY_DIR="$HOME/dev/gists"
 
 # maven
 export M2_HOME=$HOME/application/apache-maven-2.2.0
@@ -37,7 +36,6 @@ HISTSIZE=1024
 # http://journal.mycom.co.jp/column/zsh/002/index.html
 PROMPT="[%n@%m]%~%# "
 SAVEHIST=2048
-VIMRC=$HOME/.vimrc
 
 ### key bindings
 bindkey -e
@@ -55,8 +53,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # http://hatena.g.hatena.ne.jp/hatenatech/20060517/1147833430
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-source $HOME/.zsh/aliases
-source $HOME/.zsh/zshoptions
+source $HOME/projects/dotfiles/zsh/zshaliases
+source $HOME/projects/dotfiles/zsh/zshoptions
 
 #
 # Default shell configuration

@@ -27,8 +27,8 @@ nnoremap <C-h> :help<Space>
 inoremap <C-h> <BS>
 cnoremap <C-h> <BS>
 
-noremap <C-l> <Esc>
-noremap <C-i> <Tab>
+cnoremap <C-l> <Esc>
+inoremap <C-i> <Tab>
 
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>

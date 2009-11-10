@@ -211,7 +211,7 @@ set hidden
 
 " {{{ expression-commands
 
-let mapleader = " "
+let mapleader=" "
 
 " }}}
 
@@ -225,6 +225,9 @@ nnoremap <Leader>s. :<C-u>source ~/projects/dotfiles/vim/vimrc<Enter>
 
 " edit file
 nnoremap <Leader>e :e<Space>
+
+" open current directory
+nnoremap <Leader>d :edit .<CR>
 
 " save changes
 nnoremap <Leader>w :w<CR>
@@ -258,9 +261,6 @@ vnoremap > >gv
 "nnoremap J jzz
 nnoremap K kzz
 noremap <CR> o<ESC>
-
-" open current directory"
-noremap <Leader>d :e .<CR>
 
 " http://d.hatena.ne.jp/kozo-ni/20081028#1225205605
 nnoremap <F5> :<C-u>execute '!' &l:filetype '%'<Return>
@@ -369,23 +369,18 @@ map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
 
 set background=dark
 
-" http://d.hatena.ne.jp/tasukuchan/20070816/1187246177
-highlight WhitespaceEOL ctermbg=red guibg=red
-match WhitespaceEOL /\s\+$/
-autocmd WinEnter * match WhitespaceEOL /\s\+$/
-
 " }}}
 
 " {{{ taglist.vim
 
-let Tlist_Show_One_File = 1
+let Tlist_Show_One_File=1
 nnoremap <silent> <Leader>tl :TlistToggle<CR>
 
 " }}}
 
 " {{{ netrw.vim
 
-let g:netrw_browse_split = 1
+let g:netrw_browse_split=0
 
 " }}}
 
@@ -429,26 +424,34 @@ nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 " }}}
 
 " autocmd {{{
+
+autocmd!
+
 " Go back to the position the cursor was on the last time this file was edited
 " This autocommand jumps to the last known position in a file just after
 " opening it, if the '" mark is set:
 " ref. eval.txt line3756
-""autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-""
-""" For all text files set 'textwidth' to 78 characters.
-""autocmd FileType text setlocal textwidth=78
-""
-""autocmd WinEnter * setlocal cursorline
-""autocmd WinLeave * setlocal nocursorline
-""
-""autocmd FileType netrw nnoremap q :q<CR>
-""
-""" http://paranoid.dip.jp/kaworu/2008-06-07-1.html
-""autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+" For all text files set 'textwidth' to 78 characters.
+autocmd FileType text setlocal textwidth=78
+
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+
+autocmd FileType netrw nnoremap q :q<CR>
+
+" http://paranoid.dip.jp/kaworu/2008-06-07-1.html
+autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 " }}}
 
 " other utils {{{
+
+" http://d.hatena.ne.jp/tasukuchan/20070816/1187246177
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+autocmd WinEnter * match WhitespaceEOL /\s\+$/
 
 " http://d.hatena.ne.jp/ns9tks/20091105/1257420345
 augroup VimrcNetrw
@@ -464,7 +467,7 @@ function s:openNetrw()
   endif
 endfunction
 
-nnoremap <Space>- :call <SID>openNetrw()<CR>
+nnoremap <Leader>- :call <SID>openNetrw()<CR>
 
 " }}}
 

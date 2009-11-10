@@ -10,6 +10,7 @@ filetype plugin indent on
 " Switch on syntax highlighting
 syntax enable
 
+set runtimepath&
 set runtimepath+=~/projects/dotfiles/vim/runtime,~/projects/dotfiles/vim/runtime/after
 
 " }}}
@@ -28,6 +29,7 @@ set nrformats=octal,hex,alpha
 set pastetoggle=<F8>
 
 " :h fo-table
+set formatoptions&
 set formatoptions+=mM
 
 " }}}

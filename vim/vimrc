@@ -7,9 +7,6 @@ set nocompatible
 " Enable loading filetype and indentation plugins
 filetype plugin indent on
 
-" Switch on syntax highlighting
-syntax enable
-
 set runtimepath&
 set runtimepath+=~/projects/dotfiles/vim/runtime,~/projects/dotfiles/vim/runtime/after
 
@@ -470,3 +467,7 @@ ab fro for
 " }}}
 
 chdir ~
+
+" Switch on syntax highlighting
+syntax enable
+

@@ -4,9 +4,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" Enable loading filetype and indentation plugins
 filetype plugin indent on
-
 set runtimepath&
 set runtimepath+=~/projects/dotfiles/vim/runtime,~/projects/dotfiles/vim/runtime/after
 
@@ -22,10 +20,8 @@ set backspace=indent,eol,start
 " Enable CTRL-A/CTRL-X to work on octal and hex numbers, as well as characters
 set nrformats=octal,hex,alpha
 
-" Use F8 to toggle 'paste' mode
 set pastetoggle=<F8>
 
-" :h fo-table
 set formatoptions&
 set formatoptions+=mM
 
@@ -35,10 +31,8 @@ set formatoptions+=mM
 
 " {{{ set for completion
 
-" Remember up to 100 'colon' commmands and search patterns
 set history=100
 
-" Insert mode completion options
 set completeopt=menu,longest,preview
 
 " Use menu to show command-line completion (in 'full' case)
@@ -66,14 +60,6 @@ set viminfo='20,\"50,:20,%,n~/.viminfo
 
 " {{{ set for display
 
-command! Cp932 edit ++enc=cp932
-command! Eucjp edit ++enc=euc-jp
-command! Iso2022jp edit ++enc=iso-2022-jp
-command! Utf8 edit ++enc=utf-8
-
-command! Jis Iso2022jp
-command! Sjis Cp932
-
 set background=dark
 
 " http://omake.accense.com/wiki/vimrc
@@ -81,10 +67,8 @@ set fileencodings=utf-8,cp932,euc-jp
 set ambiwidth=double
 set foldmethod=marker
 
-" don't print the line number in front of each line
 set nonumber
-
-" Show line, column number, and relative position within a file in the status line
+set wrap
 set ruler
 
 " Scroll when cursor gets within 3 characters of top/bottom edge
@@ -93,32 +77,18 @@ set scrolloff=3
 " don't show the difference between tabs and spaces and for trailing blanks
 set nolist
 
-" lines longer than the width of the window will wrap
-set wrap
-
-" Don't wrap words by default
-set textwidth=0
-
 " Always show status line, even for one window
 set laststatus=2
 
-" Number of screen lines to use for the command-line
 set cmdheight=2
 
 " Show (partial) commands (or size of selection in Visual mode) in the status line
 set showcmd
 
-" When a bracket is inserted, briefly jump to a matching one
 set showmatch
-
-" Jump to matching bracket for 2/10th of a second (works with showmatch)
 set matchtime=2
 
-" Splitting a window will put the new window below the current one
-"set splitbelow
-
-" Splitting a window will put the new window right of the current one
-"set splitright
+set splitright
 
 " The title of the window will be set to the value of titlestring
 set title
@@ -126,37 +96,18 @@ set title
 set statusline=%F%m%r%h%w\ [%{&fileencoding}\ %{&fileformat}]\ [TYPE=%Y]\ [%l/%L,\ %c]
 " set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
-" Highlight the screen line of the cursor with CursorLine
-setlocal cursorline
-
 " }}}
 
 
 
 " {{{ set for indent
 
-" An indentation level every eight columns
 set tabstop=8
-
-" Convert all tabs typed into spaces
 set expandtab
-
-" Indent/outdent by two columns
 set shiftwidth=2
-
-" Always indent/outdent to the nearest tabstop
 set shiftround
-
-" When softtabstop is zero, this feature is off
-set softtabstop=0
-
-" Do smart autoindenting when starting a new line
 set smartindent
-
-" When on, a <Tab> in front of a line inserts blanks according to shiftwidth
 set smarttab
-
-" Copy indent from current line when starting a new line
 set autoindent
 
 " }}}
@@ -165,20 +116,10 @@ set autoindent
 
 " {{{ set for search
 
-" Don't highlight results of a search
 set nohlsearch
-
-" Enable incremental search
 set incsearch
-
-" The case of normal letters is ignored
 set ignorecase
-
-" Override the 'ignorecase' option if the search pattern contains upper case
-" characters
 set smartcase
-
-" Searches wrap around the end of the file
 set wrapscan
 
 " }}}
@@ -187,17 +128,8 @@ set wrapscan
 
 " {{{ set for file manipulation
 
-" Write contents of the file, if it has been modified, on buffer exit
-set autowrite
-
-" Write swap file to disk after every 50 characters
-set updatecount=50
-set updatetime=500
-
-" When a file has been detected to have been changed outside of Vim and
-" it has not been changed inside of Vim, automatically read it again.
+set autowriteall
 set autoread
-
 set nobackup
 set noswapfile
 
@@ -225,7 +157,7 @@ nnoremap <Leader>e :e<Space>
 nnoremap <Leader>d :edit .<CR>
 
 " save changes
-nnoremap <Leader>w :w<CR>
+nnoremap <Leader>s :w<CR>
 
 " exit vim without saving any changes
 nnoremap <Leader>q :q!<CR>
@@ -265,11 +197,6 @@ nnoremap <F5> :<C-u>execute '!' &l:filetype '%'<Return>
 vnoremap <silent> <C-l> <Esc>
 inoremap <silent> <C-l> <Esc>
 cnoremap <silent> <C-l> <C-c>
-
-" Use CTRL-S for saving, also in Insert mode
-noremap <C-S>		:update<CR>
-vnoremap <C-S>		<C-C>:update<CR>
-inoremap <C-S>		<C-O>:update<CR>
 
 " http://whileimautomaton.net/2008/06/diary#d01-214900
 nnoremap <C-h> :<C-u>help<Space>
@@ -434,6 +361,22 @@ autocmd FileType netrw nnoremap q :q<CR>
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 " }}}
+
+
+
+" custom commands {{{
+
+command! Cp932 edit ++enc=cp932
+command! Eucjp edit ++enc=euc-jp
+command! Iso2022jp edit ++enc=iso-2022-jp
+command! Utf8 edit ++enc=utf-8
+
+command! Jis Iso2022jp
+command! Sjis Cp932
+
+" }}}"
+
+
 
 " other utils {{{
 

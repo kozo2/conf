@@ -29,6 +29,7 @@ cnoremap <C-h> <BS>
 
 cnoremap <C-l> <Esc>
 inoremap <C-i> <Tab>
+cnoremap <C-i> <Tab>
 
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>

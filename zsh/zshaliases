@@ -31,6 +31,8 @@ alias du='du -ackh'
 alias diff='diff -NBaur'
 alias scp='scp -p'
 
+alias lca='ls --color=auto -la'
+
 # show the directories or symbolic link of directories
 alias lsd='ls -ld *(-/DN)'
 

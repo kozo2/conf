@@ -9,7 +9,7 @@ export M2_HOME=$HOME/application/apache-maven-2.2.0
 export M2=$M2_HOME/bin
 
 # pax-construct
-export PAX_CONSTRUCT_HOME=$HOME/application/pax-construct-1.4
+export PAX_CONSTRUCT_HOME=$HOME/apps/pax-construct-1.4
 export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
 
 # OS dependent variables (Java, Macports, ...)
@@ -68,7 +68,7 @@ predict-on
 
 # http://d.hatena.ne.jp/ns9tks/20091016/1255691027
 if [ $SHLVL = 1 ]; then
-  tmux attach-session || tmux
+  tmux attach-session || tmux -f $HOME/projects/dotfiles/tmux/.tmux.conf
 fi
 
 function chpwd() { lca }

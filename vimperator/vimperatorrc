@@ -28,10 +28,8 @@ inoremap <C-h> <BS>
 cnoremap <C-h> <BS>
 
 cnoremap <C-l> <Esc>
-nnoremap <C-i> <Tab>
+inoremap <C-i> <Tab>
 cnoremap <C-i> <Tab>
-nnoremap <C-S-i> <S-Tab>
-cnoremap <C-S-i> <S-Tab>
 
 cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>

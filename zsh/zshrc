@@ -5,17 +5,17 @@ echo "Loading zshrc"
 export EDITOR=vim
 
 # maven
-export M2_HOME=$HOME/application/apache-maven-2.2.0
+export M2_HOME=$HOME/apps/apache-maven-2.2.1
 export M2=$M2_HOME/bin
 
 # pax-construct
-export PAX_CONSTRUCT_HOME=$HOME/application/pax-construct-1.4
+export PAX_CONSTRUCT_HOME=$HOME/apps/pax-construct-1.4
 export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
 
 # OS dependent variables (Java, Macports, ...)
 os_type=`uname`
 if [ "$os_type" = "Linux" ]; then
-    export JAVA_HOME=/usr/lib/jvm/java-1.5.0-sun
+    export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.15
     export JAVA=$JAVA_HOME/bin
     export PATH=$M2:$PAX_CONSTRUCT:$JAVA:$PATH
 elif [ "$os_type" = "Darwin" ]; then
@@ -68,6 +68,7 @@ predict-on
 
 # http://d.hatena.ne.jp/ns9tks/20091016/1255691027
 if [ $SHLVL = 1 ]; then
-  export TERM=xterm-256color
-  tmux attach-session || tmux
+  tmux attach-session || tmux -f $HOME/projects/dotfiles/tmux/.tmux.conf
 fi
+
+function chpwd() { lca }

@@ -9,9 +9,10 @@ hi CompDesc             color: black; width: 50%;
 " Mappings
 
 " http://subtech.g.hatena.ne.jp/secondlife/20080919/1221795410
-qmark m gmail
-qmark r google_reader
-qmark t twitter
+qmark m https://mail.google.com/mail
+qmark r http://www.google.com/reader
+qmark t http://twitter.com
+qmark y http://www.youtube.com
 
 let mapleader=","
 

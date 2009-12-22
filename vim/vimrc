@@ -4,9 +4,10 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-filetype plugin indent on
 set runtimepath&
 set runtimepath+=~/projects/dotfiles/vim/runtime,~/projects/dotfiles/vim/runtime/after
+
+filetype plugin indent on
 
 " }}}
 
@@ -360,6 +361,8 @@ autocmd WinLeave * setlocal nocursorline
 autocmd FileType netrw nnoremap q :q<CR>
 autocmd FileType netrw nnoremap <C-j> :
 autocmd FileType netrw nmap <buffer> f <cr>
+
+autocmd BufRead,BufNewFile *.pde set filetype=processing
 
 " http://paranoid.dip.jp/kaworu/2008-06-07-1.html
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen

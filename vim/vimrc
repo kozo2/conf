@@ -5,7 +5,7 @@
 set nocompatible
 
 set runtimepath&
-set runtimepath+=~/projects/dotfiles/vim/runtime,~/projects/dotfiles/vim/runtime/after
+set runtimepath+=~/projects/vim-autocomplpop,~/projects/vim-fuzzyfinder,~/projects/dotfiles/vim/runtime,~/projects/dotfiles/vim/runtime/after
 
 filetype plugin indent on
 

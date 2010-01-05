@@ -359,7 +359,7 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
 autocmd FileType netrw nnoremap q :q<CR>
-autocmd FileType netrw nnoremap <C-j> :
+autocmd FileType netrw nnoremap <C-m> :
 autocmd FileType netrw nmap <buffer> f <cr>
 
 autocmd BufRead,BufNewFile *.pde set filetype=processing

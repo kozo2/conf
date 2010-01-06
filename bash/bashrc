@@ -12,7 +12,7 @@ alias gps='git push'
 alias gpl='git pull'
 alias gdf='git diff'
 
-alias scm='svn commit -m'
+alias sci='svn commit -m'
 alias sst='svn status'
 alias sdf='svn diff'
 

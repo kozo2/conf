@@ -259,7 +259,6 @@ noremap! <C-d> <Del>
 
 " quick EX command for my key arrangement
 noremap - :
-noremap : -
 
 " swap lines down-upward and display lines down-upward
 noremap j gj
@@ -359,7 +358,6 @@ autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
 autocmd FileType netrw nnoremap q :q<CR>
-autocmd FileType netrw nnoremap <C-m> :
 autocmd FileType netrw nmap <buffer> f <cr>
 
 autocmd BufRead,BufNewFile *.pde set filetype=processing

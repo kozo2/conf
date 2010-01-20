@@ -3,6 +3,7 @@ echo "Loading zshrc"
 
 ### environment variables
 export EDITOR=vim
+export PAGER=less
 
 # maven
 export M2_HOME=$HOME/apps/apache-maven

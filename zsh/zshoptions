@@ -6,14 +6,14 @@
 
 echo "Loading $HOME/.zsh/zshoptions"
 
-# Treat the `#', `~' and `^' characters as part of patterns for filename generation, etc. (An initial unquoted `~' always produces named directory expansion.)
-setopt extended_glob
+# Use additional pattern matching features.
+setopt extendedglob
 
-# If this is set, zsh sessions will append their history list to the history file, rather than overwrite it. Thus, multiple parallel zsh sessions will all have their history lists added to the history file, in the order they are killed.
-setopt append_history
+# Append new history lines instead of overwriting.
+setopt appendhistory
 
-# If a command is issued that can't be executed as a normal command, and the command is the name of a directory, perform the cd command to that directory.
-setopt auto_cd
+# Change directory given just path.
+setopt autocd
 
 # Automatically list choices on an ambiguous completion.
 setopt auto_list
@@ -37,7 +37,7 @@ setopt auto_pushd
 # Treat single word simple commands without redirection as candidates for resumption of an existing job.
 setopt auto_resume
 
-# no Beep on error in ZLE.
+# no Beep on errors.
 setopt NO_beep
 
 # X{ab} expands to Xa Xb
@@ -128,10 +128,10 @@ setopt mark_dirs
 # Perform implicit tees or cats when multiple redirections are attempted
 setopt multios
 
-# If a pattern for filename generation has no matches, print an error, instead of leaving it unchanged in the argument list. This also applies to file expansion of an initial `~' or `='.
+# Unmatched patterns cause an error.
 setopt nomatch
 
-# Report the status of background jobs immediately, rather than waiting until just before printing a prompt.
+# Immediately report changes in background job status.
 setopt notify
 
 # If numeric filenames are matched by a filename generation pattern, sort the filenames numerically rather than lexicographically.

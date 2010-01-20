@@ -9,13 +9,11 @@ alias gps='git push'
 alias gpl='git pull'
 alias gdf='git diff'
 
-alias scm='svn commit -m'
+alias sci='svn commit -m'
 alias sst='svn status'
 alias sdf='svn diff'
+alias sad='svn add'
 
-alias mv='nocorrect mv'
-alias cp='nocorrect cp'
-alias mkdir='nocorrect mkdir'
 alias h=history
 alias grep=egrep
 alias ll='ls -l'
@@ -35,7 +33,14 @@ alias du='du -ackh'
 alias diff='diff -NBaur'
 alias scp='scp -p'
 
-alias lca='ls --color=auto -la'
+os_type=`uname`
+if [ "$os_type" = "Linux" ]; then
+    alias lcol='ls --color=auto -la'
+elif [ "$os_type" = "FreeBSD" ]; then
+    alias lcol='ls -laG'
+elif [ "$os_type" = "Darwin" ]; then
+    alias lcol='ls -laG'
+fi
 
 # show the directories or symbolic link of directories
 alias lsd='ls -ld *(-/DN)'

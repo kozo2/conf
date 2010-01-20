@@ -2,28 +2,19 @@
 
 echo "Loading $HOME/.zsh/aliases"
 
-alias gad='git add'
-alias gst='git status'
-alias gci='git commit -m'
-alias gps='git push'
-alias gpl='git pull'
-alias gdf='git diff'
-
-alias sci='svn commit -m'
-alias sst='svn status'
-alias sdf='svn diff'
-alias sad='svn add'
-
-alias h=history
-alias grep=egrep
-alias ll='ls -l'
-alias la='ls -a'
+# some useful aliases
+alias h='fc -l'
+#alias h=history
+alias j='jobs -l'
+alias m=$PAGER
+#alias l=less
+alias ll='ls -laFo'
+alias l='ls -l'
+alias g='egrep -i'
 
 # http://blog.bulknews.net/mt/archives/DECON.pdf
 alias e='emacs -nw'
 alias v=vim
-alias l=less
-alias j='jobs -l'
 alias x=exit
 alias where='command -v'
 alias su='su -l'
@@ -59,3 +50,16 @@ alias -g GI='|grep -i'
 dl (){
   command mv $* ~/.Trash/
 }
+
+# vcs alias
+alias gad='git add'
+alias gst='git status'
+alias gci='git commit -m'
+alias gps='git push'
+alias gpl='git pull'
+alias gdf='git diff'
+
+alias sci='svn commit -m'
+alias sst='svn status'
+alias sdf='svn diff'
+alias sad='svn add'

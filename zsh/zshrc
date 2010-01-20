@@ -31,13 +31,14 @@ elif [ "$os_type" = "Darwin" ]; then
 fi
 
 ### shell variables
-HISTFILE=$HOME/.zsh_history
+HISTFILE=$HOME/.histfile
 HISTSIZE=1024
+SAVEHIST=1024
+
 # http://journal.mycom.co.jp/column/zsh/002/index.html
 PROMPT="[%n@%m]%~%# "
-SAVEHIST=2048
 
-### key bindings
+# Emacs keymap
 bindkey -e
 
 # historical backward/forward search with linehead string binded to ^P/^N
@@ -71,4 +72,4 @@ if [ $SHLVL = 1 ]; then
   tmux attach-session || tmux -f $HOME/projects/dotfiles/tmux/.tmux.conf
 fi
 
-function chpwd() { lca }
+function chpwd() { lcol }

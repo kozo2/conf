@@ -2,30 +2,19 @@
 
 echo "Loading $HOME/.zsh/aliases"
 
-alias gad='git add'
-alias gst='git status'
-alias gci='git commit -m'
-alias gps='git push'
-alias gpl='git pull'
-alias gdf='git diff'
-
-alias scm='svn commit -m'
-alias sst='svn status'
-alias sdf='svn diff'
-
-alias mv='nocorrect mv'
-alias cp='nocorrect cp'
-alias mkdir='nocorrect mkdir'
-alias h=history
-alias grep=egrep
-alias ll='ls -l'
-alias la='ls -a'
+# some useful aliases
+alias h='fc -l'
+#alias h=history
+alias j='jobs -l'
+alias m=$PAGER
+#alias l=less
+alias ll='ls -laFo'
+alias l='ls -l'
+alias g='egrep -i'
 
 # http://blog.bulknews.net/mt/archives/DECON.pdf
 alias e='emacs -nw'
 alias v=vim
-alias l=less
-alias j='jobs -l'
 alias x=exit
 alias where='command -v'
 alias su='su -l'
@@ -35,7 +24,14 @@ alias du='du -ackh'
 alias diff='diff -NBaur'
 alias scp='scp -p'
 
-alias lca='ls --color=auto -la'
+os_type=`uname`
+if [ "$os_type" = "Linux" ]; then
+    alias lcol='ls --color=auto -la'
+elif [ "$os_type" = "FreeBSD" ]; then
+    alias lcol='ls -laG'
+elif [ "$os_type" = "Darwin" ]; then
+    alias lcol='ls -laG'
+fi
 
 # show the directories or symbolic link of directories
 alias lsd='ls -ld *(-/DN)'
@@ -54,3 +50,16 @@ alias -g GI='|grep -i'
 dl (){
   command mv $* ~/.Trash/
 }
+
+# vcs alias
+alias gad='git add'
+alias gst='git status'
+alias gci='git commit -m'
+alias gps='git push'
+alias gpl='git pull'
+alias gdf='git diff'
+
+alias sci='svn commit -m'
+alias sst='svn status'
+alias sdf='svn diff'
+alias sad='svn add'

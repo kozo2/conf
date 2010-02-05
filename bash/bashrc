@@ -6,9 +6,9 @@ function share_history {
 	    history -c
 	    history -r
 	}
-PROMPT_COMMAND = 'share_history'
+PROMPT_COMMAND='share_history'
 shopt -u histappend
-export HISTSIZE = 8192
+export HISTSIZE=8192
 
 shopt -s autocd
 shopt -s cdspell

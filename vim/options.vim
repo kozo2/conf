@@ -41,7 +41,7 @@ set viminfo='20,\"50,:20,%,n~/.viminfo
 
 """ display
 
-set background=dark
+set background=light
 
 " http://omake.accense.com/wiki/vimrc
 set fileencodings=utf-8,cp932,euc-jp

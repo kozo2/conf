@@ -9,6 +9,10 @@ export PAGER=less
 export M2_HOME=$HOME/apps/apache-maven
 export M2=$M2_HOME/bin
 
+# ant
+export ANT_HOME=$HOME/apps/apache-ant
+export ANT=$ANT_HOME/bin
+
 # pax-construct
 export PAX_CONSTRUCT_HOME=$HOME/apps/pax-construct
 export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
@@ -16,9 +20,9 @@ export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
 # OS dependent variables (Java, Macports, ...)
 os_type=`uname`
 if [ "$os_type" = "Linux" ]; then
-    export JAVA_HOME=/usr/lib/jvm/java-6-sun-1.6.0.15
+    export JAVA_HOME=/usr/lib/jvm/java-6-sun
     export JAVA=$JAVA_HOME/bin
-    export PATH=$M2:$PAX_CONSTRUCT:$JAVA:$PATH
+    export PATH=$ANT:$M2:$PAX_CONSTRUCT:$JAVA:$PATH
 elif [ "$os_type" = "Darwin" ]; then
     export JAVA_HOME=/Library/Java/Home
     export JAVA=$JAVA_HOME/bin

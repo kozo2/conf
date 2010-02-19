@@ -13,6 +13,9 @@ export M2=$M2_HOME/bin
 export ANT_HOME=$HOME/apps/ant
 export ANT=$ANT_HOME/bin
 
+# eclipse
+export ECLIPSE=$HOME/apps/eclipse
+
 # pax-construct
 export PAX_CONSTRUCT_HOME=$HOME/apps/pax-construct
 export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
@@ -22,7 +25,7 @@ os_type=`uname`
 if [ "$os_type" = "Linux" ]; then
     export JAVA_HOME=/usr/lib/jvm/java-6-sun
     export JAVA=$JAVA_HOME/bin
-    export PATH=$ANT:$M2:$PAX_CONSTRUCT:$JAVA:$PATH
+    export PATH=$ECLIPSE:$ANT:$M2:$PAX_CONSTRUCT:$JAVA:$PATH
 elif [ "$os_type" = "Darwin" ]; then
     export JAVA_HOME=/Library/Java/Home
     export JAVA=$JAVA_HOME/bin

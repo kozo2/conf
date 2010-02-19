@@ -29,7 +29,7 @@
 ;;   (load "init-skk")
   )
  ((string-match "linux" system-configuration)
-  (load "init-locale")
+  (load "init-gui")
   )
  ((string-match "mingw" system-configuration)
   (load "init-gui")

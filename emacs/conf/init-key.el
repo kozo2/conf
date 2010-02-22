@@ -34,3 +34,5 @@
 (global-set-key "\M-[" 'highlight-changes-previous-change)
 (global-set-key "\M-]" 'highlight-changes-next-change)
 
+(global-set-key "\C-w" ctl-x-map)
+;global-set-key "\C-x" 'kill-region)

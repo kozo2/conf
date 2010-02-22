@@ -2,5 +2,5 @@
 (scroll-bar-mode nil)
 
 ;; http://www.nongnu.org/color-theme/
-(require 'color-theme)
-(color-theme-clarity)
+;(require 'color-theme)
+;(color-theme-clarity)

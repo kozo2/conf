@@ -30,6 +30,7 @@
   )
  ((string-match "linux" system-configuration)
   (load "init-gui")
+  (load "init-anthy")
   )
  ((string-match "mingw" system-configuration)
   (load "init-gui")

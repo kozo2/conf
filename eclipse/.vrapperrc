@@ -1,0 +1,8 @@
+noremap <Space>j <C-f>
+noremap <Space>k <C-b>
+
+eclipseaction lineStart org.eclipse.ui.edit.text.goto.lineStart
+eclipseaction lineEnd   org.eclipse.ui.edit.text.goto.lineEnd
+inoremap <C-a> <ESC>:lineStart<C-m>i
+inoremap <C-e> <ESC>:lineEnd<C-m>a
+inoremap <C-l> <ESC>

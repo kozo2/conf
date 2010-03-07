@@ -1,6 +1,5 @@
 (require 'dired-x)
 (require 'wdired)
-(require 'psvn)
 
 (setq dired-recursive-copies 'always)
 (setq dired-recursive-deletes 'always)
@@ -11,7 +10,7 @@
 (add-hook 'dired-mode-hook
           (function
            (lambda ()
-             (local-set-key "s" 'svn-status)
+             (local-set-key "s" 'vc-dir)
              (local-set-key "-" 'dired-up-directory)
              (local-set-key "j" 'dired-next-line)
              (local-set-key "k" 'dired-previous-line)

@@ -11,7 +11,7 @@
 
 ;; http://d.hatena.ne.jp/rubikitch/20080117
 ;(global-set-key "\C-j" 'anything)
-(global-set-key (kbd "C-x b") 'anything)
+(global-set-key (kbd "C-x C-b") 'anything)
 
 (global-set-key "\C-cp" 'replace-string)
 (global-set-key "\C-cr" 'comment-region)

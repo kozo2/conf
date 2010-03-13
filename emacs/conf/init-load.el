@@ -35,7 +35,7 @@
   (load "init-gui")
   (load "init-anthy")
   )
- ((string-match "mingw" system-configuration)
+ ((string-match "i386-msvc-nt5.1.2600" system-configuration)
   (load "init-gui")
   (load "init-windows")
   )

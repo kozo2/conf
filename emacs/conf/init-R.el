@@ -1,5 +1,5 @@
 ;; http://ess.r-project.org/Manual/readme.html#Installation
-(load "~/.emacs.d/elisp/ess-5.7.1/lisp/ess-site")
+(load "~/.emacs.d/elisp/ess/lisp/ess-site")
 
 (add-hook 'inferior-ess-mode-hook
           (function

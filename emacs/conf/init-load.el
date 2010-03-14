@@ -14,7 +14,7 @@
 ;(load "init-history")
 (load "init-key")
 ;(load "init-lang")
-;(load "init-misc")
+(load "init-misc")
 ;(load "init-register")
 (load "init-save")
 ;(load "init-search")

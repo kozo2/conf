@@ -1,6 +1,6 @@
 # http://devel.aquahill.net/zsh/aliases
 
-echo "Loading $HOME/.zsh/aliases"
+echo "Loading zshaliases"
 
 # some useful aliases
 alias h='fc -l'

@@ -4,7 +4,7 @@
 # http://www.bash2zsh.com/zsh_refcard/refcard.pdf
 # http://zsh.sourceforge.net/Doc/Release/zsh_27.html
 
-echo "Loading $HOME/.zsh/zshoptions"
+echo "Loading zshoptions"
 
 # Use additional pattern matching features.
 setopt extendedglob

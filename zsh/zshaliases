@@ -7,14 +7,8 @@ alias h='fc -l'
 #alias h=history
 alias j='jobs -l'
 alias m=$PAGER
-#alias l=less
-alias ll='ls -laFo'
-alias l='ls -l'
 alias g='egrep -i'
 
-# http://blog.bulknews.net/mt/archives/DECON.pdf
-alias e='emacs -nw'
-alias v=vim
 alias x=exit
 alias where='command -v'
 alias su='su -l'
@@ -26,11 +20,14 @@ alias scp='scp -p'
 
 os_type=`uname`
 if [ "$os_type" = "Linux" ]; then
-    alias lcol='ls --color=auto -la'
+    alias l='ls --color=auto -la'
+    alias v=vim
 elif [ "$os_type" = "FreeBSD" ]; then
-    alias lcol='ls -laG'
+    alias l='ls -laG'
+    alias e='emacs -nw'
+    alias v=vim
 elif [ "$os_type" = "Darwin" ]; then
-    alias lcol='ls -laG'
+    alias l='ls -laG'
 fi
 
 # show the directories or symbolic link of directories

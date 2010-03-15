@@ -91,4 +91,4 @@ if [ "$os_type" = "Linux" ]; then
     fi
 fi
 
-function chpwd() { lcol }
+function chpwd() { l }

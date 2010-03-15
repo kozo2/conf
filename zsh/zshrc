@@ -26,6 +26,7 @@ export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
 
 # OS dependent variables (Java, Macports, ...)
 os_type=`uname`
+
 if [ "$os_type" = "Linux" ]; then
     export JAVA_HOME=/usr/lib/jvm/java-6-sun
     export JAVA=$JAVA_HOME/bin
@@ -80,9 +81,14 @@ compinit
 autoload predict-on
 predict-on
 
-# http://d.hatena.ne.jp/ns9tks/20091016/1255691027
-if [ $SHLVL = 1 ]; then
-  tmux attach-session || tmux -f $HOME/projects/dotfiles/tmux/.tmux.conf
+#
+# tmux
+#
+if [ "$os_type" = "Linux" ]; then
+    # http://d.hatena.ne.jp/ns9tks/20091016/1255691027
+    if [ $SHLVL = 1 ]; then
+      tmux attach-session || tmux -f $HOME/projects/dotfiles/tmux/.tmux.conf
+    fi
 fi
 
 function chpwd() { lcol }

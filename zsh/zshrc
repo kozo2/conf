@@ -40,6 +40,7 @@ elif [ "$os_type" = "Darwin" ]; then
     export MACPORTS_SBIN=/opt/local/sbin
     export MACPORTS=$MACPORTS_BIN:$MACPORTS_SBIN
     export PATH=$M2:$PAX_CONSTRUCT:$JAVA:$SUBVERSION:$MACPORTS:$PATH
+    export MANPATH=/opt/local/man:$MANPATH
 fi
 
 ### shell variables

@@ -3,15 +3,15 @@
 set nocompatible
 
 set runtimepath&
-set runtimepath+=~/projects/vim-autocomplpop,~/projects/vim-fuzzyfinder,~/projects/snipmate.vim,~/projects/snipmate.vim/after,~/projects/dotfiles/vim/runtime,~/projects/dotfiles/vim/runtime/after
+set runtimepath+=~/projects/vim-autocomplpop,~/projects/vim-fuzzyfinder,~/projects/snipmate.vim,~/projects/snipmate.vim/after,~/projects/conf/vim/runtime,~/projects/conf/vim/runtime/after
 
 filetype plugin indent on
 syntax enable
 
-source ~/projects/dotfiles/vim/abbreviations.vim
-source ~/projects/dotfiles/vim/autocmds.vim
-source ~/projects/dotfiles/vim/customcommands.vim
-source ~/projects/dotfiles/vim/mappings.vim
-source ~/projects/dotfiles/vim/options.vim
-source ~/projects/dotfiles/vim/pluginsettings.vim
-source ~/projects/dotfiles/vim/utils.vim
+source ~/projects/conf/vim/abbreviations.vim
+source ~/projects/conf/vim/autocmds.vim
+source ~/projects/conf/vim/customcommands.vim
+source ~/projects/conf/vim/mappings.vim
+source ~/projects/conf/vim/options.vim
+source ~/projects/conf/vim/pluginsettings.vim
+source ~/projects/conf/vim/utils.vim

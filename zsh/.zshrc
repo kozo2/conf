@@ -68,8 +68,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # http://hatena.g.hatena.ne.jp/hatenatech/20060517/1147833430
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-source $HOME/projects/dotfiles/zsh/zshaliases
-source $HOME/projects/dotfiles/zsh/zshoptions
+source $HOME/projects/conf/zsh/zshaliases
+source $HOME/projects/conf/zsh/zshoptions
 
 #
 # Default shell configuration

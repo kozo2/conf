@@ -84,11 +84,11 @@ predict-on
 #
 # tmux
 #
-if [ "$os_type" = "Linux" ]; then
-    # http://d.hatena.ne.jp/ns9tks/20091016/1255691027
-    if [ $SHLVL = 1 ]; then
-      tmux attach-session || tmux -f $HOME/projects/dotfiles/tmux/.tmux.conf
-    fi
-fi
+#if [ "$os_type" = "Linux" ]; then
+#    # http://d.hatena.ne.jp/ns9tks/20091016/1255691027
+#    if [ $SHLVL = 1 ]; then
+#      tmux attach-session || tmux -f $HOME/projects/dotfiles/tmux/.tmux.conf
+#    fi
+#fi
 
 function chpwd() { l }

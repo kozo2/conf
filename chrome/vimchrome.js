@@ -65,3 +65,21 @@
 // @exclude https://mail.google.com/*
 // @execute CloseTab([])
 // ==/UserScript==
+
+// ==UserScript==
+// @ShortcutManager
+// @name Focus on the next input element
+// @namespace 3v28ZYKQkixa
+// @key Ctrl+i
+// @include *
+// @execute FocusNextElement([])
+// ==/UserScript==
+
+// ==UserScript==
+// @ShortcutManager
+// @name Upper directory
+// @namespace 3v28ZYKQkixa
+// @key Shift+u
+// @include *
+// @execute UpperDirectory([])
+// ==/UserScript==

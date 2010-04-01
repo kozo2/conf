@@ -1,7 +1,7 @@
 let mapleader=" "
 
 " shortcut to load vimrc
-nnoremap <Leader>. :<C-u>edit ~/projects/dotfiles/vim/vimrc<Enter>
+nnoremap <Leader>. :<C-u>edit ~/projects/dotfiles/vim/.vimrc<Enter>
 
 " edit file
 nnoremap <Leader>e :e<Space>

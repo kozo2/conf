@@ -7,7 +7,7 @@
     (unless (member epath load-path)
       (setq load-path (cons epath load-path)))))
 
-(my-load-path "~/projects/dotfiles/emacs/conf")
-(my-load-path "~/.emacs.d/elisp")
+(my-load-path "~/projects/conf/emacs/conf")
+(my-load-path "~/.emacs.d")
 
 (load "init-load")

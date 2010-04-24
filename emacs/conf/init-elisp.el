@@ -1,5 +1,4 @@
 (require 'install-elisp)
-(setq install-elisp-repository-directory "~/.emacs.d/elisp/")
 
 (add-hook 'emacs-lisp-mode-hook
           (function

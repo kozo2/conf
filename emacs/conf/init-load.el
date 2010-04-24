@@ -3,21 +3,15 @@
       (concat  "%b - emacs@" system-name))
 
 (load "init-anything")
-;(load "init-buffer")
 (load "init-completion")
-;(load "init-develock")
 (load "init-dired")
 (load "init-elisp")
 (load "init-function")
 (load "init-highlight")
-;(load "init-history")
 (load "init-key")
-;(load "init-lang")
 (load "init-misc")
-;(load "init-register")
 (load "init-save")
 (load "init-search")
-;(load "init-text")
 
 ;; http://www.hasta-pronto.org/archives/2007/01/08-0259.php
 (cond

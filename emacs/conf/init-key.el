@@ -9,8 +9,7 @@
 (setq imenu-always-use-completion-buffer-p 'never)
 (global-set-key "\C-xp" (lambda () (interactive) (other-window -1)))
 
-;; http://d.hatena.ne.jp/rubikitch/20080117
-;(global-set-key "\C-j" 'anything)
+;; http://dev.ariel-networks.com/articles/emacs/part1/
 (global-set-key (kbd "C-x C-b") 'anything)
 
 (global-set-key "\C-cp" 'replace-string)

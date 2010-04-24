@@ -1,3 +1,4 @@
+;; http://dev.ariel-networks.com/articles/emacs/part2/
 (require 'anything)
 (require 'anything-config)
 (require 'anything-match-plugin)

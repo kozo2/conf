@@ -1,5 +1,5 @@
 # http://devel.aquahill.net/zsh/dot.zshrc
-echo "Loading zshrc"
+echo "Loading .zshrc"
 
 ### environment variables
 export EDITOR=vim
@@ -34,13 +34,11 @@ if [ "$os_type" = "Linux" ]; then
 elif [ "$os_type" = "Darwin" ]; then
     export JAVA_HOME=/Library/Java/Home
     export JAVA=$JAVA_HOME/bin
-    export SUBVERSION_HOME=/opt/subversion
-    export SUBVERSION=$SUBVERSION_HOME/bin
     # macports
     export MACPORTS_BIN=/opt/local/bin
     export MACPORTS_SBIN=/opt/local/sbin
     export MACPORTS=$MACPORTS_BIN:$MACPORTS_SBIN
-    export PATH=$M2:$PAX_CONSTRUCT:$JAVA:$SUBVERSION:$MACPORTS:$PATH
+    export PATH=$M2:$PAX_CONSTRUCT:$JAVA:$MACPORTS:$PATH
     export MANPATH=/opt/local/man:$MANPATH
 fi
 
@@ -84,11 +82,11 @@ predict-on
 #
 # tmux
 #
-#if [ "$os_type" = "Linux" ]; then
-#    # http://d.hatena.ne.jp/ns9tks/20091016/1255691027
-#    if [ $SHLVL = 1 ]; then
-#      tmux attach-session || tmux -f $HOME/projects/dotfiles/tmux/.tmux.conf
-#    fi
-#fi
+if [ "$os_type" = "FreeBSD" ]; then
+    # http://d.hatena.ne.jp/ns9tks/20091016/1255691027
+    if [ $SHLVL = 1 ]; then
+      tmux attach-session || tmux -f $HOME/projects/conf/tmux/.tmux.conf
+    fi
+fi
 
 function chpwd() { l }

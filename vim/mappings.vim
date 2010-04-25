@@ -110,7 +110,8 @@ noremap! <C-d> <Del>
 "inoremap ) 9
 
 " quick EX command for my key arrangement
-noremap - :
+noremap ; :
+noremap : ;
 
 " swap lines down-upward and display lines down-upward
 noremap j gj

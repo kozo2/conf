@@ -9,10 +9,10 @@
 !keycode 17 = parenleft 8
 !keycode 18 = parenright 9
 !keycode 19 = asciitilde 0
-keycode 20 = semicolon plus
+keycode 20 = colon asterisk
 keycode 34 = bracketleft braceleft
 keycode 35 = bracketright braceright
-keycode 47 = minus equal
+keycode 48 = minus equal
 keycode 51 = at grave
 keycode 100 = space
 
@@ -27,8 +27,8 @@ keysym Hiragana_Katakana = Alt_R
 
 ! normal keyboard
 remove Lock = Eisu_toggle
-keysym Eisu_toggle = Alt_L
-add mod1 = Alt_L
+keysym Eisu_toggle = Super_L
+!add mod1 = Alt_L
 
 keycode 49 = Escape
 

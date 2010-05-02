@@ -1,3 +1,5 @@
 [user]
-	name = Kozo Nishida
+	name = Kozo NISHIDA
 	email = kozo-ni@is.naist.jp
+[color]
+        ui = auto

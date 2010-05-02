@@ -1,17 +1,21 @@
+
 " Colors
 hi StatusLine           color: black; background: LightGray; font-weight: normal; font-size: 12pt;
 hi Normal               color: black; background: white;     font-size: 14pt;
 hi CompItem[selected]   color: black; background: Gold;
 hi CompDesc             color: black; width: 50%;
 
-
-
 " Mappings
+
+noremap ; :
+noremap : ;
 
 qmark m https://mail.google.com/mail
 qmark r http://www.google.com/reader
 qmark t http://twitter.com
 qmark y http://www.youtube.com
+qmark e https://www.evernote.com/Login.action
+qmark d https://docs.google.com
 
 let mapleader=","
 
@@ -28,6 +32,7 @@ inoremap <C-h> <BS>
 cnoremap <C-h> <BS>
 
 cnoremap <C-l> <Esc>
+
 inoremap <C-i> <Tab>
 cnoremap <C-i> <Tab>
 
@@ -53,20 +58,15 @@ nnoremap k 3<C-y>
 nnoremap h :tp<CR>
 nnoremap l :tn<CR>
 
-nnoremap <C-r> :restart<CR>
-
-nnoremap <C-j> :
-
 " for SKK
 "cnoremap <C-j> <Nop>
-
-
 
 " Options
 
 " about:config
 set! dom.disable_window_move_resize=true
 set! browser.fullscreen.autohide=false
+set! ui.key.contentAccess=0
 
 " left-hand mouse case
 set guioptions=lb
@@ -109,6 +109,6 @@ noremap <silent> S :exe ":google "+content.getSelection()<CR>
 command alc -nargs=* tabopen http://eow.alc.co.jp/<args>
 noremap <silent> A :exe ":alc "+content.getSelection()<CR>
 
-echo "vimperatorrc sourced"
+echo "conf/vimperator/.vimperatorrc sourced"
 
 " vim: set ft=vimperator:

@@ -10,10 +10,7 @@ autocmd FileType text setlocal textwidth=78
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
-autocmd FileType netrw nnoremap q :q<CR>
 autocmd FileType netrw nmap <buffer> f <cr>
-
-"autocmd BufRead,BufNewFile *.pde set filetype=processing
 
 " http://paranoid.dip.jp/kaworu/2008-06-07-1.html
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen

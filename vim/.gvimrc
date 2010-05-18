@@ -4,4 +4,5 @@ if has('mac')
 else
   set guifont=DejaVu\ Sans\ Mono\ 12
   set guifontwide=VL\ ゴシック\ 12
+  set guioptions-=T
 endif

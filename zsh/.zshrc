@@ -21,17 +21,17 @@ export JRUBY_HOME=$HOME/apps/jruby
 export JRUBY=$JRUBY_HOME/bin
 
 # pax-construct
-export PAX_CONSTRUCT_HOME=$HOME/apps/pax-construct
-export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
+#export PAX_CONSTRUCT_HOME=$HOME/apps/pax-construct
+#export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
 
 # OS dependent variables (Java, Macports, ...)
 os_type=`uname`
 
 if [ "$os_type" = "Linux" ]; then
-    export JAVA_HOME=/usr/lib/jvm/java-6-sun
+    export JAVA_HOME=$HOME/apps/jdk
     export JAVA=$JAVA_HOME/bin
     export APPENGINE=$HOME/apps/google_appengine
-    export PATH=$APPENGINE:$JRUBY:$ECLIPSE:$ANT:$M2:$PAX_CONSTRUCT:$JAVA:$PATH
+    export PATH=$APPENGINE:$JRUBY:$ECLIPSE:$ANT:$M2:$JAVA:$PATH
 elif [ "$os_type" = "Darwin" ]; then
     export JAVA_HOME=/Library/Java/Home
     export JAVA=$JAVA_HOME/bin

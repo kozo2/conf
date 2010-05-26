@@ -20,6 +20,10 @@ export ECLIPSE=$HOME/apps/eclipse
 export JRUBY_HOME=$HOME/apps/jruby
 export JRUBY=$JRUBY_HOME/bin
 
+# mendeley
+export MENDELEY_HOME=$HOME/apps/mendeley
+export MENDELEY=$MENDELEY_HOME/bin
+
 # pax-construct
 #export PAX_CONSTRUCT_HOME=$HOME/apps/pax-construct
 #export PAX_CONSTRUCT=$PAX_CONSTRUCT_HOME/bin
@@ -31,7 +35,7 @@ if [ "$os_type" = "Linux" ]; then
     export JAVA_HOME=$HOME/apps/jdk
     export JAVA=$JAVA_HOME/bin
     export APPENGINE=$HOME/apps/google_appengine
-    export PATH=$APPENGINE:$JRUBY:$ECLIPSE:$ANT:$M2:$JAVA:$PATH
+    export PATH=$MENDELEY:$APPENGINE:$JRUBY:$ECLIPSE:$ANT:$M2:$JAVA:$PATH
 elif [ "$os_type" = "Darwin" ]; then
     export JAVA_HOME=/Library/Java/Home
     export JAVA=$JAVA_HOME/bin

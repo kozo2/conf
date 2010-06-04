@@ -27,7 +27,7 @@ keysym Hiragana_Katakana = Alt_R
 
 ! normal keyboard
 remove Lock = Eisu_toggle
-keysym Eisu_toggle = Super_L
+keysym Eisu_toggle = Return
 !add mod1 = Alt_L
 
 keycode 49 = Escape

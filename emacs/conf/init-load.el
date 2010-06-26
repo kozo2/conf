@@ -23,9 +23,9 @@
  ((string-match "amd64-portbld-freebsd8.0" system-configuration)
   (load "init-misc")
   )
- ((string-match "linux" system-configuration)
+ ((string-match "x86_64-pc-linux-gnu" system-configuration)
   (load "init-gui")
-  (load "init-anthy")
+  (load "init-ruby")
   )
  ((string-match "i386-msvc-nt5.1.2600" system-configuration)
   ;; http://ess.r-project.org/Manual/readme.html#Installation

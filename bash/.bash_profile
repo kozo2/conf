@@ -1,1 +1,1 @@
-source ~/projects/dotfiles/bash/bashrc
+source ~/projects/conf/bash/bashrc

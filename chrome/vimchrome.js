@@ -5,6 +5,10 @@
 // @key j
 // @include *
 // @exclude https://mail.google.com/*
+// @exclude https://docs.google.com/*
+// @exclude https://www.google.com/calendar/*
+// @exclude http://d.hatena.ne.jp/kozo2/*
+// @exclude http://www.evernote.com/*
 // @execute ScrollDown(["64"])
 // ==/UserScript==
 
@@ -15,25 +19,11 @@
 // @key k
 // @include *
 // @exclude https://mail.google.com/*
+// @exclude https://docs.google.com/*
+// @exclude https://www.google.com/calendar/*
+// @exclude http://d.hatena.ne.jp/kozo2/*
+// @exclude http://www.evernote.com/*
 // @execute ScrollUp(["64"])
-// ==/UserScript==
-
-// ==UserScript==
-// @ShortcutManager
-// @name Select the left tab
-// @namespace 3v28ZYKQkixa
-// @key h
-// @include *
-// @execute SelectLeftTab([])
-// ==/UserScript==
-
-// ==UserScript==
-// @ShortcutManager
-// @name Select the right tab
-// @namespace 3v28ZYKQkixa
-// @key l
-// @include *
-// @execute SelectRightTab([])
 // ==/UserScript==
 
 // ==UserScript==
@@ -43,6 +33,10 @@
 // @key Shift+h
 // @include *
 // @exclude https://mail.google.com/*
+// @exclude https://docs.google.com/*
+// @exclude https://www.google.com/calendar/*
+// @exclude http://d.hatena.ne.jp/kozo2/*
+// @exclude http://www.evernote.com/*
 // @execute Back([])
 // ==/UserScript==
 
@@ -53,6 +47,10 @@
 // @key Shift+l
 // @include *
 // @exclude https://mail.google.com/*
+// @exclude https://docs.google.com/*
+// @exclude https://www.google.com/calendar/*
+// @exclude http://d.hatena.ne.jp/kozo2/*
+// @exclude http://www.evernote.com/*
 // @execute Forward([])
 // ==/UserScript==
 
@@ -63,6 +61,10 @@
 // @key d
 // @include *
 // @exclude https://mail.google.com/*
+// @exclude https://docs.google.com/*
+// @exclude https://www.google.com/calendar/*
+// @exclude http://d.hatena.ne.jp/kozo2/*
+// @exclude http://www.evernote.com/*
 // @execute CloseTab([])
 // ==/UserScript==
 
@@ -81,5 +83,10 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+u
 // @include *
+// @exclude https://mail.google.com/*
+// @exclude https://docs.google.com/*
+// @exclude https://www.google.com/calendar/*
+// @exclude http://d.hatena.ne.jp/kozo2/*
+// @exclude http://www.evernote.com/*
 // @execute UpperDirectory([])
 // ==/UserScript==

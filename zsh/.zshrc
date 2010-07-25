@@ -13,16 +13,9 @@ export M2=$M2_HOME/bin
 export ANT_HOME=$HOME/apps/ant
 export ANT=$ANT_HOME/bin
 
-# eclipse
-export ECLIPSE=$HOME/apps/eclipse
-
 # jruby
 export JRUBY_HOME=$HOME/apps/jruby
 export JRUBY=$JRUBY_HOME/bin
-
-# mendeley
-export MENDELEY_HOME=$HOME/apps/mendeley
-export MENDELEY=$MENDELEY_HOME/bin
 
 # pax-construct
 #export PAX_CONSTRUCT_HOME=$HOME/apps/pax-construct
@@ -36,15 +29,13 @@ if [ "$os_type" = "Linux" ]; then
     export JAVA=$JAVA_HOME/bin
     export APPENGINE=$HOME/apps/google_appengine
     export PATH=$MENDELEY:$APPENGINE:$JRUBY:$ECLIPSE:$ANT:$M2:$JAVA:$PATH
+    export ECLIPSE=$HOME/apps/eclipse
+    export MENDELEY_HOME=$HOME/apps/mendeley
+    export MENDELEY=$MENDELEY_HOME/bin
 elif [ "$os_type" = "Darwin" ]; then
-    export JAVA_HOME=/Library/Java/Home
-    export JAVA=$JAVA_HOME/bin
-    # macports
-    export MACPORTS_BIN=/opt/local/bin
-    export MACPORTS_SBIN=/opt/local/sbin
-    export MACPORTS=$MACPORTS_BIN:$MACPORTS_SBIN
-    export PATH=$M2:$PAX_CONSTRUCT:$JAVA:$MACPORTS:$PATH
-    export MANPATH=/opt/local/man:$MANPATH
+    #export JAVA_HOME=/Library/Java/Home
+    #export JAVA=$JAVA_HOME/bin
+    export PATH=$M2:$PAX_CONSTRUCT:$PATH
 fi
 
 ### shell variables

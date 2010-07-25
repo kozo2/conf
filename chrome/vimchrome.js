@@ -1,6 +1,6 @@
 // ==UserScript==
 // @ShortcutManager
-// @name Scroll down by 64 pixels
+// @name Scroll down by 128 pixels
 // @namespace 3v28ZYKQkixa
 // @key j
 // @include *
@@ -9,12 +9,12 @@
 // @exclude https://www.google.com/calendar/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
-// @execute ScrollDown(["64"])
+// @execute ScrollDown(["128"])
 // ==/UserScript==
 
 // ==UserScript==
 // @ShortcutManager
-// @name Scroll up by 64 pixels
+// @name Scroll up by 128 pixels
 // @namespace 3v28ZYKQkixa
 // @key k
 // @include *
@@ -23,7 +23,7 @@
 // @exclude https://www.google.com/calendar/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
-// @execute ScrollUp(["64"])
+// @execute ScrollUp(["128"])
 // ==/UserScript==
 
 // ==UserScript==

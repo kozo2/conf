@@ -27,7 +27,7 @@ elif [ "$os_type" = "FreeBSD" ]; then
     alias e='emacs -nw'
     alias v=vim
 elif [ "$os_type" = "Darwin" ]; then
-    alias l='ls -laG'
+    alias l='ls -lahG'
 fi
 
 # show the directories or symbolic link of directories

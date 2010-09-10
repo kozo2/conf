@@ -1,6 +1,3 @@
-;; default to better frame titles
-(setq frame-title-format
-      (concat  "%b - emacs@" system-name))
 
 (load "init-anything")
 (load "init-completion")
@@ -27,9 +24,8 @@
   (load "init-gui")
   (load "init-ruby")
   )
- ((string-match "i386-msvc-nt5.1.2600" system-configuration)
+ ((string-match "i386-mingw-nt6.1.7600" system-configuration)
   ;; http://ess.r-project.org/Manual/readme.html#Installation
-  (load "~/.emacs.d/elisp/ess/lisp/ess-site")
   (load "init-gui")
   (load "init-windows")
   )

@@ -10,7 +10,7 @@
 (global-set-key "\C-xp" (lambda () (interactive) (other-window -1)))
 
 ;; http://dev.ariel-networks.com/articles/emacs/part1/
-(global-set-key (kbd "C-x C-b") 'anything)
+;(global-set-key (kbd "C-x C-b") 'anything)
 
 (global-set-key "\C-cp" 'replace-string)
 (global-set-key "\C-cr" 'comment-region)
@@ -34,4 +34,5 @@
 (global-set-key "\M-]" 'highlight-changes-next-change)
 
 (global-set-key "\C-w" ctl-x-map)
-(global-set-key "\C-wj" 'kill-region)
+;(global-set-key "\C-wj" 'kill-region)
+(global-set-key "\C-wj" 'tcode-mode)

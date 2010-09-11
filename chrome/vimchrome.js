@@ -7,6 +7,7 @@
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
+// @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
 // @execute ScrollDown(["128"])
@@ -21,6 +22,7 @@
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
+// @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
 // @execute ScrollUp(["128"])

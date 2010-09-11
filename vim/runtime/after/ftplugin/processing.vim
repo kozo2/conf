@@ -1,1 +1,0 @@
-inoremap <expr> = smartchr#loop(' = ', ' == ', '=')

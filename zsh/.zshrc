@@ -2,8 +2,11 @@
 echo "Loading .zshrc"
 
 ### environment variables
-export EDITOR=vim
-export PAGER=less
+#export EDITOR=vim
+#export PAGER=less
+
+# PYTHONPATH
+#export PYTHONPATH=/Library/Python/2.6/site-packages:/usr/local/bin
 
 # maven
 export M2_HOME=$HOME/apps/maven
@@ -35,7 +38,18 @@ if [ "$os_type" = "Linux" ]; then
 elif [ "$os_type" = "Darwin" ]; then
     #export JAVA_HOME=/Library/Java/Home
     #export JAVA=$JAVA_HOME/bin
-    export PATH=$M2:$PAX_CONSTRUCT:$PATH
+    # in case of Gentoo Prefix
+    export EPREFIX="$HOME/Gentoo"
+    export PATH=$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:$ANT:$M2:$PATH
+    if [ -f startprefix ]; then
+      sh startprefix
+    fi
+    # in case of MacPorts
+    #export MACPORTS_PREFIX=/opt/local
+    #export MACPORTS_BIN=$MACPORTS_PREFIX/bin
+    #export MACPORTS_SBIN=$MACPORTS_PREFIX/sbin
+    #export MACPORTS_MAN=$MACPORTS_PREFIX/share/man
+    #export PATH=$MACPORTS_BIN:$MACPORTS_SBIN:$MACPORTS_MAN:$ANT:$M2:$PATH
 fi
 
 ### shell variables
@@ -78,7 +92,7 @@ predict-on
 #
 # tmux
 #
-if [ "$os_type" = "FreeBSD" ]; then
+if [ "$os_type" = "Linux" ]; then
     # http://d.hatena.ne.jp/ns9tks/20091016/1255691027
     if [ $SHLVL = 1 ]; then
       tmux attach-session || tmux -f $HOME/projects/conf/tmux/.tmux.conf

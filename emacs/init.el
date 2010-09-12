@@ -3,7 +3,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/projects/conf/emacs/conf/")
-(add-to-list 'load-path "~/projects/emacswikipages/" t)
+(add-to-list 'load-path "~/projects/emacswiki.org/" t)
 
 (require 'auto-install)
 (require 'anything-startup)

@@ -16,7 +16,8 @@ set formatoptions+=mM
 
 set history=128
 
-set completeopt=menu,longest,preview
+"set completeopt=menu,longest,preview
+set completeopt=menu,preview,longest
 
 " Use menu to show command-line completion (in 'full' case)
 set wildmenu

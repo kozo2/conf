@@ -25,7 +25,6 @@
 ;; http://www.hasta-pronto.org/archives/2007/01/08-0259.php
 (cond
  ((string-match "i386-apple-darwin9.8.0" system-configuration)
-  (require 'ess-site)
   (load "init-gui")
   (load "init-mac")
   )
@@ -38,13 +37,12 @@
   )
  ((string-match "i386-mingw-nt6.1.7600" system-configuration)
   ;; http://ess.r-project.org/Manual/readme.html#Installation
-  (load "~/projects/ESS/lisp/ess-site")
   (load "init-gui")
   (load "init-tcode")
 
   (set-face-attribute 'default nil
 		      :family "Consolas"
-		      :height 140)
+		      :height 120)
   (set-fontset-font
    nil 'japanese-jisx0208
    (font-spec :family "ÇlÇr ÉSÉVÉbÉN"))

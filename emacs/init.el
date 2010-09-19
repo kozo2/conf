@@ -24,10 +24,37 @@
 
 ;; http://www.hasta-pronto.org/archives/2007/01/08-0259.php
 (cond
- ((string-match "i386-apple-darwin9.8.0" system-configuration)
+ ((string-match "x86_64-apple-darwin10.4.1" system-configuration)
   (require 'ess-site)
   (load "init-gui")
-  (load "init-mac")
+;  (load "init-mac")
+
+  ;; http://sakito.jp/emacs/emacs23.html
+  (when (>= emacs-major-version 23)
+    (set-face-attribute 'default nil
+			:family "monaco"
+			:height 140)
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     'japanese-jisx0208
+     '("Hiragino Maru Gothic Pro" . "iso10646-1"))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     'japanese-jisx0212
+     '("Hiragino Maru Gothic Pro" . "iso10646-1"))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     'mule-unicode-0100-24ff
+     '("monaco" . "iso10646-1"))
+    (setq face-font-rescale-alist
+	  '(("^-apple-hiragino.*" . 1.2)
+	    (".*osaka-bold.*" . 1.2)
+	    (".*osaka-medium.*" . 1.2)
+	    (".*courier-bold-.*-mac-roman" . 1.0)
+	    (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
+	    (".*monaco-bold-.*-mac-roman" . 0.9)
+	    ("-cdac$" . 1.3))))
+
   )
  ((string-match "amd64-portbld-freebsd8.0" system-configuration)
   (load "init-misc")
@@ -47,12 +74,25 @@
 		      :height 140)
   (set-fontset-font
    nil 'japanese-jisx0208
-   (font-spec :family "‚l‚r ƒSƒVƒbƒN"))
+   (font-spec :family "ï¼­ï¼³ ã‚´ã‚·ãƒƒã‚¯"))
   (setq face-font-rescale-alist
 	'((".*Consolas.*" . 1.0)
-	  (".*‚l‚r ƒSƒVƒbƒN.*" . 1.1)
+	  (".*ï¼­ï¼³ ã‚´ã‚·ãƒƒã‚¯.*" . 1.1)
 	 ;("-cdac$" . 1.3)
 	  ))
 
   )
  )
+
+
+(savehist-mode 1)
+(setq-default save-place t)
+(require 'saveplace)
+(show-paren-mode 1)
+(global-set-key (kbd "C-h") 'delete-backward-char)
+(display-time)
+(line-number-mode 1)
+(column-number-mode 1)
+(transient-mark-mode 1)
+(setq load-path (cons "~/.emacs.d/lisp/" load-path))
+(require 'tc-setup)

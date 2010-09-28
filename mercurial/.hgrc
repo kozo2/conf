@@ -1,0 +1,14 @@
+[ui]
+username = kozo2
+ignore = ~/.hgignore
+
+[defaults]
+add = --encoding=utf-8
+clone = --encoding=utf-8
+commit = --encoding=utf-8
+pull = --encoding=utf-8
+push = --encoding=utf-8
+remove = --encoding=utf-8
+revert = --encoding=utf-8
+update = --encoding=utf-8
+status = --encoding=utf-8

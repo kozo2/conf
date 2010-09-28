@@ -9,12 +9,6 @@ nnoremap <Leader>e :e<Space>
 " open current directory
 nnoremap <Leader>d :edit .<CR>
 
-" save changes
-nnoremap <Leader>w :w<CR>
-
-" exit vim without saving any changes
-"nnoremap <Leader>q :q!<CR>
-
 " exit vim saving changes
 nnoremap <Leader>x :x<CR>
 
@@ -43,7 +37,7 @@ nnoremap K kzz
 noremap <CR> o<ESC>
 
 " http://d.hatena.ne.jp/kozo-ni/20081028#1225205605
-nnoremap <F5> :<C-u>execute '!' &l:filetype '%'<Return>
+"nnoremap <F5> :<C-u>execute '!' &l:filetype '%'<Return>
 
 " Use CTRL-L for Escape
 " http://twitter.com/emanon001/status/1022597622

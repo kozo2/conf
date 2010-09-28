@@ -5,7 +5,7 @@
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " For all text files set 'textwidth' to 78 characters.
-autocmd FileType text setlocal textwidth=78
+""autocmd FileType text setlocal textwidth=78
 
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline

@@ -8,6 +8,7 @@
              (local-set-key "(" 'electric-pair)
              (local-set-key "[" 'electric-pair)
              (local-set-key "{" 'electric-pair)
+	     (local-set-key "\C-j" 'ess-smart-underscore)
              )))
 
 (add-hook 'ess-mode-hook
@@ -18,4 +19,5 @@
              (local-set-key "(" 'electric-pair)
              (local-set-key "[" 'electric-pair)
              (local-set-key "{" 'electric-pair)
+	     (local-set-key "\C-j" 'ess-smart-underscore)
              )))

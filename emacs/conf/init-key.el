@@ -13,20 +13,14 @@
 ;(global-set-key (kbd "C-x C-b") 'anything)
 
 (global-set-key "\C-cp" 'replace-string)
-(global-set-key "\C-cr" 'comment-region)
+
 (global-set-key "\C-cu" 'uncomment-region)
 (global-set-key "\C-cm" 'describe-mode)
 (global-set-key "\C-cc" 'copy-file-path)
 
-(global-set-key "\C-c\C-b" 'pop-tag-mark)
-(global-set-key "\C-c\C-f" 'find-tag)
-(global-set-key "\C-c\C-u" 'expand-abbrev)
-
 ;; http://blog.clouder.jp/archives/000673.html
 (global-set-key "\C-x\C-i" 'indent-region)
 
-(global-set-key "\C-o" 'dabbrev-expand)
-;(global-set-key "\M-/" 'redo)
 (global-set-key "\M- " 'set-mark-command)
 
 ;; http://d.hatena.ne.jp/Dubhead/20081203#p1
@@ -36,3 +30,5 @@
 (global-set-key "\C-w" ctl-x-map)
 ;(global-set-key "\C-wj" 'kill-region)
 (global-set-key "\C-wj" 'tcode-mode)
+
+(global-set-key "\M-n" '(lambda () (interactive) (find-tag last-tag 1)))

@@ -12,22 +12,24 @@
 (setq frame-title-format
       (concat  "%b - emacs@" system-name))
 
-(load "init-completion")
-(load "init-dired")
+(load "init-buffer")
+(load "init-cursor")
 (load "init-elisp")
+(load "init-externalprogram")
 (load "init-function")
-(load "init-gui")
 (load "init-highlight")
+(load "init-inputsupport")
 (load "init-key")
+(load "init-moreconvenient")
 (load "init-search")
 (load "init-R")
 
 ;; http://www.hasta-pronto.org/archives/2007/01/08-0259.php
 (cond
  ((string-match "x86_64-apple-darwin10.4.1" system-configuration)
-  (require 'ess-site)
-  (load "init-gui")
-;  (load "init-mac")
+
+  (setq ns-command-modifier (quote meta))
+  (setq ns-alternate-modifier (quote super))
 
   ;; http://sakito.jp/emacs/emacs23.html
   (when (>= emacs-major-version 23)
@@ -60,13 +62,10 @@
   (load "init-misc")
   )
  ((string-match "x86_64-pc-linux-gnu" system-configuration)
-  (load "init-gui")
   (load "init-ruby")
   )
  ((string-match "i386-mingw-nt6.1.7600" system-configuration)
   ;; http://ess.r-project.org/Manual/readme.html#Installation
-  (load "~/projects/ESS/lisp/ess-site")
-  (load "init-gui")
   (load "init-tcode")
 
   (set-face-attribute 'default nil
@@ -89,10 +88,10 @@
 (setq-default save-place t)
 (require 'saveplace)
 (show-paren-mode 1)
-(global-set-key (kbd "C-h") 'delete-backward-char)
 (display-time)
 (line-number-mode 1)
 (column-number-mode 1)
-(transient-mark-mode 1)
+(tool-bar-mode nil)
+(scroll-bar-mode nil)
 (setq load-path (cons "~/.emacs.d/lisp/" load-path))
 (require 'tc-setup)

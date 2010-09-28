@@ -82,7 +82,7 @@ set statusline=%F%m%r%h%w\ [%{&fileencoding}\ %{&fileformat}]\ [TYPE=%Y]\ [%l/%L
 
 """ indent
 
-set expandtab
+""set expandtab
 set shiftround
 set smartindent
 set smarttab

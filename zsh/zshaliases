@@ -14,7 +14,7 @@ alias where='command -v'
 alias su='su -l'
 
 alias df='df -h'
-alias du='du -ackh'
+#alias du='du -ackh'
 alias diff='diff -NBaur'
 alias scp='scp -p'
 

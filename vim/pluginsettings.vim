@@ -1,3 +1,6 @@
+" AutoComplPop
+let g:acp_completeoptPreview = 1
+
 " FuzzyFinder
 
 let g:fuf_modesDisable = []
@@ -35,6 +38,9 @@ nnoremap <silent> <C-f><C-r> :FufRenewCache<CR>
 
 let Tlist_Show_One_File=1
 nnoremap <silent> <Leader>tl :TlistToggle<CR>
+" http://vimwiki.net/?tips/59
+set tags+=./tags;
+let Tlist_Ctags_Cmd = '/Users/kozo2/Gentoo/usr/bin/ctags'
 
 " netrw.vim
 

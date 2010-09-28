@@ -2,8 +2,10 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-set runtimepath&
-set runtimepath+=~/projects/vim-smartchr,~/projects/vim-surround,~/projects/vim-quickrun,~/projects/vim-autocomplpop,~/projects/vim-fuzzyfinder,~/projects/snipmate.vim,~/projects/snipmate.vim/after,~/projects/conf/vim/runtime,~/projects/conf/vim/runtime/after
+""set runtimepath&
+""set runtimepath+=~/projects/vim-smartchr,~/projects/vim-surround,~/projects/vim-quickrun,~/projects/vim-autocomplpop,~/projects/vim-fuzzyfinder,~/projects/snipmate.vim,~/projects/snipmate.vim/after,~/projects/conf/vim/runtime,~/projects/conf/vim/runtime/after
+
+set runtimepath=~/projects/vim-smartchr,~/projects/vim-surround,~/projects/vim-quickrun,~/projects/vim-autocomplpop,~/projects/vim-fuzzyfinder,~/projects/snipmate.vim,~/projects/snipmate.vim/after,~/projects/conf/vim/runtime,~/projects/conf/vim/runtime/after,~/.vim,~/.vim/after,$VIMRUNTIME
 
 filetype plugin indent on
 syntax enable

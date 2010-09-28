@@ -1,5 +1,4 @@
 (setq make-backup-files nil)
-(fset 'yes-or-no-p 'y-or-n-p)
 
 (ffap-bindings)
 (require 'uniquify)

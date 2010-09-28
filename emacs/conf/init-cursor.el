@@ -1,4 +1,3 @@
-(setq transient-mark-mode t)
 (setq line-move-visual nil)
 
 (require 'point-undo)

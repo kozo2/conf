@@ -13,7 +13,7 @@
       (concat  "%b - emacs@" system-name))
 
 (global-hl-line-mode 1)
-(set-face-background 'hl-line "darkolivegreen")
+;(set-face-background 'hl-line "darkolivegreen")
 (savehist-mode 1)
 (setq-default save-place t)
 (require 'saveplace)

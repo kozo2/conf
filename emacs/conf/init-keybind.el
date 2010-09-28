@@ -1,3 +1,18 @@
+(defun line-to-top-of-window () (interactive) (recenter 0))
+(global-set-key (kbd "C-z") 'line-to-top-of-window)
+
+(defun other-window-or-split ()
+  (interactive)
+;  (when (one-window-p) (split-window-horizontally))
+  (when (one-window-p) (split-window-vertically))
+  (other-window 1))
+(global-set-key (kbd "C-t") 'other-window-or-split)
+
+;; (require 'key-chord)
+;; (setq key-chord-two-keys-delay 0.04)
+;; (key-chord-mode 1)
+;; (key-chord-define emacs-lisp-mode-map "jf" 'describe-function)
+
 ;; http://dev.ariel-networks.com/Members/inoue/recommended-emacs-el
 (global-set-key "\M-g" 'goto-line)
 (global-set-key "\M-s" 'search-forward-regexp)
@@ -28,7 +43,7 @@
 (global-set-key "\M-]" 'highlight-changes-next-change)
 
 (global-set-key "\C-w" ctl-x-map)
-;(global-set-key "\C-wj" 'kill-region)
+(global-set-key "\C-ww" 'kill-region)
 (global-set-key "\C-wj" 'tcode-mode)
 
 (global-set-key "\M-n" '(lambda () (interactive) (find-tag last-tag 1)))

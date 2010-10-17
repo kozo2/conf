@@ -18,11 +18,17 @@
 	try-complete-lisp-symbol
 	))
 
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
-(global-auto-complete-mode 1)
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+;; (ac-config-default)
+;; (global-auto-complete-mode 1)
 
 (defun emacs-lisp-ac-setup ()
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))
 (add-hook 'emacs-lisp-mode-hook 'emacs-lisp-ac-setup)
+
+(add-to-list 'load-path
+	     "~/projects/yasnippet-read-only")
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/projects/yasnippet-read-only/snippets/")

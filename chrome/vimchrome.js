@@ -4,6 +4,7 @@
 // @namespace 3v28ZYKQkixa
 // @key j
 // @include *
+// @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
@@ -19,6 +20,7 @@
 // @namespace 3v28ZYKQkixa
 // @key k
 // @include *
+// @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
@@ -34,9 +36,11 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+h
 // @include *
+// @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
+// @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
 // @execute Back([])
@@ -48,9 +52,11 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+l
 // @include *
+// @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
+// @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
 // @execute Forward([])
@@ -62,9 +68,11 @@
 // @namespace 3v28ZYKQkixa
 // @key d
 // @include *
+// @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
+// @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
 // @execute CloseTab([])
@@ -76,6 +84,13 @@
 // @namespace 3v28ZYKQkixa
 // @key Ctrl+i
 // @include *
+// @exclude http://twitter.com/*
+// @exclude https://mail.google.com/*
+// @exclude https://docs.google.com/*
+// @exclude https://www.google.com/calendar/*
+// @exclude http://www.google.com/reader/*
+// @exclude http://d.hatena.ne.jp/kozo2/*
+// @exclude http://www.evernote.com/*
 // @execute FocusNextElement([])
 // ==/UserScript==
 
@@ -85,9 +100,11 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+u
 // @include *
+// @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
+// @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
 // @execute UpperDirectory([])

@@ -6,7 +6,6 @@
 (add-to-list 'load-path "~/projects/emacswiki.org/" t)
 
 (require 'auto-install)
-(require 'anything-startup)
 
 ;; default to better frame titles
 (setq frame-title-format
@@ -38,6 +37,7 @@
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
 
+(load "init-anything")
 (load "init-buffer")
 (load "init-cursor")
 (load "init-elisp")
@@ -46,6 +46,7 @@
 (load "init-inputsupport")
 (load "init-keybind")
 (load "init-moreconvenient")
+(load "init-prog")
 (load "init-search")
 (load "init-R")
 
@@ -83,12 +84,15 @@
 	    ("-cdac$" . 1.3))))
 
   )
- ((string-match "amd64-portbld-freebsd8.0" system-configuration)
-  (load "init-misc")
-  )
- ((string-match "x86_64-pc-linux-gnu" system-configuration)
-  (load "init-ruby")
-  )
+
+ ;; ((string-match "amd64-portbld-freebsd8.0" system-configuration)
+
+ ;;  )
+
+ ;; ((string-match "x86_64-pc-linux-gnu" system-configuration)
+
+ ;;  )
+
  ((string-match "i386-mingw-nt6.1.7600" system-configuration)
   ;; http://ess.r-project.org/Manual/readme.html#Installation
   (load "init-tcode")

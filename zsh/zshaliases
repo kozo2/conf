@@ -6,7 +6,7 @@ echo "Loading zshaliases"
 alias h='fc -l'
 #alias h=history
 alias j='jobs -l'
-alias m=$PAGER
+alias m='less'
 alias g='egrep -i'
 
 alias x=exit

@@ -39,17 +39,17 @@ elif [ "$os_type" = "Darwin" ]; then
     #export JAVA_HOME=/Library/Java/Home
     #export JAVA=$JAVA_HOME/bin
     # in case of Gentoo Prefix
-    export EPREFIX="$HOME/Gentoo"
-    export PATH=$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:$ANT:$M2:$PATH
-    if [ -f startprefix ]; then
-      sh startprefix
-    fi
+    # export EPREFIX="$HOME/Gentoo"
+    # export PATH=$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:$ANT:$M2:$PATH
+    # if [ -f startprefix ]; then
+    #   sh startprefix
+    # fi
     # in case of MacPorts
-    #export MACPORTS_PREFIX=/opt/local
-    #export MACPORTS_BIN=$MACPORTS_PREFIX/bin
-    #export MACPORTS_SBIN=$MACPORTS_PREFIX/sbin
-    #export MACPORTS_MAN=$MACPORTS_PREFIX/share/man
-    #export PATH=$MACPORTS_BIN:$MACPORTS_SBIN:$MACPORTS_MAN:$ANT:$M2:$PATH
+    export MACPORTS_PREFIX=/opt/local
+    export MACPORTS_BIN=$MACPORTS_PREFIX/bin
+    export MACPORTS_SBIN=$MACPORTS_PREFIX/sbin
+    export MACPORTS_MAN=$MACPORTS_PREFIX/share/man
+    export PATH=$MACPORTS_BIN:$MACPORTS_SBIN:$MACPORTS_MAN:$ANT:$M2:$PATH
 fi
 
 ### shell variables

@@ -70,3 +70,26 @@ nnoremap <Leader>- :call <SID>openNetrw()<CR>
 "
 "call s:show_diff()
 
+function! s:split_nicely()
+  if winwidth(0) > 2 * &winwidth
+    vsplit
+  else
+    split
+  endif
+  wincmd p
+endfunction
+
+nnoremap <silent> <Tab> :call <SID>NextWindowOrTab()<CR>
+function! s:NextWindowOrTab()
+  if tabpagenr('$') == 1 && winnr('$') == 1
+    split
+    wincmd p
+"    call s:split_nicely()
+  elseif winnr() < winnr("$")
+    wincmd w
+  else
+    tabnext
+    1wincmd w
+  endif
+endfunction
+

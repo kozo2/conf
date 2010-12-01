@@ -8,6 +8,7 @@ alias h='fc -l'
 alias j='jobs -l'
 alias m='less'
 alias g='egrep -i'
+alias p='cd -'
 
 alias x=exit
 alias where='command -v'

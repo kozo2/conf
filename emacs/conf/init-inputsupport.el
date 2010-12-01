@@ -18,10 +18,11 @@
 	try-complete-lisp-symbol
 	))
 
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-;; (ac-config-default)
-;; (global-auto-complete-mode 1)
+
+(require 'auto-complete-config)
+(ac-config-default)
+(global-auto-complete-mode 1)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict/")
 
 (defun emacs-lisp-ac-setup ()
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))

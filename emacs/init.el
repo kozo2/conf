@@ -4,6 +4,7 @@
 (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/projects/conf/emacs/conf/")
 (add-to-list 'load-path "~/projects/emacswiki.org/" t)
+(add-to-list 'load-path "~/projects/emacs-smartchr/")
 
 (require 'auto-install)
 

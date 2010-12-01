@@ -8,6 +8,15 @@
   (other-window 1))
 (global-set-key (kbd "C-t") 'other-window-or-split)
 
+(require 'smartchr)
+(global-set-key (kbd "=") (smartchr '(" = " " == " "=")))
+(global-set-key (kbd ",") (smartchr '(", " ",")))
+(global-set-key (kbd "'") (smartchr '("'`!!''" "'")))
+(global-set-key (kbd "\"") (smartchr '("\"`!!'\"" "\"")))
+(global-set-key (kbd "(") (smartchr '("(`!!')" "(")))
+(global-set-key (kbd "[") (smartchr '("[`!!']" "[")))
+(global-set-key (kbd "{") (smartchr '("{`!!'}" "{")))
+
 ;; (require 'key-chord)
 ;; (setq key-chord-two-keys-delay 0.04)
 ;; (key-chord-mode 1)

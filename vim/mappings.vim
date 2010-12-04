@@ -129,3 +129,7 @@ noremap D d$
 " :h scroll-smooth
 map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
 map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+
+" quick window move
+nnoremap <C-K> <C-W>k
+nnoremap <C-J> <C-W>j

@@ -10,12 +10,13 @@
 
 (require 'smartchr)
 (global-set-key (kbd "=") (smartchr '(" = " " == " "=")))
+(global-set-key (kbd "+") (smartchr '(" + " "+")))
 (global-set-key (kbd ",") (smartchr '(", " ",")))
 (global-set-key (kbd "'") (smartchr '("'`!!''" "'")))
 (global-set-key (kbd "\"") (smartchr '("\"`!!'\"" "\"")))
-(global-set-key (kbd "(") (smartchr '("(`!!')" "(")))
-(global-set-key (kbd "[") (smartchr '("[`!!']" "[")))
-(global-set-key (kbd "{") (smartchr '("{`!!'}" "{")))
+(global-set-key (kbd "(") (smartchr '("(`!!')" "()`!!'" "(")))
+(global-set-key (kbd "[") (smartchr '("[`!!']" "[]`!!'" "[")))
+(global-set-key (kbd "{") (smartchr '("{`!!'}" "{}`!!'" "{")))
 
 ;; (require 'key-chord)
 ;; (setq key-chord-two-keys-delay 0.04)

@@ -12,9 +12,6 @@
 (add-hook 'emacs-lisp-mode-hook
           (function
            (lambda ()
-             (local-set-key "\"" 'electric-pair)
-             (local-set-key "(" 'electric-pair)
-             (local-set-key "{" 'electric-pair)
              (local-set-key "\C-c\C-d" 'describe-function)
              (local-set-key "\C-c\C-v" 'describe-variable)
              )))
@@ -22,9 +19,6 @@
 (add-hook 'lisp-interaction-mode-hook
           (function
            (lambda ()
-             (local-set-key "\"" 'electric-pair)
-             (local-set-key "(" 'electric-pair)
-             (local-set-key "{" 'electric-pair)
 	     (local-set-key "\C-c\C-d" 'describe-function)
              (local-set-key "\C-c\C-v" 'describe-variable)
              )))

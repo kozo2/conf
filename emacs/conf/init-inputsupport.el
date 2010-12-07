@@ -24,6 +24,10 @@
 (global-auto-complete-mode 1)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict/")
 
+(define-key ac-complete-mode-map "\C-n" 'ac-next)
+(define-key ac-complete-mode-map "\C-p" 'ac-previous)
+
+
 (defun emacs-lisp-ac-setup ()
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))
 (add-hook 'emacs-lisp-mode-hook 'emacs-lisp-ac-setup)

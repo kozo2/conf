@@ -44,6 +44,9 @@
 	  (function
 	   (lambda ()
 	     (local-set-key "\C-cp" 'py-doc-popup)
+	     (local-set-key (kbd "'") (smartchr '("'`!!''" "'")))
+	     (make-local-variable 'ac-ignores)
+	     (add-to-list 'ac-ignores "for")
 	     )))
 
 ;;; Ruby

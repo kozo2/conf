@@ -24,8 +24,7 @@
 (global-auto-complete-mode 1)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict/")
 
-(define-key ac-complete-mode-map "\C-n" 'ac-next)
-(define-key ac-complete-mode-map "\C-p" 'ac-previous)
+(setq ac-use-menu-map t)
 
 
 (defun emacs-lisp-ac-setup ()

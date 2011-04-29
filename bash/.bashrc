@@ -91,6 +91,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -108,11 +116,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH=$PATH:~/apps/jdk/bin
-export PATH=$PATH:~/apps/eclipse
-export PATH=$PATH:~/apps/ant/bin
-
-
 # http://iandeth.dyndns.org/mt/ian/archives/000651.html
 function share_history {
 	    history -a
@@ -121,45 +124,7 @@ function share_history {
 	}
 PROMPT_COMMAND='share_history'
 
-# some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias gad='git add'
-alias gst='git status'
-alias gci='git commit -m'
-alias gps='git push'
-alias gpl='git pull'
-alias gdf='git diff'
-
-alias sci='svn commit -m'
-alias sst='svn status'
-alias sdf='svn diff'
-
-alias h=history
-
-# http://blog.bulknews.net/mt/archives/DECON.pdf
-alias e='emacs -nw'
-alias v=vim
-alias m=less
-alias j='jobs -l'
-alias x=exit
-alias where='command -v'
-alias su='su -l'
-
-alias df='df -h'
-alias du='du -ackh'
-alias diff='diff -NBaur'
-alias scp='scp -p'
-
-# show the directories or symbolic link of directories
-alias lsd='ls -ld *(-/DN)'
-
-# show the files start with "."
-alias lsa='ls -ld .*'
-
 function cd() {
   builtin cd $@
-  l
+  ll
 }

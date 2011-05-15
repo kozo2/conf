@@ -115,6 +115,8 @@ set background=light
 set fileencodings=utf-8,cp932,euc-jp
 set ambiwidth=double
 
+set previewheight=36
+
 " "}}}
 
 
@@ -238,18 +240,19 @@ set runtimepath+=~/.vim/vundle.git/ " my dev version
 call vundle#rc()
 
 " trying this 
-Bundle "YankRing.vim"
+"Bundle "YankRing.vim"
 Bundle "http://github.com/thinca/vim-quickrun.git"
 Bundle "http://github.com/thinca/vim-poslist.git"
 Bundle "http://github.com/mattn/gist-vim.git"
-Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
+"Bundle "http://github.com/rstacruz/sparkup.git", {'rtp': 'vim/'}
 
 " Programming
-Bundle "jQuery"
-Bundle "rails.vim"
+"Bundle "jQuery"
+"Bundle "rails.vim"
 
 " Snippets
-Bundle "http://github.com/gmarik/snipmate.vim.git"
+"Bundle "http://github.com/gmarik/snipmate.vim.git"
+Bundle "http://github.com/msanders/snipmate.vim.git"
 
 " Syntax highlight
 "Bundle "cucumber.zip"
@@ -263,10 +266,10 @@ Bundle "http://github.com/gmarik/snipmate.vim.git"
 "Bundle "ragtag.vim"
 
 " Utility
-Bundle "repeat.vim"
+"Bundle "repeat.vim"
 Bundle "surround.vim"
-Bundle "SuperTab"
-Bundle "file-line"
+"Bundle "SuperTab"
+"Bundle "file-line"
 Bundle "Align"
 
 " FuzzyFinder
@@ -285,6 +288,10 @@ Bundle "Align"
 "nnoremap <silent> <LocalLeader>8  :FufBookmark<CR> 
 "nnoremap <silent> <LocalLeader>*  :FuzzyFinderAddBookmark<CR><CR>
 "nnoremap <silent> <LocalLeader>9  :FufTaggedFile<CR> 
+
+" Unite
+Bundle "unite.vim"
+
 
 " " }}}
 

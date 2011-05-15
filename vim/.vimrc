@@ -272,6 +272,9 @@ Bundle "surround.vim"
 "Bundle "file-line"
 Bundle "Align"
 
+" AutoComplPop
+Bundle "AutoComplPop"
+
 " FuzzyFinder
 "Bundle "L9"
 "Bundle "FuzzyFinder"
@@ -296,16 +299,16 @@ Bundle "unite.vim"
 " " }}}
 
 " Zoomwin
-Bundle "ZoomWin"
-noremap <LocalLeader>o :ZoomWin<CR>
-vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
-inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
-noremap <C-W>+o :ZoomWin<CR>
+"Bundle "ZoomWin"
+"noremap <LocalLeader>o :ZoomWin<CR>
+"vnoremap <LocalLeader>o <C-C>:ZoomWin<CR>
+"inoremap <LocalLeader>o <C-O>:ZoomWin<CR>
+"noremap <C-W>+o :ZoomWin<CR>
 
 " Ack
-Bundle "ack.vim"
-noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
-vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
+"Bundle "ack.vim"
+"noremap <LocalLeader># "ayiw:Ack <C-r>a<CR>
+"vnoremap <LocalLeader># "ay:Ack <C-r>a<CR>
 
 " tComment
 Bundle "tComment"
@@ -317,9 +320,9 @@ Bundle "git://git.wincent.com/command-t.git"
 let g:CommandTMatchWindowAtTop=1 " show window at top
 
 " Navigation
-Bundle "http://github.com/gmarik/vim-visual-star-search.git"
+"Bundle "http://github.com/gmarik/vim-visual-star-search.git"
 
 " smartchr
-"
+
 
 " " }}}

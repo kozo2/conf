@@ -96,6 +96,20 @@ var notepad_a_map = [
     assignVk('WACLASS<Notepad>+C-A+S-', 's', 'C+', 'f'),
 ];
 
+// Firefox
+var firefox_c_map = [
+    // cursor move
+    assignVk('WACLASS<MozillaWindowClass>+C+A-S-', 'a', '', 'VK_HOME'),
+    assignVk('WACLASS<MozillaWindowClass>+C+A-S-', 'b', '', 'VK_LEFT'),
+    assignVk('WACLASS<MozillaWindowClass>+C+A-S-', 'e', '', 'VK_END'),
+    assignVk('WACLASS<MozillaWindowClass>+C+A-S-', 'f', '', 'VK_RIGHT'),
+    assignVk('WACLASS<MozillaWindowClass>+C+A-S-', 'j', '', 'VK_DOWN'),
+    assignVk('WACLASS<MozillaWindowClass>+C+A-S-', 'k', '', 'VK_UP'),
+
+    // edit
+    assignVk('WACLASS<MozillaWindowClass>+C+A-S-', 'd', '', 'VK_DELETE'),
+];
+
 // Google chrome
 var chrome_c_map = [
     // cursor move
@@ -124,9 +138,10 @@ var chrome_c_map = [
 var chrome_a_map = [
     // downloads
     assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'd', 'C+', 'j'),
-    // tab move
-    assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'j', 'C+', 'VK_TAB'),
-    assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'k', 'C+S+', 'VK_TAB'),
+
+    // history move
+    assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'j', '', 'VK_DOWN'),
+    assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'k', '', 'VK_UP'),
 
     // history
     assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'h', 'C+', 'h'),
@@ -143,6 +158,11 @@ var afx_c_map = [
 ];
 
 // explorer
+var edit_c_map = [
+    assignVk('WCLASS<Edit>+C+A-S-', 'j', '', 'VK_DOWN'),
+    assignVk('WCLASS<Edit>+C+A-S-', 'k', '', 'VK_UP'),
+];
+
 var explorer_c_map = [
     // cursor move
     assignVk('WACLASS<CabinetWClass>+C+A-S-', 'j', '', 'VK_DOWN'),
@@ -217,7 +237,7 @@ var map_global = [
     includeMap('C+A+IMESTR/', map_sp),
 
     // wHelperの起動
-    //assign('A+C+', 'w', wHelper.toggle, false),
+    assign('A+C+', 'w', wHelper.toggle, false),
 
     // siriusCommand機能の設定
     // assign('C+', 'jp-@', false, map_ctrl_at),
@@ -290,10 +310,14 @@ var map_global = [
     includeMap('WACLASS<Chrome_WidgetWin_0>+C+A-S-', chrome_c_map),
     includeMap('WACLASS<Chrome_WidgetWin_0>+C-A+S-', chrome_a_map),
 
+    // Firefox
+    includeMap('WACLASS<MozillaWindowClass>+C+A-S-', firefox_c_map),
+
     // あふ
     includeMap('WACLASS<TAfxWForm>+C+A-S-', afx_c_map),
 
     // explorer
+    includeMap('WCLASS<Edit>+C+A-S-', edit_c_map),
     includeMap('WACLASS<CabinetWClass>+C+A-S-', explorer_c_map),
     includeMap('WACLASS<CabinetWClass>+C-A+S-', explorer_a_map),
 
@@ -322,4 +346,3 @@ siriusFlow.setupMap(map_global);
 
 // kHelperの横幅を13に変更（百相鍵盤『き』を利用する時に設定して下さい）
 // kHelper.width = 13;
-

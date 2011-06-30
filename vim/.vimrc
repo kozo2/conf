@@ -109,7 +109,7 @@ set mousehide  " Hide mouse after chars typed
 set splitbelow
 set splitright
 
-set background=light
+set background=dark
 
 " http://omake.accense.com/wiki/vimrc
 set fileencodings=utf-8,cp932,euc-jp
@@ -234,7 +234,7 @@ nnoremap <C-J> <C-W>j
 
 " " }}}
 
-set runtimepath+=~/.vim/vundle.git/ " my dev version
+set runtimepath+=~/.vim/bundle/vundle/ " my dev version
 
 " Plugins " {{{
 call vundle#rc()

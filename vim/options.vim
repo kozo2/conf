@@ -82,12 +82,14 @@ set statusline=%F%m%r%h%w\ [%{&fileencoding}\ %{&fileformat}]\ [TYPE=%Y]\ [%l/%L
 
 """ indent
 
-""set expandtab
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set shiftround
 set smartindent
 set smarttab
 set autoindent
-
 
 
 """ search

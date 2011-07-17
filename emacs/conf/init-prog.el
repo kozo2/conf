@@ -43,6 +43,7 @@
 (add-hook 'python-mode-hook 
 	  (function
 	   (lambda ()
+	     (local-set-key "\C-a" 'back-to-indentation)
 	     (local-set-key "\C-cp" 'py-doc-popup)
 	     (local-set-key (kbd "'") (smartchr '("'`!!''" "'")))
 	     (make-local-variable 'ac-ignores)

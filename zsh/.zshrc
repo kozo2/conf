@@ -36,15 +36,18 @@ if [ "$os_type" = "Linux" ]; then
     export MENDELEY_HOME=$HOME/apps/mendeley
     export MENDELEY=$MENDELEY_HOME/bin
 elif [ "$os_type" = "Darwin" ]; then
+    ## Java
     #export JAVA_HOME=/Library/Java/Home
     #export JAVA=$JAVA_HOME/bin
-    # in case of Gentoo Prefix
-    # export EPREFIX="$HOME/Gentoo"
-    # export PATH=$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:$ANT:$M2:$PATH
+    ## enthought Python distribution
+    #export EPD="/Library/Frameworks/Python.framework/Versions/Current/bin"
+    ## Gentoo Prefix
+    #export EPREFIX="$HOME/Gentoo"
+    #export PATH=$EPREFIX/usr/bin:$EPREFIX/bin:$EPREFIX/tmp/usr/bin:$EPREFIX/tmp/bin:$ANT:$M2:$PATH
     # if [ -f startprefix ]; then
     #   sh startprefix
     # fi
-    # in case of MacPorts
+    ## MacPorts
     export MACPORTS_PREFIX=/opt/local
     export MACPORTS_BIN=$MACPORTS_PREFIX/bin
     export MACPORTS_SBIN=$MACPORTS_PREFIX/sbin

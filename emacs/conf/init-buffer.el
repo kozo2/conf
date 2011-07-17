@@ -34,4 +34,6 @@
              (local-set-key "j" 'dired-next-line)
              (local-set-key "k" 'dired-previous-line)
              (local-set-key "q" 'kill-this-buffer)
+;	     (local-set-key "\C-n" 'anything)
+	     (local-set-key "\C-t" 'other-window-or-split)
              )))

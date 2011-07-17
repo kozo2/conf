@@ -25,7 +25,8 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict/")
 
 (setq ac-use-menu-map t)
-
+(define-key ac-menu-map "\C-j" 'ac-next)
+(define-key ac-menu-map "\C-k" 'ac-previous)
 
 (defun emacs-lisp-ac-setup ()
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))

@@ -19,6 +19,7 @@
 (add-hook 'lisp-interaction-mode-hook
           (function
            (lambda ()
+	     (local-set-key "\C-c\C-j" 'eval-print-last-sexp)
 	     (local-set-key "\C-c\C-d" 'describe-function)
              (local-set-key "\C-c\C-v" 'describe-variable)
              )))

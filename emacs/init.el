@@ -86,10 +86,6 @@
 
   )
 
- ;; ((string-match "amd64-portbld-freebsd8.0" system-configuration)
-
- ;;  )
-
  ;; ((string-match "x86_64-pc-linux-gnu" system-configuration)
 
  ;;  )

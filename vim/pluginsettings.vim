@@ -1,3 +1,8 @@
+" smartchr
+inoremap <buffer> <expr> = smartchr#loop(' = ', ' == ', '=')
+inoremap <buffer> <expr> + smartchr#loop(' + ', '+')
+inoremap <buffer> <expr> , smartchr#loop(', ', ',')
+
 " AutoComplPop
 let g:acp_completeoptPreview = 1
 

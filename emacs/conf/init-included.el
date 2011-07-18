@@ -8,6 +8,10 @@
 ;; (ido-mode 1)
 ;; (ido-everywhere 1)
 
+;; (icomplete-mode t)
+
+;; (partial-completion-mode t)
+
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 (setq uniquify-ignore-buffers-re "*[^*]+*")

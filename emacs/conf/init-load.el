@@ -1,15 +1,3 @@
-
-(load "init-anything")
-(load "init-completion")
-(load "init-dired")
-(load "init-elisp")
-(load "init-function")
-(load "init-highlight")
-(load "init-key")
-(load "init-misc")
-(load "init-save")
-(load "init-search")
-
 ;; http://www.hasta-pronto.org/archives/2007/01/08-0259.php
 (cond
  ((string-match "i386-apple-darwin9.8.0" system-configuration)
@@ -30,5 +18,3 @@
   (load "init-windows")
   )
  )
-
-(load "init-R")

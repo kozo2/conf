@@ -92,3 +92,10 @@
 ;; (require 'grep-a-lot)
 ;; (grep-a-lot-setup-keys)
 ;; (grep-a-lot-advise igrep)
+
+;; (require 'lcomp)
+;; (lcomp-mode 1)
+;; (lcomp-keys-mode 1)
+;; (lcomp-install)
+
+;; (require 'summarye)

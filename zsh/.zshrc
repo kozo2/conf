@@ -11,6 +11,7 @@ echo "Loading .zshrc"
 # maven
 export M2_HOME=$HOME/apps/maven
 export M2=$M2_HOME/bin
+export MAVEN_OPTS="-Xmx1024m -Duser.language=en"
 
 # ant
 export ANT_HOME=$HOME/apps/ant

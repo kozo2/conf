@@ -1,6 +1,10 @@
+(require 'package)
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
 (require 'auto-install)
-;(setq auto-install-directory "~/.emacs.d/auto-install/")
-(setq auto-install-directory "~/elisp/")
+(setq auto-install-directory "~/.emacs.d/auto-install/")
+;(setq auto-install-directory "~/elisp/")
 
 ;; (auto-install-batch "anything")
 ;; (auto-install-batch "auto-complete development version")

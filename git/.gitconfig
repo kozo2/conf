@@ -1,5 +1,13 @@
 [user]
-	name = Kozo Nishida
-	email = knishida@riken.jp
+  name = Kozo Nishida
+  email = knishida@riken.jp
 [color]
-        ui = auto
+  ui = auto
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --grpah --date=short
+  type = cat-file -t
+  dump = cat-file -p

@@ -11,28 +11,18 @@ HISTCONTROL=ignoredups:ignorespace
 
 echo "Loading ~/projects/conf/bash/.bashrc"
 
-# append to the history file, don't overwrite it
 shopt -s histappend
-# When the first word of a simple command cannot be executed, try to cd to it.
 shopt -s autocd
-# Attempt spelling correction on each directory component of an argument to cd. Allowed in interactive shells only.
 shopt -s cdspell
-# When an attempt is made to exit a shell and there are stopped or running background jobs, the shell prints There are running jobs. and a list of jobs and their statuses. A second exit attempt (such as typing EOF again) causes the shell to exit.
 shopt -s checkjobs
-# Attempt spelling correction on directory names during word completion if the name as given does not exist.
 shopt -s dirspell
-# Include filenames starting with a period in the results of filename expansion.
 shopt -s dotglob
-# Do not exit a noninteractive shell if the command given to exec cannot be executed. Interactive shells do not exit in such a case, no matter the setting of this option.
 shopt -s execfail
+shopt -s checkwinsize
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"

@@ -60,7 +60,7 @@
              )))
 
 ;;(global-set-key "\C-i" 'dabbrev-expand)
-(global-set-key "\C-i" 'hippie-expand)
+;;(global-set-key "\C-i" 'hippie-expand)
 (setq hippie-expand-try-functions-list
       '(try-complete-file-name-partially
 	try-complete-file-name

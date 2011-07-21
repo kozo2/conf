@@ -4,9 +4,9 @@
 (set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
 
-(add-to-list 'load-path "~/.emacs.d/")
-(add-to-list 'load-path "~/projects/conf/emacs/conf/")
-(add-to-list 'load-path (expand-file-name "~/elisp/"))
+;(add-to-list 'load-path (expand-file-name "~/elisp/"))
+(add-to-list 'load-path "~/.emacs.d/auto-install/")
+(add-to-list 'load-path "~/projects/conf/emacs/")
 (add-to-list 'load-path "~/share/emacs/site-lisp/tc/")
 ;(add-to-list 'load-path "~/projects/yasnippet-read-only")
 
@@ -61,4 +61,4 @@
 (load "init-additional")
 (load "init-function")
 (load "init-keybind")
-(load "init-prog")
+(load "init-program")

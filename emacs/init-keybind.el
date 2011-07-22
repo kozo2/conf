@@ -23,6 +23,7 @@
 ;; (global-set-key "\M-w" 'kill-region)
 
 (define-key ctl-x-map "\C-u" 'dired-jump)
+(define-key ctl-x-map "|" 'window-toggle-division)
 ;(define-key ctl-x-map "\C-o" 'delete-other-windows)
 
 ;(global-set-key "\C-s" 'save-buffer)

@@ -74,6 +74,7 @@
 // @exclude https://www.google.com/calendar/*
 // @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
+// @exclude http://live.nicovideo.jp/watch/*
 // @exclude http://www.evernote.com/*
 // @execute CloseTab([])
 // ==/UserScript==
@@ -108,4 +109,22 @@
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
 // @execute UpperDirectory([])
+// ==/UserScript==
+
+// ==UserScript==
+// @ShortcutManager
+// @name Scroll down by 128 pixels
+// @namespace ay72uQQvN9iG
+// @key Ctrl+j
+// @include http://twitter.com/*
+// @execute ScrollDown(["128"])
+// ==/UserScript==
+
+// ==UserScript==
+// @ShortcutManager
+// @name Scroll up by 128 pixels
+// @namespace ay72uQQvN9iG
+// @key Ctrl+k
+// @include http://twitter.com/*
+// @execute ScrollUp(["128"])
 // ==/UserScript==

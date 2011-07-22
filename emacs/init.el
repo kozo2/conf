@@ -62,3 +62,4 @@
 (load "init-function")
 (load "init-keybind")
 (load "init-program")
+(load "init-font")

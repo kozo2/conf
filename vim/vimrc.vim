@@ -54,6 +54,49 @@ abbreviate teh the
 abbreviate fro for
 " }}}
 
+" functions {{{
+
+" http://d.hatena.ne.jp/ns9tks/20091105/1257420345
+augroup VimrcNetrw
+  autocmd!
+  autocmd FileType netrw let g:bufnrLastNetrw = bufnr('%')
+augroup END
+
+function s:openNetrw()
+  if exists('g:bufnrLastNetrw')
+    execute g:bufnrLastNetrw . 'buffer'
+  else
+    edit .
+  endif
+endfunction
+
+nnoremap <Leader>- :call <SID>openNetrw()<CR>
+
+function! s:split_nicely()
+  if winwidth(0) > 2 * &winwidth
+    vsplit
+  else
+    split
+  endif
+  wincmd p
+endfunction
+
+nnoremap <silent> <Tab> :call <SID>NextWindowOrTab()<CR>
+function! s:NextWindowOrTab()
+  if tabpagenr('$') == 1 && winnr('$') == 1
+    split
+    wincmd p
+"    call s:split_nicely()
+  elseif winnr() < winnr("$")
+    wincmd w
+  else
+    tabnext
+    1wincmd w
+  endif
+endfunction
+
+" }}}
+
 " autocmd {{{
 " Go back to the position the cursor was on the last time this file was edited
 " This autocommand jumps to the last known position in a file just after
@@ -73,6 +116,10 @@ autocmd BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set f
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
 autocmd BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=gitcommit
 
+" http://d.hatena.ne.jp/tasukuchan/20070816/1187246177
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+autocmd WinEnter * match WhitespaceEOL /\s\+$/
 
 " http://paranoid.dip.jp/kaworu/2008-06-07-1.html
 "autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen

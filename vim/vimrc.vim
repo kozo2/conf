@@ -256,6 +256,7 @@ set foldlevel=100
 set history=128
 set timeoutlen=250
 
+
 set pastetoggle=<F8>
 set mouse-=a
 set shortmess=atI
@@ -269,6 +270,7 @@ set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 set clipboard+=unnamed
 set ambiwidth=double
 
+set backspace=indent,eol,start
 set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
 set fileencodings=utf-8,cp932,euc-jp
 set completeopt=menu,preview,longest

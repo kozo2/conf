@@ -30,6 +30,7 @@ Bundle 'FuzzyFinder'
 " ...
 
 filetype plugin indent on     " required! 
+syntax enable
 
 "
 " Brief help
@@ -68,6 +69,11 @@ autocmd WinLeave * setlocal nocursorline
 
 autocmd FileType netrw nmap <buffer> f <cr>
 
+autocmd BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby
+autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
+autocmd BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=gitcommit
+
+
 " http://paranoid.dip.jp/kaworu/2008-06-07-1.html
 "autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 "}}}
@@ -95,6 +101,20 @@ nnoremap <Leader>d :edit .<CR>
 
 " exit vim saving changes
 nnoremap <Leader>x :x<CR>
+
+nnoremap <silent> <LocalLeader>[ :tabprev<CR>
+nnoremap <silent> <LocalLeader>] :tabnext<CR>
+vnoremap <silent> <LocalLeader>= yP
+nnoremap <silent> <LocalLeader>= YP
+nnoremap <silent> <LocalLeader>- :bd<CR>
+" Split line(opposite to S-J joining line) 
+nnoremap <silent> <C-J> gEa<CR><ESC>ew 
+
+" show/Hide hidden Chars
+map <silent> <F12> :set invlist<CR>     
+
+" generate HTML version current buffer using current color scheme
+map <silent> <LocalLeader>2h :runtime! syntax/2html.vim<CR> 
 
 " map ,f to display all lines with keyword under cursor and ask which one to
 " jump to
@@ -192,9 +212,16 @@ set autoread
 set autochdir
 set autoindent
 
+set cindent
+set cinoptions=:s,ps,ts,cs
+set cinwords=if,else,while,do,for,switch,case
+
+set foldenable
 set expandtab
 set shiftround
 
+set hidden
+set hlsearch
 set incsearch
 set ignorecase
 
@@ -205,14 +232,18 @@ set smartcase
 set showcmd
 set showmatch
 
+set splitbelow
 set splitright
 
 set title
 set ruler
-set wrap
 set wrapscan
 set wildmenu
+set modeline
+set mousehide
 
+set textwidth=0		" Don't wrap lines by default
+set modelines=5
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -220,12 +251,28 @@ set matchtime=2
 set cmdheight=2
 set laststatus=2
 set scrolloff=3
+set previewheight=36
+set foldlevel=100
 set history=128
+set timeoutlen=250
 
 set pastetoggle=<F8>
-set formatoptions&
-set formatoptions+=mM
+set mouse-=a
+set shortmess=atI
+set foldmethod=marker
+"set formatoptions&
+"set formatoptions+=mM
+set fo+=o " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
+set fo-=r " Do not automatically insert a comment leader after an enter
+set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
+
+set clipboard+=unnamed
+set ambiwidth=double
+
+set foldopen=block,hor,mark,percent,quickfix,tag " what movements open folds 
+set fileencodings=utf-8,cp932,euc-jp
 set completeopt=menu,preview,longest
+set nrformats=octal,hex,alpha
 
 " http://d.hatena.ne.jp/ns9tks/20080603/1212500562
 " Set command-line completion mode:
@@ -246,11 +293,14 @@ set viminfo='20,\"50,:20,%,n~/.viminfo
 set statusline=%F%m%r%h%w\ [%{&fileencoding}\ %{&fileformat}]\ [TYPE=%Y]\ [%l/%L,\ %c]
 " set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
+set nowrap
 set nonumber
 set nolist
-set nohlsearch
 set nobackup
+set nowritebackup
 set noswapfile
+set novisualbell
+set noerrorbells
 
 "}}}
 

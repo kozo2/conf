@@ -37,6 +37,34 @@
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))
 (add-hook 'emacs-lisp-mode-hook 'emacs-lisp-ac-setup)
 
+(require 'bf-mode)
+;; list up file extensions which should be excepted
+(setq bf-mode-except-exts
+      (append '("\\.dump$" "\\.data$" "\\.mp3$" "\\.lnk$")
+	      bf-mode-except-exts))
+;; list up file extensions which should be forced browsing
+(setq bf-mode-force-browse-exts
+      (append '("\\.txt$" "\\.and.more...")
+	      bf-mode-force-browse-exts))
+;; browsable file size maximum
+(setq bf-mode-browsing-size 100) ;; 100 killo bytes
+;; browsing htmls with w3m (needs emacs-w3m.el and w3m)
+(setq bf-mode-html-with-w3m t)
+;; browsing archive file (contents listing) verbosely
+(setq bf-mode-archive-list-verbose t)
+;; browing directory (file listing) verbosely
+;;(setq bf-mode-directory-list-verbose t)
+;; start bf-mode immediately after starting dired
+;;(setq bf-mode-enable-at-starting-dired t)
+;; quitting dired directly from bf-mode
+(setq bf-mode-directly-quit t)
+;; vim-like custom
+(define-key bf-mode-map "j" 'bf-mode-next)
+(define-key bf-mode-map "k" 'bf-mode-previous)
+;; (define-key bf-mode-map "n" 'bf-mode-toggle-browse-alternative)
+;;   (define-key bf-mode-map "h" 'bf-mode-change-heading)
+
+
 ;; (require 'popwin)
 ;; (setq display-buffer-function 'popwin:display-buffer)
 ;; (setq popwin:special-display-config '(("*scratch*")))

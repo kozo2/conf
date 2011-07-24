@@ -8,7 +8,8 @@
 (add-to-list 'load-path "~/.emacs.d/auto-install/")
 (add-to-list 'load-path "~/projects/conf/emacs/")
 (add-to-list 'load-path "~/share/emacs/site-lisp/tc/")
-(add-to-list 'load-path "~/projects/yasnippet-read-only")
+(add-to-list 'load-path "~/projects/yasnippet-read-only/")
+(add-to-list 'load-path "~/projects/magit/")
 
 (global-hl-line-mode 1)
 ;(set-face-background 'hl-line "darkolivegreen")

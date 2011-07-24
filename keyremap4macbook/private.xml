@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root>
+	<list>
+		<item>
+			<name>kozo2</name>
+			<list>
+				<item>
+					<name>kozo2 remap</name>
+					<identifier>remap.kozo2</identifier>
+					<autogen>--KeyToKey-- KeyCode::JIS_COLON, KeyCode::MINUS</autogen>
+					<autogen>--KeyToKey-- KeyCode::MINUS, KeyCode::JIS_COLON</autogen>
+					<autogen>--KeyToKey-- KeyCode::JIS_BRACKET_LEFT, KeyCode::JIS_BRACKET_RIGHT</autogen>
+					<autogen>--KeyToKey-- KeyCode::JIS_BRACKET_RIGHT, KeyCode::JIS_ATMARK</autogen>
+					<autogen>--KeyToKey-- KeyCode::JIS_ATMARK, KeyCode::JIS_BRACKET_LEFT</autogen>
+				</item>
+			</list>
+		</item>
+	</list>
+</root>

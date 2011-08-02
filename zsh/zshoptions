@@ -6,171 +6,59 @@
 
 echo "Loading zshoptions"
 
-# Use additional pattern matching features.
 setopt extendedglob
-
-# Append new history lines instead of overwriting.
 setopt appendhistory
-
-# Change directory given just path.
 setopt autocd
-
-# Automatically list choices on an ambiguous completion.
 setopt auto_list
-
-# Automatically use menu completion after the second consecutive request for completion, for example by pressing the tab key repeatedly. This option is overridden by MENU_COMPLETE.
 setopt auto_menu
-
-# Any parameter that is set to the absolute name of a directory immediately becomes a name for that directory, that will be used by the `%~' and related prompt sequences, and will be available when completion is performed on a word starting with `~'. (Otherwise, the parameter must be used in the form `~param' first.)
 setopt auto_name_dirs
-
-# If a parameter name was completed and a following character (normally a space) automatically inserted, and the next character typed is one of those that have to come directly after the name (like `}', `:', etc.), the automatically added character is deleted, so that the character typed comes immediately after the parameter name. Completion in a brace expansion is affected similarly: the added character is a `,', which will be removed if `}' is typed next.
 setopt auto_param_keys
-
-# If a parameter is completed whose content is the name of a directory, then add a trailing slash instead of a space.
 setopt auto_param_slash
-
-# Make cd push the old directory onto the directory stack.
-# auto directory pushd that you can get dirs list by cd -[tab]
 setopt auto_pushd
-
-# Treat single word simple commands without redirection as candidates for resumption of an existing job.
 setopt auto_resume
-
-# no Beep on errors.
 setopt NO_beep
-
-# X{ab} expands to Xa Xb
 setopt brace_ccl
-
-# cd var works if $var is directory
-# If the argument to a cd command (or an implied cd with the AUTO_CD option set) is not a directory, and does not begin with a slash, try to expand the expression as if it were preceded by a `~'
 setopt cdable_vars
-
-# Report the status of background and suspended jobs before exiting a shell with job control; a second attempt to exit the shell will succeed. NO_CHECK_JOBS is best used only in combination with NO_HUP, else such jobs will be killed automatically.
-# The check is omitted if the commands run from the previous command line included a `jobs' command, since it is assumed the user is aware that there are background or suspended jobs. A `jobs' command run from the precmd function is not counted for this purpose.
 setopt check_jobs
-
-# Allow redirections to overwrite
 #setopt clobber
-
-# Prevents aliases on the command line from being internally substituted before completion is attempted. The effect is to make the alias a distinct command for completion purposes.
 setopt complete_aliases
-
-# Try to correct the spelling of commands. Note that, when the HASH_LIST_ALL option is not set or when some directories in the path are not readable, this may falsely report spelling errors the first time some commands are used.
 setopt correct
-
-# Try to correct the spelling of all arguments in a line.
 #setopt correct_all
-
-# Expand =cmd to /path/to/cmd
 setopt equals
-
-# Timestamps saved to history file
 #setopt extended_history
-
-# no Use ^S/^Q style flow control
 setopt NO_flow_control
-
-# Store command location for speed
 #setopt hash_cmds
-
-# Do not enter command lines into the history list if they are duplicates of the previous event.
 setopt hist_ignore_dups
-
-# If a new command line being added to the history list duplicates an older one, the older command is removed from the list (even if it is not the previous event).
 setopt hist_ignore_all_dups
-
-# Remove command lines from the history list when the first character on the line is a space, or when one of the expanded aliases contains a leading space. Note that the command lingers in the internal history until the next command is entered before it vanishes, allowing you to briefly reuse or edit the line. If you want to make it vanish right away without entering another command, type a space and press return.
 setopt hist_ignore_space
-
-# Remove superfluous blanks from each command line being added to the history list.
 setopt hist_reduce_blanks
-
-# Whenever the user enters a line with history expansion, don't execute the line directly; instead, perform history expansion and reload the line into the editing buffer.
 setopt hist_verify
-
-# no Send the HUP signal to running jobs when the shell exits.
 setopt NO_hup
-
-# Do not exit on end-of-file. Require the use of exit or logout instead. However, ten consecutive EOFs will cause the shell to exit anyway, to avoid the shell hanging if its tty goes away.
-# Also, if this option is set and the Zsh Line Editor is used, widgets implemented by shell functions can be bound to EOF (normally Control-D) without printing the normal warning message. This works only for normal widgets, not for completion widgets.
 setopt ignore_eof
-
-# Allow comments even in interactive shells.
 setopt interactive_comments
-
-# no beep sound when complete list displayed
 setopt nolistbeep
-
-# Try to make the completion list smaller (occupying less lines) by printing the matches in columns with different widths.
 setopt list_packed
-
-# When listing files that are possible completions, show the type of each file with a trailing identifying mark.
 setopt list_types
-
-# List jobs in the long format by default.
 setopt long_list_jobs
-
-# All unquoted arguments of the form `anything=expression' appearing after the command name have filename expansion (that is, where expression has a leading `~' or `=') performed on expression as if it were a parameter assignment. The argument is not otherwise treated specially; it is passed to the command as a single argument, and not used as an actual parameter assignment. For example, in echo foo=~/bar:~/rod, both occurrences of ~ would be replaced. Note that this happens anyway with typeset and similar statements.
-# This option respects the setting of the KSH_TYPESET option. In other words, if both options are in effect, arguments looking like assignments will not undergo wordsplitting.
 setopt magic_equal_subst
-
-# Warn if mail file timestamp changed
 #setopt mail_warning
-
-# Append a trailing `/' to all directory names resulting from filename generation (globbing).
 setopt mark_dirs
-
-# Cycle through ambiguous matches
 #setopt menu_complete
-
-# Perform implicit tees or cats when multiple redirections are attempted
 setopt multios
-
-# Unmatched patterns cause an error.
 setopt nomatch
-
-# Immediately report changes in background job status.
 setopt notify
-
-# If numeric filenames are matched by a filename generation pattern, sort the filenames numerically rather than lexicographically.
 setopt numeric_glob_sort
-
-# dir/cmd can be found in $PATH
 #setopt path_dirs
-
-# Print eight bit characters literally in completion lists, etc. This option is not necessary if your system correctly returns the printability of eight bit characters
 setopt print_eightbit
-
-# Return status printed unless zero
 #setopt print_exit_value
-
-# Don't push multiple copies of the same directory onto the directory stack.
 setopt pushd_ignore_dups
-
-# pushd with no argument goes to ~
 #setopt pushd_to_home
-
-# Wait before asking if rm * is OK
 #setopt rm_star_wait
-
-# Allow the short forms of for, repeat, select, if, and function constructs.
 setopt short_loops
-
-# Line editing on single line (bad tty)
 #setopt single_line_zle
-
-# Show trace of execution with $PS4
 #setopt xtrace
-
-# If set, parameter expansion, command substitution and arithmetic expansion are performed in prompts.
 setopt prompt_subst
-
-# http://0xcc.net/unimag/1/
 setopt share_history
-
-# Remove the history (fc -l) command from the history list when invoked. Note that the command lingers in the internal history until the next command is entered before it vanishes, allowing you to briefly reuse or edit the line.
 setopt hist_no_store
 
 unsetopt promptcr

@@ -1,21 +1,18 @@
-(require 'package)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
+;; (require 'package)
+;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+;; (package-initialize)
 
 (require 'auto-install)
-(setq auto-install-directory "~/.emacs.d/auto-install/")
-;(setq auto-install-directory "~/elisp/")
-
 
 ;; (auto-install-batch "anything")
 ;; (auto-install-batch "auto-complete development version")
-;; (auto-install-from-url "https://raw.github.com/m2ym/popwin-el/v0.3/popwin.el")
 ;; (auto-install-from-url "https://raw.github.com/imakado/emacs-smartchr/master/smartchr.el")
 ;; (auto-install-from-url "http://www.bookshelf.jp/elc/bf-mode.el")
 ;; (auto-install-from-emacswiki "color-moccur.el")
 ;; (auto-install-from-emacswiki "moccur-edit.el")
 ;; (auto-install-from-emacswiki "grep-edit.el")
 
+;; (auto-install-from-url "https://raw.github.com/m2ym/popwin-el/v0.3/popwin.el")
 
 (require 'anything)
 ;; (require 'anything-startup)

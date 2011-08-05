@@ -8,9 +8,9 @@
 ;; (auto-install-batch "auto-complete development version")
 ;; (auto-install-from-url "https://raw.github.com/imakado/emacs-smartchr/master/smartchr.el")
 ;; (auto-install-from-url "http://www.bookshelf.jp/elc/bf-mode.el")
-;; (auto-install-from-emacswiki "color-moccur.el")
-;; (auto-install-from-emacswiki "moccur-edit.el")
-;; (auto-install-from-emacswiki "grep-edit.el")
+;; (auto-install-from-url "http://www.bookshelf.jp/elc/color-moccur.el")
+;; (auto-install-from-url "http://www.bookshelf.jp/elc/moccur-edit.el")
+;; (auto-install-from-url "http://www.bookshelf.jp/elc/grep-edit.el")
 
 ;; (auto-install-from-url "https://raw.github.com/m2ym/popwin-el/v0.3/popwin.el")
 

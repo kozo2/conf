@@ -23,7 +23,6 @@
 ;; (global-set-key "\M-w" 'kill-region)
 
 (define-key ctl-x-map "\C-u" 'dired-jump)
-(define-key ctl-x-map "|" 'window-toggle-division)
 ;(define-key ctl-x-map "\C-o" 'delete-other-windows)
 
 ;(global-set-key "\C-s" 'save-buffer)
@@ -54,3 +53,36 @@
 ;; (global-set-key "\M-]" 'highlight-changes-next-change)
 
 ;; (global-set-key "\M-n" '(lambda () (interactive) (find-tag last-tag 1)))
+
+
+;; dired
+(define-key dired-mode-map "r" 'wdired-change-to-wdired-mode)
+
+;;(global-set-key "\C-i" 'dabbrev-expand)
+;;(global-set-key "\C-i" 'hippie-expand)
+
+;; auto-complete
+(define-key ac-menu-map "\C-j" 'ac-next)
+(define-key ac-menu-map "\C-k" 'ac-previous)
+
+;; bf-mode
+(define-key bf-mode-map "j" 'bf-mode-next)
+(define-key bf-mode-map "k" 'bf-mode-previous)
+;; (define-key bf-mode-map "n" 'bf-mode-toggle-browse-alternative)
+;;   (define-key bf-mode-map "h" 'bf-mode-change-heading)
+
+;; smartchr
+(global-set-key (kbd "=") (smartchr '(" = " "=" " == ")))
+(global-set-key (kbd "+") (smartchr '(" + " "+")))
+(global-set-key (kbd "<") (smartchr '(" < " "<")))
+(global-set-key (kbd ">") (smartchr '(" > " ">")))
+(global-set-key (kbd ",") (smartchr '(", " ",")))
+(global-set-key (kbd "\"") (smartchr '("\"`!!'\"" "\"\"`!!'" "\"")))
+(global-set-key (kbd "(") (smartchr '("(`!!')" "()`!!'" "(")))
+(global-set-key (kbd "[") (smartchr '("[`!!']" "[]`!!'" "[")))
+(global-set-key (kbd "{") (smartchr '("{`!!'}" "{}`!!'" "{")))
+
+;; my functions
+(global-set-key (kbd "C-z") 'line-to-top-of-window)
+(global-set-key (kbd "C-t") 'other-window-or-split)
+(define-key ctl-x-map "|" 'window-toggle-division)

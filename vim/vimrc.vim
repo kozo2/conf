@@ -15,7 +15,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'thinca/vim-quickrun'
 Bundle 'msanders/snipmate.vim'
-Bundle 'kana/vim-smartchr'
 
 " vim-scripts repos
 Bundle 'taglist.vim'
@@ -23,6 +22,7 @@ Bundle 'L9'
 Bundle 'AutoComplPop'
 Bundle 'Align'
 Bundle 'FuzzyFinder'
+Bundle 'smartchr'
 
 " non github repos
 "Bundle 'git://git.wincent.com/command-t.git'

@@ -21,6 +21,7 @@
 (define-key anything-map "\C-j" 'anything-next-line)
 (define-key anything-map "\C-k" 'anything-previous-line)
 ;; (global-set-key "\C-r" 'anything-execute-extended-command)
+(define-key ctl-x-map "g" 'anything-imenu)
 
 ;; ;; swap *-w
 ;; (global-set-key "\C-w" 'kill-ring-save)
@@ -35,7 +36,6 @@
 (global-set-key "\M-u" 'scroll-down)
 (global-set-key "\M-/" 'tags-search)
 (global-set-key "\M-m" 'blink-matching-open)
-(global-set-key "\C-cg" 'imenu)
 (setq imenu-always-use-completion-buffer-p 'never)
 ;; (global-set-key "\C-xp" (lambda () (interactive) (other-window -1)))
 

@@ -16,6 +16,8 @@
 ;; (auto-install-from-url "https://raw.github.com/m2ym/popwin-el/v0.3/popwin.el")
 
 (require 'anything)
+(require 'anything-config)
+
 ;; (require 'anything-startup)
 ;; (define-key anything-map "\C-\M-p" 'anything-previous-source)
 ;; (define-key anything-map "\C-\M-n" 'anything-next-source)

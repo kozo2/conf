@@ -71,6 +71,9 @@
 ;; (define-key bf-mode-map "n" 'bf-mode-toggle-browse-alternative)
 ;;   (define-key bf-mode-map "h" 'bf-mode-change-heading)
 
+;; e2wm
+(global-set-key (kbd "M-+") 'e2wm:start-management)
+
 ;; smartchr
 (global-set-key (kbd "=") (smartchr '(" = " "=" " == ")))
 (global-set-key (kbd "+") (smartchr '(" + " "+")))

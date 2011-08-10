@@ -1,6 +1,5 @@
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
-(global-set-key "\C-u" ctl-x-map)
 ;(define-key ctl-x-map "\C-q" 'quoted-insert)
 (global-set-key "\C-x" universal-argument-map)
 
@@ -12,6 +11,11 @@
 (global-set-key "\C-p" 'toggle-input-method)
 (global-set-key "\C-m" 'newline-and-indent)
 
+;; ctl-x-map
+(global-set-key "\C-u" ctl-x-map)
+(define-key ctl-x-map "\C-u" 'dired-jump-other-window)
+;(define-key ctl-x-map "\C-o" 'delete-other-windows)
+
 ;; anything
 (global-set-key (kbd "C-n") 'anything)
 (define-key anything-map "\C-j" 'anything-next-line)
@@ -21,9 +25,6 @@
 ;; ;; swap *-w
 ;; (global-set-key "\C-w" 'kill-ring-save)
 ;; (global-set-key "\M-w" 'kill-region)
-
-(define-key ctl-x-map "\C-u" 'dired-jump)
-;(define-key ctl-x-map "\C-o" 'delete-other-windows)
 
 ;(global-set-key "\C-s" 'save-buffer)
 ;(global-set-key "\M-s" 'isearch-forward)
@@ -72,7 +73,7 @@
 ;;   (define-key bf-mode-map "h" 'bf-mode-change-heading)
 
 ;; e2wm
-(global-set-key (kbd "M-+") 'e2wm:start-management)
+;(global-set-key (kbd "M-+") 'e2wm:start-management)
 
 ;; smartchr
 (global-set-key (kbd "=") (smartchr '(" = " "=" " == ")))

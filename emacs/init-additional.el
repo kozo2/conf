@@ -6,6 +6,7 @@
 
 ;; (auto-install-batch "anything")
 ;; (auto-install-batch "auto-complete development version")
+;; (auto-install-from-url "https://raw.github.com/kiwanami/emacs-window-layout/master/window-layout.el")
 ;; (auto-install-from-url "https://raw.github.com/imakado/emacs-smartchr/master/smartchr.el")
 ;; (auto-install-from-url "http://www.bookshelf.jp/elc/bf-mode.el")
 ;; (auto-install-from-url "http://www.bookshelf.jp/elc/color-moccur.el")
@@ -32,6 +33,8 @@
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))
 
 (require 'magit)
+
+(require 'e2wm)
 
 (require 'bf-mode)
 ;; list up file extensions which should be excepted

@@ -1,5 +1,6 @@
 #cd ~/.emacs.d/auto-install/
 #curl -O https://raw.github.com/kiwanami/emacs-window-layout/master/window-layout.el
+#curl -O https://raw.github.com/m2ym/popwin-el/master/popwin.el
 #wget http://www.emacswiki.org/emacs/download/auto-install.el
 #wget package.el
 

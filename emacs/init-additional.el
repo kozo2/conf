@@ -34,7 +34,7 @@
 
 (require 'magit)
 
-(require 'e2wm)
+;(require 'e2wm)
 
 (require 'bf-mode)
 ;; list up file extensions which should be excepted
@@ -58,13 +58,13 @@
 ;; quitting dired directly from bf-mode
 (setq bf-mode-directly-quit t)
 
-;; (require 'popwin)
-;; (setq display-buffer-function 'popwin:display-buffer)
-;; (setq popwin:special-display-config '(("*scratch*")))
-;; (display-buffer "*scratch*")
-;; ;(setq anything-samewindow nil)
-;; ;(push '("*anything*" :height 20) popwin:special-display-config)
-;; (push '(dired-mode :position top) popwin:special-display-config)
+(require 'popwin)
+(setq display-buffer-function 'popwin:display-buffer)
+(setq popwin:special-display-config '(("*scratch*")))
+(display-buffer "*scratch*")
+(setq anything-samewindow nil)
+(push '("*anything*" :height 20) popwin:special-display-config)
+(push '(dired-mode :position top) popwin:special-display-config)
 
 (require 'smartchr)
 

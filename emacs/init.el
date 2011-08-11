@@ -28,6 +28,7 @@
 (display-time)
 
 ;; default to better frame titles
+(setq debug-on-error t)
 (setq frame-title-format
       (concat  "%b - emacs@" system-name))
 (setq completion-ignore-case t)

@@ -14,7 +14,9 @@
 ;; ctl-x-map
 (global-set-key "\C-u" ctl-x-map)
 (define-key ctl-x-map "\C-u" 'dired-jump-other-window)
-;(define-key ctl-x-map "\C-o" 'delete-other-windows)
+(define-key ctl-x-map "\C-r" 'dired-jump)
+(define-key ctl-x-map "\C-j" 'ffap-read-only)
+(define-key ctl-x-map "\C-o" 'delete-other-windows)
 
 ;; anything
 (global-set-key (kbd "C-n") 'anything)

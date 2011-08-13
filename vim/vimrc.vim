@@ -52,6 +52,19 @@ syntax enable
 " abbreviations {{{
 abbreviate teh the
 abbreviate fro for
+
+" Shortcut enc and ff.
+cnoreabbrev ++u ++enc=utf8
+cnoreabbrev ++c ++enc=cp932
+cnoreabbrev ++s ++enc=cp932
+cnoreabbrev ++e ++enc=euc-jp
+cnoreabbrev ++j ++enc=iso-2022-jp
+cnoreabbrev ++x ++ff=unix
+cnoreabbrev ++d ++ff=dox
+cnoreabbrev ++m ++ff=mac
+
+
+
 " }}}
 
 " functions {{{
@@ -273,6 +286,10 @@ nnoremap <M-h>   <C-w>h
 nnoremap <M-j>   <C-w>j
 nnoremap <M-k>   <C-w>k
 nnoremap <M-l>   <C-w>l
+nnoremap <D-h>   <C-w>h
+nnoremap <D-j>   <C-w>j
+nnoremap <D-k>   <C-w>k
+nnoremap <D-l>   <C-w>l
 
 " Quick save and quit.
 nnoremap <silent> <Space>w :<C-u>update<CR>

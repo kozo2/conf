@@ -235,6 +235,22 @@ noremap k gk
 noremap gj j
 noremap gk k
 
+" Yank to the end of line. (It is same as C and D)
+nnoremap Y y$
+
+" Search selected area.
+vnoremap <silent> z/ <ESC>/\v%V
+vnoremap <silent> z? <ESC>?\v%V
+
+" Switch the tab page.
+nnoremap <C-n> gt
+nnoremap <C-p> gT
+
+" Scroll + Move
+nnoremap <C-j> <C-e>gj
+nnoremap <C-k> <C-y>gk
+
+
 " quick date insert
 inoremap <expr> ,df strftime('%Y-%m-%dT%H:%M:%S')
 inoremap <expr> ,dd strftime('%Y-%m-%d')
@@ -249,9 +265,28 @@ onoremap gc :<C-u>normal gc<Enter>
 map <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
 map <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
 
-" quick window move
-nnoremap <C-K> <C-W>k
-nnoremap <C-J> <C-W>j
+nnoremap <Left>  <C-w>h
+nnoremap <Down>  <C-w>j
+nnoremap <Up>    <C-w>k
+nnoremap <Right> <C-w>l
+nnoremap <M-h>   <C-w>h
+nnoremap <M-j>   <C-w>j
+nnoremap <M-k>   <C-w>k
+nnoremap <M-l>   <C-w>l
+
+" Quick save and quit.
+nnoremap <silent> <Space>w :<C-u>update<CR>
+nnoremap <silent> <Space>W :<C-u>update!<CR>
+nnoremap <silent> <Space>q :<C-u>quit<CR>
+nnoremap <silent> <Space>Q :<C-u>quit!<CR>
+
+" Change encodings and formats.
+nnoremap <Space>e <Nop>
+nnoremap <silent> <Space>es :<C-u>setl fenc=cp932<CR>
+nnoremap <silent> <Space>ee :<C-u>setl fenc=euc-jp<CR>
+nnoremap <silent> <Space>eu :<C-u>setl fenc=utf-8<CR>
+nnoremap <silent> <Space>ed :<C-u>setl ff=dos<CR>
+nnoremap <silent> <Space>ex :<C-u>setl ff=unix<CR>
 
 " }}}
 

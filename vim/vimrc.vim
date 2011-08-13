@@ -69,6 +69,16 @@ cnoreabbrev ++m ++ff=mac
 
 " functions {{{
 
+function! DiffWithFileFromDisk()
+  let filename=expand('%')
+  let diffname = filename.'.fileFromBuffer'
+  exec 'saveas! '.diffname
+  diffthis
+  vsplit
+  exec 'edit '.filename
+  diffthis
+endfunction
+
 " http://d.hatena.ne.jp/ns9tks/20091105/1257420345
 augroup VimrcNetrw
   autocmd!
@@ -184,6 +194,8 @@ nnoremap ,f [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
 
 " use <F6> to toggle line numbers
 nnoremap <silent> <F6> :set number!<CR>
+
+nmap <F7> :call DiffWithFileFromDisk()<CR>
 
 " open filename under cursor in a new window (use current file's working
 " directory)

@@ -20,9 +20,7 @@
 (line-number-mode 1)
 (column-number-mode 1)
 (transient-mark-mode 1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-;(menu-bar-mode nil)
+(menu-bar-mode -1)
 (which-func-mode 1)
 
 (display-time)

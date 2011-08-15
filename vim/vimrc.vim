@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 " My Bundles here: {{{
 "
 " original repos on github
+Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'thinca/vim-quickrun'
@@ -85,7 +86,7 @@ augroup VimrcNetrw
   autocmd FileType netrw let g:bufnrLastNetrw = bufnr('%')
 augroup END
 
-function s:openNetrw()
+function! s:openNetrw()
   if exists('g:bufnrLastNetrw')
     execute g:bufnrLastNetrw . 'buffer'
   else

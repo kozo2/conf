@@ -139,6 +139,8 @@ autocmd FileType netrw nmap <buffer> <C-j> jp
 autocmd FileType netrw nmap <buffer> <C-k> kp
 autocmd FileType netrw nmap <buffer> <C-h> -
 
+autocmd FileType help nnoremap <buffer> q <C-w>c
+
 autocmd BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown
 autocmd BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=gitcommit

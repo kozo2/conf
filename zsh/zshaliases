@@ -51,13 +51,18 @@ dl (){
   command mv $* ~/.Trash/
 }
 
-# vcs alias
-alias gad='git add'
-alias gst='git status'
-alias gci='git commit -m'
-alias gps='git push'
-alias gpl='git pull'
-alias gdf='git diff'
+# http://gitimmersion.com/lab_11.html
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
 
 alias sci='svn commit -m'
 alias sst='svn status'

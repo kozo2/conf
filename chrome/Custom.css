@@ -1,0 +1,51 @@
+﻿@font-face {
+font-family: "ＭＳ Ｐゴシック";
+src: local("メイリオ"), local("ＭＳ Ｐゴシック");
+}
+
+@font-face {
+font-family: "MS PGothic";
+src: local("メイリオ"), local("ＭＳ Ｐゴシック");
+}
+
+@font-face {
+font-family: "MS UI Gothic";
+src: local("Meiryo UI"), local("メイリオ"), local("MS UI Gothic");
+}
+
+@font-face {
+font-family: "ＭＳ ゴシック";
+src: local("MigMix 1M"), local("ＭＳ ゴシック");
+}
+
+@font-face {
+font-family: "MS Gothic";
+src: local("MigMix 1M"), local("ＭＳ ゴシック");
+}
+
+@font-face {
+font-family: "MS UI Gothic";
+src: local("Meiryo UI"), local("メイリオ"), local("MS UI Gothic");
+}
+
+/* MS明朝系の ClearType 対応化 */
+
+@font-face {
+font-family: "ＭＳ Ｐ明朝";
+src: local("IPA P明朝"), local("ＭＳ Ｐ明朝");
+}
+
+@font-face {
+font-family: "MS PMincho";
+src: local("IPA P明朝"), local("ＭＳ Ｐ明朝");
+}
+
+@font-face {
+font-family: "ＭＳ 明朝";
+src: local("IPA明朝"), local("ＭＳ 明朝");
+}
+
+@font-face {
+font-family: "MS Mincho";
+src: local("IPA明朝"), local("ＭＳ 明朝");
+}

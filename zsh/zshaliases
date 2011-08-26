@@ -23,6 +23,8 @@ os_type=`uname`
 if [ "$os_type" = "Linux" ]; then
     alias l='ls --color=auto -la'
     alias v=vim
+elif [ "$os_type" = "CYGWIN_NT-6.1-WOW64" ]; then
+    alias l='ls --color=auto -la'
 elif [ "$os_type" = "FreeBSD" ]; then
     alias l='ls -laG'
     alias e='emacs -nw'

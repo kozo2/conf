@@ -13,6 +13,8 @@
 ;; (auto-install-from-url "http://www.bookshelf.jp/elc/moccur-edit.el")
 ;; (auto-install-from-url "http://www.bookshelf.jp/elc/grep-edit.el")
 
+;; (auto-install-from-emacswiki "http://www.emacswiki.org/emacs/download/sr-speedbar.el")
+
 (require 'anything)
 (require 'anything-config)
 

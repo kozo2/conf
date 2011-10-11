@@ -29,14 +29,14 @@
 (require 'auto-complete-config)
 (ac-config-default)
 (global-auto-complete-mode 1)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict/")
+(add-to-list 'ac-dictionary-directories "~/projects/auto-complete/dict/")
 (setq ac-use-menu-map t)
 (defun emacs-lisp-ac-setup ()
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))
 
 (require 'magit)
 
-;(require 'e2wm)
+(require 'e2wm)
 
 (require 'bf-mode)
 ;; list up file extensions which should be excepted
@@ -60,13 +60,13 @@
 ;; quitting dired directly from bf-mode
 (setq bf-mode-directly-quit t)
 
-(require 'popwin)
-(setq display-buffer-function 'popwin:display-buffer)
-(setq popwin:special-display-config '(("*scratch*")))
-(display-buffer "*scratch*")
-(setq anything-samewindow nil)
-(push '("*anything*" :height 20) popwin:special-display-config)
-(push '(dired-mode :position top) popwin:special-display-config)
+;; (require 'popwin)
+;; (setq display-buffer-function 'popwin:display-buffer)
+;; (setq popwin:special-display-config '(("*scratch*")))
+;; (display-buffer "*scratch*")
+;; (setq anything-samewindow nil)
+;; (push '("*anything*" :height 20) popwin:special-display-config)
+;; (push '(dired-mode :position top) popwin:special-display-config)
 
 (require 'smartchr)
 

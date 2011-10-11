@@ -39,6 +39,7 @@
   )
  ((string-match "i386-mingw-nt6.1.7601" system-configuration)
 
+  (tool-bar-mode nil)
   (set-default-font "Consolas 14")
   (set-fontset-font (frame-parameter nil 'font)
 		    'japanese-jisx0208

@@ -4,7 +4,7 @@
 // @namespace 3v28ZYKQkixa
 // @key j
 // @include *
-// @exclude http://twitter.com/*
+// @exclude https://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*
@@ -21,7 +21,7 @@
 // @namespace 3v28ZYKQkixa
 // @key k
 // @include *
-// @exclude http://twitter.com/*
+// @exclude https://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
 // @exclude https://www.google.com/calendar/*

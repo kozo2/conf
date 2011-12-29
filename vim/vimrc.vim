@@ -1,54 +1,48 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+set nocompatible           " be improved
+filetype plugin indent off " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
 
 " My Bundles here: {{{
 "
 " original repos on github
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'thinca/vim-quickrun'
-Bundle 'msanders/snipmate.vim'
+
+"NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc'
+" after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-openbuf'
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'choplin/unite-vim_hacks'
+NeoBundle 'tpope/vim-fugitive'
+"NeoBundle 'Lokaltog/vim-easymotion'
+"NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " vim-scripts repos
-Bundle 'taglist.vim'
-Bundle 'L9'
-Bundle 'AutoComplPop'
-Bundle 'Align'
-Bundle 'FuzzyFinder'
-Bundle 'smartchr'
+NeoBundle 'molokai'                                                             
 
-" non github repos
-"Bundle 'git://git.wincent.com/command-t.git'
+" old vundles
+"Bundle 'tpope/vim-surround'
+"Bundle 'taglist.vim'
+"Bundle 'Align'
+"Bundle 'smartchr'
 
-" ...
-
-filetype plugin indent on     " required! 
-syntax enable
-
-"
-" Brief help
-"
-" :BundleInstall  - install bundles (won't update installed)
-" :BundleInstall! - update if installed
-"
-" :Bundles foo    - search for foo
-" :Bundles! foo   - refresh cached list and search for foo
-"
-" :BundleClean    - confirm removal of unused bundles
-" :BundleClean!   - remove without confirmation
-"
-" see :h vundle for more details
-" or wiki for FAQ
-" Note: comments after Bundle command are not allowed..
 "}}}
+
+filetype plugin indent on
+
+set t_Co=256
+colorscheme molokai
+set background=dark
 
 " abbreviations {{{
 abbreviate teh the

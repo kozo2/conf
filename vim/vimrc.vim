@@ -28,7 +28,7 @@ NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " vim-scripts repos
-NeoBundle 'molokai'                                                             
+NeoBundle 'molokai'
 
 " old vundles
 "Bundle 'tpope/vim-surround'

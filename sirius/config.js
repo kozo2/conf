@@ -1,4 +1,4 @@
-﻿// 天狼基本システムのインクルード。必ず記述する
+// 天狼基本システムのインクルード。必ず記述する
 sirius.require('startup.js');
 
 // kHelperをインクルードする
@@ -81,9 +81,6 @@ var notepad_c_map = [
     assignVk('WACLASS<Notepad>+C+A-S-', 'j', '', 'VK_DOWN'),
     assignVk('WACLASS<Notepad>+C+A-S-', 'k', '', 'VK_UP'),
 
-    // page move
-    assignVk('WACLASS<Notepad>+C+A-S-', 'v', '', 'VK_NEXT'),
-
     // edit
     assignVk('WACLASS<Notepad>+C+A-S-', 'd', '', 'VK_DELETE'),
     assignVk('WACLASS<Notepad>+C+A-S-', 'y', 'C+', 'v'),
@@ -94,6 +91,22 @@ var notepad_a_map = [
     // page move
     assignVk('WACLASS<Notepad>+C-A+S-', 'v', '', 'VK_PRIOR'),
     assignVk('WACLASS<Notepad>+C-A+S-', 's', 'C+', 'f'),
+    assignVk('WACLASS<Notepad>+C-A+S-', 'a', 'C+', 'a'),
+];
+
+// evernote
+var evernote_c_map = [
+    assignVk('WACLASS<ENMainFrame>+C+A-S-', 'a', '', 'VK_HOME'),
+    assignVk('WACLASS<ENMainFrame>+C+A-S-', 'b', '', 'VK_LEFT'),
+    assignVk('WACLASS<ENMainFrame>+C+A-S-', 'e', '', 'VK_END'),
+    assignVk('WACLASS<ENMainFrame>+C+A-S-', 'f', '', 'VK_RIGHT'),
+    assignVk('WACLASS<ENMainFrame>+C+A-S-', 'j', '', 'VK_DOWN'),
+    assignVk('WACLASS<ENMainFrame>+C+A-S-', 'k', '', 'VK_UP'),
+//    assignVk('WACLASS<ENMainFrame>+C+A-S-', 'd', '', 'VK_DELETE'),
+];
+
+var evernote_a_map = [
+    assignVk('WACLASS<ENMainFrame>+C-A+S-', 'a', 'C+', 'a'),
 ];
 
 // Firefox
@@ -119,6 +132,7 @@ var chrome_c_map = [
     assignVk('WACLASS<Chrome_WidgetWin_0>+C+A-S-', 'f', '', 'VK_RIGHT'),
     assignVk('WACLASS<Chrome_WidgetWin_0>+C+A-S-', 'j', '', 'VK_DOWN'),
     assignVk('WACLASS<Chrome_WidgetWin_0>+C+A-S-', 'k', '', 'VK_UP'),
+    assignVk('WACLASS<Chrome_WidgetWin_0>+C+A-S-', 'i', '', 'VK_TAB'),
 
     // edit
     assignVk('WACLASS<Chrome_WidgetWin_0>+C+A-S-', 'd', '', 'VK_DELETE'),
@@ -142,6 +156,9 @@ var chrome_a_map = [
     // history move
     assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'j', '', 'VK_DOWN'),
     assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'k', '', 'VK_UP'),
+
+    // select all
+    assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'a', 'C+', 'a'),
 
     // history
     assignVk('WACLASS<Chrome_WidgetWin_0>+C-A+S-', 'h', 'C+', 'h'),
@@ -175,10 +192,24 @@ var explorer_a_map = [
     assignVk('WACLASS<CabinetWClass>+C-A+S-', 'v', '', 'VK_PRIOR'),
     // directory move
     assignVk('WACLASS<CabinetWClass>+C-A+S-', 'j', '', 'VK_RETURN'),
+    assignVk('WACLASS<CabinetWClass>+C-A+S-', 'VK_DOWN', '', 'VK_RETURN'),
     assignVk('WACLASS<CabinetWClass>+C-A+S-', 'k', '', 'VK_BACK'),
     // history move
     assignVk('WACLASS<CabinetWClass>+C-A+S-', 'h', 'A+', 'VK_LEFT'),
     assignVk('WACLASS<CabinetWClass>+C-A+S-', 'l', 'A+', 'VK_RIGHT'),
+];
+
+// PowerPoint2007
+var powerpnt2007_c_map = [
+    // cursor move
+    assignVk('WACLASS<PP12FrameClass>+C+A-S-', 'a', '', 'VK_HOME'),
+    assignVk('WACLASS<PP12FrameClass>+C+A-S-', 'e', '', 'VK_END'),
+    assignVk('WACLASS<PP12FrameClass>+C+A-S-', 'b', '', 'VK_LEFT'),
+    assignVk('WACLASS<PP12FrameClass>+C+A-S-', 'f', '', 'VK_RIGHT'),
+    assignVk('WACLASS<PP12FrameClass>+C+A-S-', 'j', '', 'VK_DOWN'),
+    assignVk('WACLASS<PP12FrameClass>+C+A-S-', 'k', '', 'VK_UP'),
+    // edit
+    assignVk('WACLASS<PP12FrameClass>+C+A-S-', 'd', '', 'VK_DELETE'),
 ];
 
 // PowerPoint2003
@@ -220,11 +251,28 @@ var excel_c_map = [
     assignVk('WACLASS<XLMAIN>+C+A-S-', 'd', '', 'VK_DELETE'),
 ];
 
+// Skype
+var skype_c_map = [
+    // cursor move
+    assignVk('WACLASS<tSkMainForm>+C+A-S-', 'a', '', 'VK_HOME'),
+    assignVk('WACLASS<tSkMainForm>+C+A-S-', 'e', '', 'VK_END'),
+    assignVk('WACLASS<tSkMainForm>+C+A-S-', 'b', '', 'VK_LEFT'),
+    assignVk('WACLASS<tSkMainForm>+C+A-S-', 'f', '', 'VK_RIGHT'),
+    assignVk('WACLASS<tSkMainForm>+C+A-S-', 'n', '', 'VK_DOWN'),
+    assignVk('WACLASS<tSkMainForm>+C+A-S-', 'p', '', 'VK_UP'),
+    // edit
+    assignVk('WACLASS<tSkMainForm>+C+A-S-', 'd', '', 'VK_DELETE'),
+    assign('WACLASS<tSkMainForm>+C+A-S-', 'k', killLine),
+];
+
 // my functions
 function killLine() {
     sirius.send('S+', 35);
-    sirius.send('', 46);
+    sirius.send('C+', 88);
 }
+
+// 左ウィンドウキーをモディファイアにし、モディファイア名を 'LW' にする
+sirius.registModifier('LW', sirius.vk('VK_LWIN'));
 
 
 // グローバルマップ
@@ -254,7 +302,7 @@ var map_global = [
     // includeMap('IME+IMESTR/', sirius.require('map/choi.js')),
 
     // T-Code
-    includeKMap('IME+IMESTR/', 'map/t.js'),    // 106キーボード用
+    //includeKMap('IME+IMESTR/', 'map/t.js'),    // 106キーボード用
     // includeKMap('IME+IMESTR/', 'map/t-us.js'), // 101キーボード用
 
     // TUT-Code
@@ -292,6 +340,9 @@ var map_global = [
     // すべてのアプリケーションで、Ctrl+M 押下時にリターンキーを送信
     assignVk('C+A-S-', 'm', '', 'VK_RETURN'),
 
+    assignVk('LW+', 'h', 'LW+', 'VK_LEFT'),
+    assignVk('LW+', 'o', 'LW+', 'VK_UP'),
+
     /*
     assignVk('C+A-S-', 'a', '', 'VK_HOME'),
     assignVk('C+A-S-', 'b', '', 'VK_LEFT'),
@@ -305,6 +356,10 @@ var map_global = [
     // notepad
     includeMap('WACLASS<Notepad>+C+A-S-', notepad_c_map),
     includeMap('WACLASS<Notepad>+C-A+S-', notepad_a_map),
+
+    // evernote
+    includeMap('WACLASS<ENMainFrame>+C+A-S-', evernote_c_map),
+    includeMap('WACLASS<ENMainFrame>+C-A+S-', evernote_a_map),
 
     // Google chrome
     includeMap('WACLASS<Chrome_WidgetWin_0>+C+A-S-', chrome_c_map),
@@ -321,6 +376,9 @@ var map_global = [
     includeMap('WACLASS<CabinetWClass>+C+A-S-', explorer_c_map),
     includeMap('WACLASS<CabinetWClass>+C-A+S-', explorer_a_map),
 
+    // PowerPoint2007
+    includeMap('WACLASS<PP12FrameClass>+C+A-S-', powerpnt2007_c_map),
+
     // PowerPoint2003
     includeMap('WACLASS<PP11FrameClass>+C+A-S-', powerpnt_c_map),
 
@@ -329,6 +387,9 @@ var map_global = [
 
     // Excel2003
     includeMap('WACLASS<XLMAIN>+C+A-S-', excel_c_map),
+
+    // Skype
+    includeMap('WACLASS<tSkMainForm>+C+A-S-', skype_c_map),
 
     // global volume control
     assignVk('C+A+S-', 'jp--', '', 'VK_VOLUME_DOWN'),

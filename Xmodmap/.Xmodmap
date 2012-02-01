@@ -16,14 +16,21 @@ keycode 48 = minus equal
 keycode 51 = at grave
 keycode 100 = space
 
-add Shift = Muhenkan
-keysym Muhenkan = Shift_R
+add Alt_L = Muhenkan
+keysym Muhenkan = Alt_L
 
-add Control = space
+remove Mod1 = Alt_L
+keysym Alt_L = Shift_L
+add Shift = Shift_L
+
+!add Shift = Muhenkan
+!keysym Muhenkan = Shift_R
+
 keysym space = Control_R
+add Control = space
 
-add mod1 = Hiragana_Katakana
 keysym Hiragana_Katakana = Alt_R
+add mod1 = Hiragana_Katakana
 
 ! normal keyboard
 remove Lock = Eisu_toggle

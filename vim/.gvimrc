@@ -5,7 +5,8 @@ if has('mac')
 "  colorscheme macvim
   colorscheme molokai
 else
-  set guifont=DejaVu\ Sans\ Mono\ 12
-  set guifontwide=VL\ ゴシック\ 12
+"  set guifont=DejaVu\ Sans\ Mono\ 12
+"  set guifontwide=VL\ ゴシック\ 12
+  set guifont=VL\ Gothic\ 12
   set guioptions-=T
 endif

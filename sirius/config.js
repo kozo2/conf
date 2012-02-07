@@ -14,7 +14,7 @@ kHelper.beforeKeyGuide = 4;
 // デフォルトのエディタの指定
 // パスが通っていない実行ファイルを指定する場合は、フルパスを記述する。
 // edit()関数では、ここで指定したエディタが利用される
-sirius.editor = 'notepad';
+sirius.editor = 'gvim';
 
 // 以下は利用するキー配列をJScriptのArray()として定義している。///////////////////////////
 
@@ -340,7 +340,7 @@ var map_global = [
     // すべてのアプリケーションで、Ctrl+M 押下時にリターンキーを送信
     assignVk('C+A-S-', 'm', '', 'VK_RETURN'),
 
-    assignVk('LW+', 'h', 'LW+', 'VK_LEFT'),
+    assignVk('A+', 'h', 'LW+', 'VK_LEFT'),
     assignVk('LW+', 'o', 'LW+', 'VK_UP'),
 
     /*

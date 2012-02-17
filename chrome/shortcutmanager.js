@@ -4,6 +4,7 @@
 // @namespace 3v28ZYKQkixa
 // @key j
 // @include *
+// @exclude https://plus.google.com/*
 // @exclude https://www.google.com/*
 // @exclude https://twitter.com/*
 // @exclude https://mail.google.com/*
@@ -22,6 +23,7 @@
 // @namespace 3v28ZYKQkixa
 // @key k
 // @include *
+// @exclude https://plus.google.com/*
 // @exclude https://www.google.com/*
 // @exclude https://twitter.com/*
 // @exclude https://mail.google.com/*
@@ -40,6 +42,7 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+h
 // @include *
+// @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
@@ -56,6 +59,7 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+l
 // @include *
+// @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
@@ -72,6 +76,7 @@
 // @namespace 3v28ZYKQkixa
 // @key d
 // @include *
+// @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*
@@ -105,6 +110,7 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+u
 // @include *
+// @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*

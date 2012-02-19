@@ -4,6 +4,7 @@
 // @namespace 3v28ZYKQkixa
 // @key j
 // @include *
+// @exclude http://www.ustream.tv/*
 // @exclude https://plus.google.com/*
 // @exclude https://www.google.com/*
 // @exclude https://twitter.com/*
@@ -23,6 +24,7 @@
 // @namespace 3v28ZYKQkixa
 // @key k
 // @include *
+// @exclude http://www.ustream.tv/*
 // @exclude https://plus.google.com/*
 // @exclude https://www.google.com/*
 // @exclude https://twitter.com/*
@@ -42,6 +44,7 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+h
 // @include *
+// @exclude http://www.ustream.tv/*
 // @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
@@ -59,6 +62,7 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+l
 // @include *
+// @exclude http://www.ustream.tv/*
 // @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
@@ -76,6 +80,7 @@
 // @namespace 3v28ZYKQkixa
 // @key d
 // @include *
+// @exclude http://www.ustream.tv/*
 // @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
@@ -110,6 +115,7 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+u
 // @include *
+// @exclude http://www.ustream.tv/*
 // @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*

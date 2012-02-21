@@ -115,6 +115,7 @@
 // @namespace 3v28ZYKQkixa
 // @key Shift+u
 // @include *
+// @exclude https://plus.google.com/*
 // @exclude http://www.ustream.tv/*
 // @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*

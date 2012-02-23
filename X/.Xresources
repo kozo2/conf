@@ -1,8 +1,4 @@
-
-
-
-
-
+URxvt.font: xft:VL Gothic:size=14
 
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults

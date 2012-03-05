@@ -14,7 +14,7 @@
 // @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
-// @exclude http://www.rememberthemilk.com/*
+// @exclude https://www.rememberthemilk.com/*
 // @execute ScrollDown(["128"])
 // ==/UserScript==
 
@@ -34,7 +34,7 @@
 // @exclude http://www.google.com/reader/*
 // @exclude http://d.hatena.ne.jp/kozo2/*
 // @exclude http://www.evernote.com/*
-// @exclude http://www.rememberthemilk.com/*
+// @exclude https://www.rememberthemilk.com/*
 // @execute ScrollUp(["128"])
 // ==/UserScript==
 

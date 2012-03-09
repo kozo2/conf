@@ -9,11 +9,13 @@
 !keycode 17 = parenleft 8
 !keycode 18 = parenright 9
 !keycode 19 = asciitilde 0
+
 keycode 20 = colon asterisk
 keycode 34 = bracketleft braceleft
 keycode 35 = bracketright braceright
 keycode 48 = minus equal
 keycode 51 = at grave
+
 keycode 100 = space
 
 add Alt_L = Muhenkan

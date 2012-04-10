@@ -118,7 +118,6 @@
 // @include *
 // @exclude https://plus.google.com/*
 // @exclude http://www.ustream.tv/*
-// @exclude https://plus.google.com/*
 // @exclude http://twitter.com/*
 // @exclude https://mail.google.com/*
 // @exclude https://docs.google.com/*

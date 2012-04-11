@@ -80,6 +80,7 @@
 // @namespace 3v28ZYKQkixa
 // @key d
 // @include *
+// @exclude https://www.rememberthemilk.com/*
 // @exclude http://ed.grammarly.com/editor/*
 // @exclude http://www.ustream.tv/*
 // @exclude https://plus.google.com/*

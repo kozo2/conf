@@ -1,5 +1,7 @@
 URxvt.font: xft:VL Gothic:size=14
-
+!urxvt*font: xft:VL Gothic:size=14
+!urxvt*foreground: white
+!urxvt*background: black
 
 !URxvt*font: xft:terminus-9,xft:Biwidth-9
 !URxvt*font: xft:Inconsolata-9:hinting=false,xft:Biwidth:size=9

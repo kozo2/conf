@@ -33,3 +33,7 @@ alias lsd='ls -ld *(-/DN)'
 
 # show the files start with "."
 alias lsa='ls -ld .*'
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'

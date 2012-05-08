@@ -20,8 +20,10 @@
 (line-number-mode 1)
 (column-number-mode 1)
 (transient-mark-mode 1)
-(menu-bar-mode -1)
 (which-func-mode 1)
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
 
 (display-time)
 
@@ -59,6 +61,7 @@
 ;(fset 'yes-or-no-p 'y-or-n-p)
 (defalias 'qrr 'query-replace-regexp)
 
+(load "init-japanese")
 (load "init-included")
 (load "init-additional")
 (load "init-function")

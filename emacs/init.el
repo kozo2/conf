@@ -4,6 +4,8 @@
 (set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
 
+(windmove-default-keybindings)
+
 ;(add-to-list 'load-path (expand-file-name "~/elisp/"))
 (add-to-list 'load-path "~/.emacs.d/auto-install/")
 (add-to-list 'load-path "~/projects/conf/emacs/")

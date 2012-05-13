@@ -31,8 +31,8 @@
 	    (".*monaco-bold-.*-mac-roman" . 0.9)
 	    ("-cdac$" . 1.3))))
   )
- ((string-match "amd64-portbld-freebsd8.0" system-configuration)
-
+ ((string-match "x86_64-apple-darwin11.4.0" system-configuration)
+  (set-default-font "Monaco 16")
   )
  ((string-match "x86_64-pc-linux-gnu" system-configuration)
 

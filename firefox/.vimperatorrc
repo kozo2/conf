@@ -1,0 +1,25 @@
+"3.4 (created: 2012/04/02 20:07:29)
+
+let mapleader = ","
+
+set scrollbars
+set notabnumbers
+set status=tabcount,position,input,location
+set history=1024
+set hintchars=asdfghjkl;
+
+set! javascript.options.strict=true
+set! javascript.options.showInConsole=true
+set! browser.dom.window.dump.enabled=true
+
+set! ui.key.generalAccessKey=0
+
+noremap ; :
+noremap : ;
+
+nnoremap j 5<C-e>
+nnoremap k 5<C-y>
+
+source! /Users/kozo2/.vimperatorrc.local
+
+" vim: set ft=vimperator:

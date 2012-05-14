@@ -1373,6 +1373,7 @@
     (define-key map "\C-d" 'quail-conversion-delete-char)
     (define-key map "\C-k" 'quail-conversion-delete-tail)
     (define-key map "\C-h" 'quail-conversion-backward-delete-char)
+    ;; (define-key map "\C-h" 'quail-translation-help)
     (define-key map [delete] 'quail-conversion-backward-delete-char)
     (define-key map [backspace] 'quail-conversion-backward-delete-char)
     map)

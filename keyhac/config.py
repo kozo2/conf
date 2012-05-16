@@ -22,6 +22,9 @@ def configure(keymap):
     #keymap.replaceKey( "RWin", 255 )
     keymap.replaceKey( "Space", "LCtrl" )
     keymap.replaceKey( 28, "Space" )
+    keymap.replaceKey( 29, "LShift" )
+    #keymap.replaceKey( 20, 13 )
+    #keymap.replaceKey( "CapsLock/Caps/Capital", "Enter/Return" )
 
     # ユーザモディファイアキーの定義
     keymap.defineModifier( 235, "User0" )

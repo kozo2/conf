@@ -46,3 +46,18 @@ keycode 49 = Escape
 
 !add mod1 = Zenkaku_Hankaku
 !keysym Zenkaku_Hankaku = Alt_L
+
+!!! conf for Kinesis
+!keycode 22 = Shift_L
+!add shift = Shift_L
+!
+!clear control
+!keycode 37 = Alt_L
+!add mod1 = Alt_L
+!
+!keycode 119 = Control_L
+!add control = Control_L
+!
+!keycode 105 = Shift_R
+!add shift = Shift_R
+!!! conf for Kinesis

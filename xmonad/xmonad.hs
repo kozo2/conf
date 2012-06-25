@@ -1,5 +1,5 @@
 import XMonad
 
 main = xmonad defaultConfig
-	{ terminal = "urxvt -pe tabbed"
+	{ terminal = "evilvte -fn \"VL Gothic 14\""
 	}

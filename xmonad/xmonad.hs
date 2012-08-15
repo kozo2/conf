@@ -8,6 +8,7 @@ import Anekos.Config.Layout (myLayoutHook)
 import Anekos.Config.Layout (myLayoutPrompt)
 
 scratchpads = [ NS "emacs" "emacs" (className =? "Emacs") nonFloating
+              , NS "evilvte" "evilvte -fn \"VL Gothic 14\"" (className =? "Evilvte") nonFloating
               , NS "google-chrome" "google-chrome" (className =? "Google-chrome") nonFloating
 	      ] where role = stringProperty "WM_WINDOW_ROLE"
 
@@ -15,6 +16,7 @@ myKeys = [ ("M-m", myLayoutPrompt False)
          , ("M-S-b", windowPromptGoto myXPConfig)
          , ("M-S-e", namedScratchpadAction scratchpads "emacs")
          , ("M-S-g", namedScratchpadAction scratchpads "google-chrome")
+         , ("M-S-v", namedScratchpadAction scratchpads "evilvte")
          ]
 
 myXPConfig = defaultXPConfig

@@ -4,6 +4,11 @@
 (set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
 
+;;;; mode
+(scroll-bar-mode 0)
+(global-auto-revert-mode 1)
+(winner-mode 1)
+
 (windmove-default-keybindings)
 
 ;(add-to-list 'load-path (expand-file-name "~/elisp/"))

@@ -61,3 +61,46 @@
 
 (display-time)
 
+;;;; global remap
+(global-set-key (kbd "C-u") 'helm-M-x)
+(global-set-key (kbd "C-r") 'helm-mini)
+
+;;;; addon
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
+
+(helm-mode 1)
+
+(elscreen-start)
+
+(add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
+(add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
+
+(evil-mode 1) 
+(define-key evil-normal-state-map " " 'dired-jump)
+(define-key evil-normal-state-map ";" 'evil-ex)
+(define-key evil-normal-state-map "\C-n" 'helm-mini)
+(define-key evil-insert-state-map "\C-h" 'delete-backward-char)
+(define-key evil-insert-state-map "\C-j" 'tcode-activate-input-method)
+(define-key evil-insert-state-map "\C-l" 'evil-normal-state)
+(define-key evil-insert-state-map "\C-k" 'tcode-inactivate-input-method-recenter)
+
+(setq load-path (cons "~/.emacs.d/tc3/lisp" load-path))
+(setq tcode-load-immediate t)
+(defun tcode-activate-input-method ()
+  (interactive)
+  (activate-input-method default-input-method))
+(defun tcode-inactivate-input-method ()
+  (interactive)
+  (inactivate-input-method))
+(defun tcode-inactivate-input-method-recenter ()
+  (interactive)
+  (inactivate-input-method)
+  (recenter-top-bottom))
+(define-key global-map "\C-j" 'tcode-activate-input-method)
+(define-key global-map "\C-l" 'tcode-inactivate-input-method-recenter)
+(define-key global-map "\C-\\" 'tcode-inactivate-input-method)
+(require 'tc-setup)
+;(load "tc-setup")

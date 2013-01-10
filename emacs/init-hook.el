@@ -1,14 +1,3 @@
-(add-hook 'text-mode-hook
-	  (function
-	   (lambda ()
-	     (local-set-key (kbd "?") (smartchr '("?" "よろしいでしょうか。" "でしょうか。" "ますでしょうか。")))
-	     (local-set-key (kbd "Y") (smartchr '("Y" "よろしくお願いします。")))
-	     (local-set-key (kbd "I") (smartchr '("I" "いただき" "いただきます。")))
-	     (local-set-key (kbd "M") (smartchr '("M" "申し訳ございません。")))
-	     (local-set-key (kbd "O") (smartchr '("O" "お世話になっております。")))
-	     (local-set-key (kbd "G") (smartchr '("G" "ありがとうございます。" "ありがとうございました。")))
-	     )))
-
 (add-hook 'dired-mode-hook
           (function
            (lambda ()

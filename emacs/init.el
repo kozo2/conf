@@ -1,31 +1,11 @@
+;;;; set
 ;;; uncomment this line to disable loading of "default.el" at startup
 ;; (setq inhibit-default-init t)
 
+(set-default-font "Menlo 18")
 (set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
-
-;;;; mode
-(scroll-bar-mode 0)
-(global-auto-revert-mode 1)
-(winner-mode 1)
-
-(windmove-default-keybindings)
-
-
-(global-hl-line-mode 1)
-;(set-face-background 'hl-line "darkolivegreen")
-(savehist-mode 1)
-(show-paren-mode 1)
-(line-number-mode 1)
-(column-number-mode 1)
-(transient-mark-mode 1)
-(which-func-mode 1)
-(menu-bar-mode 0)
-(tool-bar-mode 0)
-(scroll-bar-mode 0)
-
-(display-time)
-
+(setq dired-dwim-target t)
 ;; default to better frame titles
 (setq debug-on-error t)
 (setq frame-title-format
@@ -51,12 +31,33 @@
 (delete (assoc 'which-func-mode mode-line-format) mode-line-format)
 (setq-default header-line-format '(which-func-mode ("" which-func-format)))
 
+;;;; def
 (defadvice abort-recursive-edit (before minibuffer-save activate)
   (when (eq (selected-window) (active-minibuffer-window))
     (add-to-history minibuffer-history-variable (minibuffer-contents))))
-
 (defalias 'message-box 'message)
 (defalias 'yes-or-no-p 'y-or-n-p)
 ;(fset 'yes-or-no-p 'y-or-n-p)
 (defalias 'qrr 'query-replace-regexp)
+
+;;;; mode
+(scroll-bar-mode 0)
+(global-auto-revert-mode 1)
+(winner-mode 1)
+
+(windmove-default-keybindings)
+
+(global-hl-line-mode 1)
+;(set-face-background 'hl-line "darkolivegreen")
+(savehist-mode 1)
+(show-paren-mode 1)
+(line-number-mode 1)
+(column-number-mode 1)
+(transient-mark-mode 1)
+(which-func-mode 1)
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
+
+(display-time)
 

@@ -68,11 +68,3 @@
 ;(fset 'yes-or-no-p 'y-or-n-p)
 (defalias 'qrr 'query-replace-regexp)
 
-(load "init-japanese")
-(load "init-included")
-(load "init-additional")
-(load "init-function")
-(load "init-keybind")
-(load "init-program")
-(load "init-hook")
-(load "init-font")

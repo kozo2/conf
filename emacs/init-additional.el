@@ -1,30 +1,5 @@
 ;; (require 'package)
-;; (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 ;; (package-initialize)
-
-(require 'auto-install)
-
-;; (auto-install-from-url "https://raw.github.com/m2ym/popwin-el/v0.3/popwin.el")
-;; (auto-install-from-url "https://raw.github.com/kiwanami/emacs-window-layout/master/window-layout.el")
-;; (auto-install-from-url "https://raw.github.com/imakado/emacs-smartchr/master/smartchr.el")
-
-;; (auto-install-from-url "http://www.bookshelf.jp/elc/bf-mode.el")
-;; (auto-install-from-url "http://www.bookshelf.jp/elc/color-moccur.el")
-;; (auto-install-from-url "http://www.bookshelf.jp/elc/moccur-edit.el")
-;; (auto-install-from-url "http://www.bookshelf.jp/elc/grep-edit.el")
-
-;; (auto-install-from-emacswiki "http://www.emacswiki.org/emacs/download/sr-speedbar.el")
-
-(require 'anything)
-(require 'anything-config)
-
-;; (require 'anything-startup)
-;; (define-key anything-map "\C-\M-p" 'anything-previous-source)
-;; (define-key anything-map "\C-\M-n" 'anything-next-source)
-;; (anything-complete-shell-history-setup-key (kbd "C-o"))
-;; (global-set-key (kbd "M-y") 'anything-show-kill-ring)
-;; (global-set-key (kbd "C-x b") 'anything-for-files)
-;; (setq descbinds-anything-window-style 'split-window)
 
 (require 'auto-complete-config)
 (ac-config-default)

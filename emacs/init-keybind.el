@@ -3,11 +3,6 @@
 ;(define-key ctl-x-map "\C-q" 'quoted-insert)
 (global-set-key "\C-x" universal-argument-map)
 
-(global-set-key "\C-p" 'kill-line)
-
-(global-set-key "\C-j" 'next-line)
-(global-set-key "\C-k" 'previous-line)
-
 (global-set-key "\C-o" 'toggle-input-method)
 (global-set-key "\C-m" 'newline-and-indent)
 

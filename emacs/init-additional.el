@@ -9,8 +9,6 @@
 (defun emacs-lisp-ac-setup ()
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))
 
-(require 'magit)
-
 (require 'e2wm)
 
 (require 'bf-mode)

@@ -9,8 +9,6 @@
 (defun emacs-lisp-ac-setup ()
   (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))
 
-(require 'e2wm)
-
 (require 'bf-mode)
 ;; list up file extensions which should be excepted
 (setq bf-mode-except-exts

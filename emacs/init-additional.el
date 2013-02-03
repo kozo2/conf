@@ -1,11 +1,3 @@
-(require 'auto-complete-config)
-(ac-config-default)
-(global-auto-complete-mode 1)
-(add-to-list 'ac-dictionary-directories "~/projects/auto-complete/dict/")
-(setq ac-use-menu-map t)
-(defun emacs-lisp-ac-setup ()
-  (setq ac-source '(ac-source-words-in-same-mode-buffers ac-source-words-in-same-mode-buffers)))
-
 (require 'bf-mode)
 ;; list up file extensions which should be excepted
 (setq bf-mode-except-exts

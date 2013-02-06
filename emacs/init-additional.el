@@ -41,10 +41,6 @@
 
 (require 'grep-edit)
 
-(require 'yasnippet)
-(yas/initialize)
-(yas/load-directory "~/projects/yasnippet-read-only/snippets/")
-
 ;; (require 'recentf-ext)
 ;; (global-set-key (kbd "C-x C-;") 'recentf-open-files)
 

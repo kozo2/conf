@@ -78,6 +78,7 @@
 
 (require 'auto-complete-config)
 (ac-config-default)
+(global-auto-complete-mode 1)
 
 (add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
 (add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))

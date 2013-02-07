@@ -2,12 +2,11 @@
 ;;; uncomment this line to disable loading of "default.el" at startup
 ;; (setq inhibit-default-init t)
 
-(set-default-font "Menlo 18")
 (set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
 (setq dired-dwim-target t)
-;; default to better frame titles
 (setq debug-on-error t)
+;; default to better frame titles
 (setq frame-title-format
       (concat  "%b - emacs@" system-name))
 (setq completion-ignore-case t)

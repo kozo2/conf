@@ -44,6 +44,7 @@
 (scroll-bar-mode 0)
 (global-auto-revert-mode 1)
 (winner-mode 1)
+(recentf-mode 1)
 
 (windmove-default-keybindings)
 

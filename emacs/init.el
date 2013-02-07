@@ -64,6 +64,7 @@
 ;;;; global remap
 (global-set-key (kbd "C-u") 'helm-M-x)
 (global-set-key (kbd "C-r") 'helm-mini)
+(global-set-key (kbd "C-h") 'delete-backward-char)
 
 ;;;; addon
 (require 'package)

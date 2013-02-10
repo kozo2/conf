@@ -1,5 +1,3 @@
-(global-set-key (kbd "C-h") 'delete-backward-char)
-
 ;(define-key ctl-x-map "\C-q" 'quoted-insert)
 (global-set-key "\C-x" universal-argument-map)
 
@@ -13,13 +11,6 @@
 (define-key ctl-x-map "\C-r" 'dired-jump)
 (define-key ctl-x-map "\C-j" 'ffap-read-only)
 (define-key ctl-x-map "\C-o" 'delete-other-windows)
-
-;; anything
-(global-set-key (kbd "C-n") 'anything)
-(define-key anything-map "\C-j" 'anything-next-line)
-(define-key anything-map "\C-k" 'anything-previous-line)
-;; (global-set-key "\C-r" 'anything-execute-extended-command)
-(define-key ctl-x-map "g" 'anything-imenu)
 
 ;; ;; swap *-w
 ;; (global-set-key "\C-w" 'kill-ring-save)

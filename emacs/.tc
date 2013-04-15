@@ -1,0 +1,8 @@
+;;; -*-emacs-lisp-*- This file is automatically created
+(setq tcode-data-directory "/home/knishida/tcode/")
+(setq tcode-default-input-method "japanese-T-Code")
+(setq tcode-key-layout "qwerty")
+(add-hook 'tcode-after-load-table-hook
+	  (lambda ()
+	    (when (eq tcode-input-method 'tcode)
+	      (tcode-set-action-to-table '(23 29) "ĺ"))))

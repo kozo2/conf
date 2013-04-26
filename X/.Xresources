@@ -1,7 +1,13 @@
 URxvt.font: xft:VL Gothic:size=14
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard,tabbed
+
+URxvt.foreground: white
+URxvt.background: black
+
 !urxvt*font: xft:VL Gothic:size=14
-!urxvt*foreground: white
-!urxvt*background: black
 
 !URxvt*font: xft:terminus-9,xft:Biwidth-9
 !URxvt*font: xft:Inconsolata-9:hinting=false,xft:Biwidth:size=9

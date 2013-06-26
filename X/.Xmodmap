@@ -1,14 +1,10 @@
-! azerty emulation
-!keycode 10 = exclam 1
-!keycode 11 = quotedbl 2
-!keycode 12 = numbersign 3
-!keycode 13 = dollar 4
-!keycode 14 = percent 5
-!keycode 15 = ampersand 6
-!keycode 16 = apostrophe 7
-!keycode 17 = parenleft 8
-!keycode 18 = parenright 9
-!keycode 19 = asciitilde 0
+! Japanese notebook
+!keysym space = Control_L
+!add Control = Control_L
+!keysym Henkan_Mode = space
+!keysym Muhenkan = BackSpace
+!remove Lock = Caps_Lock
+!keysym Caps_Lock = Return
 
 keycode 20 = colon asterisk
 keycode 34 = bracketleft braceleft

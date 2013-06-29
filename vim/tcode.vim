@@ -3,7 +3,7 @@
 " Past Maintainer: Takasuka Yoshihiro <tesuri@d1.dion.ne.jp>
 " Last Change: 13-Oct-2004.
 
-scriptencoding cp932
+scriptencoding utf-8
  
 " Use this short name in the status line.
 let b:keymap_name = "tcode"

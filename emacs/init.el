@@ -2,7 +2,7 @@
 ;;; uncomment this line to disable loading of "default.el" at startup
 ;; (setq inhibit-default-init t)
 
-(set-language-environment "Japanese")
+;(set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
 (setq dired-dwim-target t)
 (setq debug-on-error t)
@@ -118,7 +118,7 @@
 
 (helm-mode 1)
 
-(elscreen-start)
+;(elscreen-start)
 
 (require 'auto-complete-config)
 (ac-config-default)
@@ -135,6 +135,10 @@
 (define-key evil-insert-state-map "\C-j" 'tcode-activate-input-method)
 (define-key evil-insert-state-map "\C-l" 'evil-normal-state)
 (define-key evil-insert-state-map "\C-k" 'tcode-inactivate-input-method-recenter)
+
+(require 'auto-save-buffers-enhanced)
+;(setq auto-save-buffers-enhanced-interval 1)
+(auto-save-buffers-enhanced t)
 
 (setq load-path (cons "~/.emacs.d/tc3/lisp" load-path))
 (setq tcode-load-immediate t)

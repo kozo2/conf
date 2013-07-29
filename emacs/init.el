@@ -105,6 +105,11 @@
 
 (display-time)
 
+(add-hook 'emacs-lisp-mode-hook
+	  (lambda ()
+	    (linum-mode 1)
+	    ))
+
 ;;;; global remap
 (global-set-key (kbd "C-u") 'helm-M-x)
 (global-set-key (kbd "C-r") 'helm-mini)

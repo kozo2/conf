@@ -118,6 +118,15 @@
 
 (helm-mode 1)
 
+(require 'e2wm)
+(setq e2wm:c-code-recipe
+      '(| (:left-max-size 30)
+        imenu main))
+(setq e2wm:c-code-winfo
+      '((:name main)
+	(:name imenu :plugin imenu :default-hide nil))
+      )
+
 ;(elscreen-start)
 
 (require 'auto-complete-config)

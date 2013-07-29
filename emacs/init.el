@@ -132,6 +132,13 @@
 	(:name imenu :plugin imenu :default-hide nil))
       )
 
+(require 'direx)
+(require 'popwin)
+(popwin-mode 1)
+(push '(direx:direx-mode :position left :width 25 :dedicated t)
+      popwin:special-display-config)
+(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory-other-window)
+
 ;(elscreen-start)
 
 (require 'auto-complete-config)

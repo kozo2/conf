@@ -108,7 +108,23 @@
 (add-hook 'emacs-lisp-mode-hook
 	  (lambda ()
 	    (linum-mode 1)
+	    (auto-complete-mode 1)
+	    (local-set-key (kbd "C-o") 'helm-lisp-completion-at-point)
+	    (paredit-mode +1)
 	    ))
+
+(add-hook 'lisp-interaction-mode-hook
+          (lambda ()
+            (paredit-mode +1)
+            ))
+
+(add-hook 'python-mode-hook
+          (lambda ()
+            (linum-mode 1)
+            (auto-complete-mode 1)
+            (paredit-mode +1)
+            ))
+
 
 ;;;; global remap
 (global-set-key (kbd "C-u") 'helm-M-x)
@@ -143,10 +159,7 @@
 
 (require 'auto-complete-config)
 (ac-config-default)
-(global-auto-complete-mode 1)
 
-(add-hook 'emacs-lisp-mode-hook       (lambda () (paredit-mode +1)))
-(add-hook 'lisp-interaction-mode-hook (lambda () (paredit-mode +1)))
 
 (evil-mode 1) 
 (define-key evil-normal-state-map " " 'dired-jump)

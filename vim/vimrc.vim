@@ -1,43 +1,5 @@
-set nocompatible           " be improved
-filetype plugin indent off " required!
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
-endif
-
-" My Bundles here: {{{
-"
-" original repos on github
-
-"NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/vimproc'
-" after install, turn shell ~/.vim/bundle/vimproc, (n,g)make -f your_machines_makefile
-NeoBundle 'Shougo/vimshell'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/vimfiler'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'thinca/vim-openbuf'
-NeoBundle 'mattn/webapi-vim'
-NeoBundle 'h1mesuke/unite-outline'
-NeoBundle 'choplin/unite-vim_hacks'
-NeoBundle 'tpope/vim-fugitive'
-"NeoBundle 'Lokaltog/vim-easymotion'
-"NeoBundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-" vim-scripts repos
-NeoBundle 'molokai'
-
-" old vundles
-"Bundle 'tpope/vim-surround'
-"Bundle 'taglist.vim'
-"Bundle 'Align'
-"Bundle 'smartchr'
-
-"}}}
-
+execute pathogen#infect()
+syntax on
 filetype plugin indent on
 
 set t_Co=256

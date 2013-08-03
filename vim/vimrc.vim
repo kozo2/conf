@@ -90,6 +90,10 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "norm
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 
+" autocmd BufWritePost *.md !pandoc -f markdown -t html %:p > %:t:r.html
+autocmd CursorHold * wall
+autocmd CursorHoldI * wall
+
 autocmd FileType netrw nmap <buffer> f <cr>
 autocmd FileType netrw nmap <buffer> <C-j> jp
 autocmd FileType netrw nmap <buffer> <C-k> kp
@@ -179,9 +183,12 @@ noremap <CR> o<ESC>
 
 " Use CTRL-L for Escape
 " http://twitter.com/emanon001/status/1022597622
-vnoremap <silent> <C-l> <Esc>
-inoremap <silent> <C-l> <Esc>
-cnoremap <silent> <C-l> <C-c>
+"vnoremap <silent> <C-l> <Esc>
+"inoremap <silent> <C-l> <Esc>
+"cnoremap <silent> <C-l> <C-c>
+
+inoremap kk <Esc>
+inoremap jj <Esc>
 
 " http://whileimautomaton.net/2008/06/diary#d01-214900
 nnoremap <C-h> :<C-u>help<Space>
@@ -280,10 +287,12 @@ nnoremap <silent> <Space>ex :<C-u>setl ff=unix<CR>
 " }}}
 
 " options {{{
+
 set autowriteall
 set autoread
 set autochdir
 set autoindent
+set autowrite
 
 set cindent
 set cinoptions=:s,ps,ts,cs
@@ -315,6 +324,7 @@ set wildmenu
 set modeline
 set mousehide
 
+set backspace=2
 set textwidth=0		" Don't wrap lines by default
 set modelines=5
 set tabstop=4
@@ -368,6 +378,7 @@ set viminfo='20,\"50,:20,%,n~/.viminfo
 set statusline=%F%m%r%h%w\ [%{&fileencoding}\ %{&fileformat}]\ [TYPE=%Y]\ [%l/%L,\ %c]
 " set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
+set nocompatible
 set nowrap
 set nonumber
 set nolist

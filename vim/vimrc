@@ -98,8 +98,8 @@ autocmd FileType netrw nmap <buffer> f <cr>
 autocmd FileType netrw nmap <buffer> <C-j> jp
 autocmd FileType netrw nmap <buffer> <C-k> kp
 autocmd FileType netrw nmap <buffer> <C-h> -
-
 autocmd FileType help nnoremap <buffer> q <C-w>c
+autocmd FileType python setl sw=4 sts=4 et
 
 autocmd BufRead,BufNewFile {Gemfile,Rakefile,Capfile,*.rake,config.ru}     set ft=ruby
 autocmd BufRead,BufNewFile {*.md,*.mkd,*.markdown}                         set ft=markdown

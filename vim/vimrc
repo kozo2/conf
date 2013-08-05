@@ -398,7 +398,7 @@ inoremap <expr> +  smartchr#loop(' + ', '+')
 inoremap <expr> ,  smartchr#loop(', ', ',')
 
 
-let g:ctrlp_cmd = 'CtrlPMRUFiles'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 let g:airline_enable_branch=1
 let g:airline_enable_tagbar=1

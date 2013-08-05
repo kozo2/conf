@@ -104,6 +104,7 @@ alias conda=/Users/kozo2/anaconda/bin/conda
 alias ipython=/Users/kozo2/anaconda/bin/ipython
 alias pip=/Users/kozo2/anaconda/bin/pip
 alias l='ls -lh'
+alias ra=ranger-cd
 
 setopt autocd
 setopt hist_ignore_all_dups

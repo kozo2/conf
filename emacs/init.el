@@ -191,3 +191,11 @@
 (define-key global-map "\C-\\" 'tcode-inactivate-input-method)
 (require 'tc-setup)
 ;(load "tc-setup")
+
+(add-hook ’tcode-after-load-table-hook
+	   (lambda ()
+	     (when (eq tcode-input-method ’tcode)
+	       (tcode-set-action-to-table ’(23 29) "頂")
+	       )))
+
+

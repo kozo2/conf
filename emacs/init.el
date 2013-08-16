@@ -30,6 +30,8 @@
 (delete (assoc 'which-func-mode mode-line-format) mode-line-format)
 (setq-default header-line-format '(which-func-mode ("" which-func-format)))
 
+(set-frame-parameter nil 'alpha '90)
+
 ;;;; def
 (defadvice abort-recursive-edit (before minibuffer-save activate)
   (when (eq (selected-window) (active-minibuffer-window))

@@ -5,4 +5,4 @@
 (add-hook 'tcode-after-load-table-hook
 	  (lambda ()
 	    (when (eq tcode-input-method 'tcode)
-	      (tcode-set-action-to-table '(23 29) "ĺ"))))
+	      (tcode-set-action-to-table '(23 29) "頂"))))

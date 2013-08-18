@@ -5,11 +5,16 @@
 ;(set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
 
+(set-default-font "Menlo 18")
+
 (setq dired-dwim-target t)
 (setq debug-on-error t)
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
 (setq enable-recursive-minibuffers t)
+(setq visible-bell t)
+
+(setq debug-on-error 1)
 
 (setq dabbrev-case-fold-search nil)
 (setq dabbrev-case-replace nil)
@@ -134,8 +139,7 @@
 
 
 ;;;; global remap
-(global-set-key (kbd "C-u") 'helm-M-x)
-(global-set-key (kbd "C-r") 'helm-mini)
+(global-set-key (kbd "C-u") 'execute-extended-command)
 (global-set-key (kbd "C-h") 'delete-backward-char)
 
 ;;;; addon
@@ -198,11 +202,3 @@
 (define-key global-map "\C-\\" 'tcode-inactivate-input-method)
 (require 'tc-setup)
 ;(load "tc-setup")
-
-(add-hook ’tcode-after-load-table-hook
-	   (lambda ()
-	     (when (eq tcode-input-method ’tcode)
-	       (tcode-set-action-to-table ’(23 29) "頂")
-	       )))
-
-

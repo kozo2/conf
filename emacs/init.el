@@ -4,27 +4,32 @@
 
 ;(set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
+
 (setq dired-dwim-target t)
 (setq debug-on-error t)
-;; default to better frame titles
-(setq frame-title-format
-      (concat  "%b - emacs@" system-name))
 (setq completion-ignore-case t)
 (setq read-file-name-completion-ignore-case t)
+(setq enable-recursive-minibuffers t)
+
 (setq dabbrev-case-fold-search nil)
 (setq dabbrev-case-replace nil)
+(setq use-dialog-box nil)
+(setq make-backup-files nil)
+(setq line-move-visual nil)
+
 (setq gc-cons-threshold (* 10 gc-cons-threshold))
 (setq message-log-max 10000)
-(setq enable-recursive-minibuffers t)
-(setq use-dialog-box nil)
 (setq history-length 1000)
 (setq echo-keystrokes 0.1)
 (setq large-file-warning-threshold (* 25 1024 1024))
-(setq make-backup-files nil)
-(setq line-move-visual nil)
 (setq scroll-conservatively 35
       scroll-margin 0
       scroll-step 1)
+
+;; default to better frame titles
+(setq frame-title-format
+      (concat  "%b - emacs@" system-name))
+
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 (setq ediff-split-window-function 'split-window-horizontally)
 (delete (assoc 'which-func-mode mode-line-format) mode-line-format)

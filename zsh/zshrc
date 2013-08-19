@@ -25,7 +25,14 @@ bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 bindkey "^[/" expand-cmd-path
 
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# http://www.rlazo.org/2010/11/18/zsh-case-insensitive-completion/
+autoload -U compinit
+compinit -C
+
+## case-insensitive (all),partial-word and then substring completion
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' \
+    'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
 
 # http://hatena.g.hatena.ne.jp/hatenatech/20060517/1147833430
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
@@ -38,8 +45,6 @@ source $HOME/projects/conf/zsh/zshoptions
 #
 autoload -U colors
 colors
-autoload -U compinit
-compinit
 autoload predict-on
 predict-on
 

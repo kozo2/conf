@@ -5,7 +5,9 @@
 ;(set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
 
-(set-default-font "Menlo 18")
+;(set-default-font "Menlo 18")
+(add-to-list 'default-frame-alist
+	     '(font . "Monaco-12"))
 
 (setq dired-dwim-target t)
 (setq debug-on-error t)

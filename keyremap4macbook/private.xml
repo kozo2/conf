@@ -5,12 +5,20 @@
     <url>file:///Applications/Google%20Chrome.app</url>
   </vkopenurldef>
   <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_Firefox</name>
+    <url>file:///Applications/Firefox.app</url>
+  </vkopenurldef> 
+  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_Vim</name>
     <url>file:///Applications/MacVim.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_Emacs</name>
     <url>file:///Applications/Emacs.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_IntelliJ</name>
+    <url>file:///Applications/IntelliJ%20IDEA%2012%20CE.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_Skype</name>
@@ -27,16 +35,26 @@
     <autogen>
 	    __KeyToKey__
 	    KeyCode::KEY_2, ModifierFlag::OPTION_R,
-	    KeyCode::VK_OPEN_URL_Vim
+	    KeyCode::VK_OPEN_URL_Firefox
     </autogen>
     <autogen>
 	    __KeyToKey__
 	    KeyCode::KEY_3, ModifierFlag::OPTION_R,
-	    KeyCode::VK_OPEN_URL_Emacs
+	    KeyCode::VK_OPEN_URL_Vim
     </autogen>
     <autogen>
 	    __KeyToKey__
 	    KeyCode::KEY_4, ModifierFlag::OPTION_R,
+	    KeyCode::VK_OPEN_URL_Emacs
+    </autogen>
+    <autogen>
+	    __KeyToKey__
+	    KeyCode::KEY_5, ModifierFlag::OPTION_R,
+	    KeyCode::VK_OPEN_URL_IntelliJ
+    </autogen>
+    <autogen>
+	    __KeyToKey__
+	    KeyCode::KEY_6, ModifierFlag::OPTION_R,
 	    KeyCode::VK_OPEN_URL_Skype
     </autogen>
   </item>

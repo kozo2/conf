@@ -5,6 +5,7 @@
 ;(set-language-environment "Japanese")
 ;(set-language-environment "UTF-8")
 
+;; https://gist.github.com/yoshinari-nomura/3465571
 (when (and (>= emacs-major-version 24)
            (eq window-system 'ns))
   ;; フォントセットを作る

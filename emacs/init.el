@@ -41,6 +41,13 @@
   ;; # 作成されない現象への対処
   (set-face-font 'default "fontset-myfonts"))
 
+(add-hook 'markdown-mode-hook
+	  (lambda ()
+	    (local-set-key (kbd "C-j") 'markdown-insert-list-item)
+	    (local-set-key (kbd "M-p") 'markdown-move-list-item-up)
+	    (local-set-key (kbd "M-n") 'markdown-move-list-item-down)
+	    ))
+
 (add-hook 'emacs-lisp-mode-hook
 	  (lambda ()
 	    (linum-mode 1)

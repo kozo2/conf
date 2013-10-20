@@ -210,15 +210,6 @@
 
 (powerline-default-theme)
 
-;(evil-mode 1) 
-;(define-key evil-normal-state-map " " 'dired-jump)
-;(define-key evil-normal-state-map ";" 'evil-ex)
-;(define-key evil-normal-state-map "\C-n" 'helm-mini)
-;(define-key evil-insert-state-map "\C-h" 'delete-backward-char)
-;(define-key evil-insert-state-map "\C-j" 'tcode-activate-input-method)
-;(define-key evil-insert-state-map "\C-l" 'evil-normal-state)
-;(define-key evil-insert-state-map "\C-k" 'tcode-inactivate-input-method-recenter)
-
 (require 'auto-save-buffers-enhanced)
 ;(setq auto-save-buffers-enhanced-interval 1)
 (auto-save-buffers-enhanced t)

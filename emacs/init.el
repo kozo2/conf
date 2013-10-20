@@ -41,6 +41,26 @@
   ;; # 作成されない現象への対処
   (set-face-font 'default "fontset-myfonts"))
 
+(add-hook 'emacs-lisp-mode-hook
+	  (lambda ()
+	    (linum-mode 1)
+	    (auto-complete-mode 1)
+	    (local-set-key (kbd "C-o") 'helm-lisp-completion-at-point)
+	    (paredit-mode +1)
+	    ))
+
+(add-hook 'lisp-interaction-mode-hook
+          (lambda ()
+            (paredit-mode +1)
+            ))
+
+(add-hook 'python-mode-hook
+          (lambda ()
+            (linum-mode 1)
+            (auto-complete-mode 1)
+            (paredit-mode +1)
+            ))
+
 (setq dired-dwim-target t)
 (setq debug-on-error t)
 (setq completion-ignore-case t)
@@ -152,27 +172,6 @@
 (scroll-bar-mode 0)
 
 (display-time)
-
-(add-hook 'emacs-lisp-mode-hook
-	  (lambda ()
-	    (linum-mode 1)
-	    (auto-complete-mode 1)
-	    (local-set-key (kbd "C-o") 'helm-lisp-completion-at-point)
-	    (paredit-mode +1)
-	    ))
-
-(add-hook 'lisp-interaction-mode-hook
-          (lambda ()
-            (paredit-mode +1)
-            ))
-
-(add-hook 'python-mode-hook
-          (lambda ()
-            (linum-mode 1)
-            (auto-complete-mode 1)
-            (paredit-mode +1)
-            ))
-
 
 ;;;; global remap
 (global-set-key (kbd "C-u") 'execute-extended-command)

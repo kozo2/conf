@@ -342,7 +342,6 @@ set timeoutlen=250
 set pastetoggle=<F8>
 set mouse-=a
 set shortmess=atI
-set foldmethod=marker
 "set formatoptions&
 "set formatoptions+=mM
 set fo+=o " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
@@ -409,6 +408,8 @@ let g:airline_theme='dark'
 " netrw.vim
 let g:netrw_browse_split=0
 
+let g:xml_syntax_folding = 1
+set foldmethod=syntax
 
 "}}}
 
